@@ -42,7 +42,7 @@
 class LandFallAlarm : public Alarm
 {
 public:
-    LandFallAlarm() : Alarm(5 /* seconds */),
+    LandFallAlarm() : Alarm(true, 5 /* seconds */),
                       m_Mode(TIME),
                       m_TimeMinutes(20),
                       m_Distance(3)
@@ -239,10 +239,11 @@ extern wxString    g_ReceivedBoundaryAnchorMessage;
 class BoundaryAlarm : public Alarm
 {
 public:
-    BoundaryAlarm() : Alarm(5 /* seconds */),
+    BoundaryAlarm() : Alarm(false, 5 /* seconds */),
                       m_Mode(TIME),
                       m_TimeMinutes(20),
-                      m_Distance(3)
+                      m_Distance(3),
+                      m_bAnchorOutside(false)
         {}
 
     wxString Type() { return _("Boundary"); }
@@ -360,8 +361,10 @@ public:
                 g_ReceivedBoundaryAnchorJSONMsg[wxS("Found")].AsBool() == false ) {
                 // This is our message
                 g_ReceivedBoundaryDistanceMessage = wxEmptyString;
+                m_bAnchorOutside = true;
                 return true;
             }
+            m_bAnchorOutside = false;
             g_ReceivedBoundaryDistanceMessage = wxEmptyString;
                //g_ReceivedBoundaryDistanceJSONMsg.Clear();
            break;
@@ -418,9 +421,9 @@ public:
             } 
             case ANCHOR:
             {
-                return wxString::Format(_T(" ") + wxString(_("Anchor")) +
-                    (m_bFired ? _T(" <") : _T(" >")) +
-                    _T(" Outside boundary %s "), m_BoundaryGUID);
+                return wxString::Format(_T(" ") + wxString(_("Anchor")) + _T(" ") +
+                                        (m_bAnchorOutside ? _("Outside") : _("Inside")) +
+                                        _T(" boundary %s"), m_BoundaryGUID);
                 break;
             }
         }
@@ -483,6 +486,7 @@ private:
 
     enum Mode { TIME, DISTANCE, ANCHOR } m_Mode;
     double m_TimeMinutes, m_Distance;
+    bool m_bAnchorOutside;
     wxString m_BoundaryGUID;
 };
 
@@ -638,12 +642,14 @@ private:
 class AnchorAlarm : public Alarm
 {
 public:
-    AnchorAlarm() : m_Radius(50) {
-        minoldfix.FixTime = 0;
-        m_Latitude = g_watchdog_pi->LastFix().Lat;
-        m_Longitude = g_watchdog_pi->LastFix().Lon;
-        m_bWasEnabled = false;
-    }
+    AnchorAlarm() : Alarm(true),
+                    m_Radius(50)
+        {
+            minoldfix.FixTime = 0;
+            m_Latitude = g_watchdog_pi->LastFix().Lat;
+            m_Longitude = g_watchdog_pi->LastFix().Lon;
+            m_bWasEnabled = false;
+        }
 
     wxString Type() { return _("Anchor"); }
     wxString Options() {
@@ -750,7 +756,7 @@ private:
 class CourseAlarm : public Alarm
 {
 public:
-    CourseAlarm() : m_Mode(BOTH), m_Tolerance(20) {
+    CourseAlarm() : Alarm(true), m_Mode(BOTH), m_Tolerance(20) {
         m_Course = g_watchdog_pi->m_cog;
     }
 
@@ -872,7 +878,7 @@ private:
 class SpeedAlarm : public Alarm
 {
 public:
-    SpeedAlarm() : m_Mode(UNDERSPEED), m_Speed(1) {}
+    SpeedAlarm() : Alarm(true), m_Mode(UNDERSPEED), m_Speed(1) {}
 
     wxString Type() { return _("Speed"); }
     wxString Options() {
@@ -1076,8 +1082,8 @@ Alarm *Alarm::NewAlarm(enum AlarmType type)
     return alarm;
 }
 
-Alarm::Alarm(int interval)
-    : m_bEnabled(true), m_bgfxEnabled(false), m_bFired(false),
+Alarm::Alarm(bool gfx, int interval)
+    : m_bHasGraphics(gfx), m_bEnabled(true), m_bgfxEnabled(false), m_bFired(false),
       m_bSound(true), m_bCommand(false), m_bMessageBox(false), m_bRepeat(false),
       m_bAutoReset(false),
       m_sSound(*GetpSharedDataLocation() + _T("sounds/2bells.wav")),

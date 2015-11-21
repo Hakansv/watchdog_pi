@@ -43,6 +43,7 @@ EditAlarmDialog::EditAlarmDialog(wxWindow* parent, Alarm *alarm)
     m_cbAutoReset->SetValue(m_alarm->m_bAutoReset);
     m_cbRepeat->SetValue(m_alarm->m_bRepeat);
     m_sRepeatSeconds->SetValue(m_alarm->m_iRepeatSeconds);
+    m_cbgfxEnabled->Enable(m_alarm->m_bHasGraphics);
     m_cbgfxEnabled->SetValue(m_alarm->m_bgfxEnabled);
 
     m_fgSizer->Insert( 0, m_alarm->OpenPanel(this), 1, wxEXPAND, 5 );
@@ -65,15 +66,15 @@ void EditAlarmDialog::Save()
     m_alarm->SavePanel(m_fgSizer->GetItem((size_t)0)->GetWindow());
 }
 
-#if 0
 void EditAlarmDialog::OnTestAlarm( wxCommandEvent& event )
 {
-    if(!m_alarm)
-        wxMessageBox(_("Invalid Alarm"), _("Watchdog"), wxOK | wxICON_ERROR, this);
-    else
-        m_alarm->Run();
+    TestAlarm testalarm;
+    Alarm *alarm = m_alarm;
+    m_alarm = &testalarm;
+    Save();
+    m_alarm->Run();
+    m_alarm = alarm;
 }
-#endif
 
 void EditAlarmDialog::OnInformation( wxCommandEvent& event )
 {
@@ -90,8 +91,8 @@ be triggered again later."),
 
 void BoundaryPanel::OnGetBoundaryGUID( wxCommandEvent& event )
 {
-extern wxJSONValue g_ReceivedBoundaryGUIDJSONMsg;
-extern wxString    g_ReceivedBoundaryGUIDMessage;
+    extern wxJSONValue g_ReceivedBoundaryGUIDJSONMsg;
+    extern wxString    g_ReceivedBoundaryGUIDMessage;
 
     wxJSONValue jMsg;
     wxJSONWriter writer;
