@@ -29,6 +29,7 @@
 #include <wx/stattext.h>
 #include <wx/panel.h>
 #include <wx/radiobox.h>
+#include <wx/statline.h>
 #include <wx/choice.h>
 
 ///////////////////////////////////////////////////////////////////////////
@@ -57,7 +58,7 @@ class WatchdogDialogBase : public wxDialog
 	
 	public:
 		
-		WatchdogDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("WatchDog"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxTAB_TRAVERSAL ); 
+		WatchdogDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("WatchDog"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL ); 
 		~WatchdogDialogBase();
 	
 };
@@ -195,13 +196,15 @@ class BoundaryPanel : public wxPanel
 	protected:
 		wxStaticText* m_staticText30;
 		wxStaticText* m_staticText7;
+		wxStaticLine* m_staticline1;
 		wxStaticText* m_staticText32;
 		wxButton* m_button12;
 		wxStaticText* m_staticText321;
-		wxStaticText* m_staticText39122;
+		wxStaticLine* m_staticline2;
 		
 		// Virtual event handlers, overide them in your derived class
 		void OnGetBoundaryGUID( wxCommandEvent& event );
+		void OnGuardZoneGUIDKillFocus( wxFocusEvent& event );
 		
 	
 	public:

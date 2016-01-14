@@ -238,14 +238,18 @@ extern wxJSONValue g_ReceivedBoundaryAnchorJSONMsg;
 extern wxString    g_ReceivedBoundaryAnchorMessage;
 extern wxJSONValue g_ReceivedGuardZoneJSONMsg;
 extern wxString    g_ReceivedGuardZoneMessage;
+extern wxString    g_GuardZoneName;
 extern AIS_Target_Info g_AISTarget;
+extern wxString    g_BoundaryName;
+extern wxString    g_BoundaryDescription;
+extern wxString    g_BoundaryGUID;
 
 enum 
 {   
-    ID_BOUNDARY_ANY = 0,
-    ID_BOUNDARY_EXCLUSION,
+    ID_BOUNDARY_EXCLUSION = 0,
     ID_BOUNDARY_INCLUSION,
     ID_BOUNDARY_NEITHER,
+    ID_BOUNDARY_ANY,
     
     ID_BOUNDARY_TYPE_LAST
 };
@@ -258,29 +262,35 @@ public:
                       m_TimeMinutes(20),
                       m_Distance(3),
                       m_BoundaryType(ID_BOUNDARY_ANY),
-                      m_bAnchorOutside(false)
-        {}
+                      m_bAnchorOutside(false),
+                      m_bGuardZoneFired(false)
+        {
+            g_GuardZoneName = wxEmptyString;
+        }
 
     wxString Type() { 
         switch(m_Mode) {
             case TIME: return _("Boundary Time");
             case DISTANCE: return _("Boundary Distance");
-            case ANCHOR: return _("Boundary GUID");
-            case GUARD: return _("Guard Zone GUID");
+            case ANCHOR: return _("Anchor Watch");
+            case GUARD: return _("Guard Zone");
             default: return _("Boundary");
         }
     }
     
     wxString Options() {
-        wxString s;
         switch(m_Mode) {
-        case TIME: s = _("Time") + wxString::Format(_T(" < %f"), m_TimeMinutes);
-        case DISTANCE: s = _("Distance") + wxString::Format(_T(" < %f nm"), m_Distance);
-        case ANCHOR: s = _("Boundary GUID") + wxString(_T(" ")) + m_BoundaryGUID;
-        case GUARD: s = _("Guard Zone GUID") + wxString(_T(" ")) + m_GuardZoneGUID;
-        default: s = _T("");
+        case TIME: return _("Time") + wxString::Format(_T(" < %f"), m_TimeMinutes);
+        case DISTANCE: return _("Distance") + wxString::Format(_T(" < %f nm"), m_Distance);
+        case ANCHOR: return _("Boundary GUID") + wxString(_T(" ")) + m_BoundaryGUID;
+        case GUARD: {
+            if(m_GuardZoneName == wxEmptyString)
+                return _("Guard Zone GUID") + wxString(_T(": ")) + m_GuardZoneGUID;
+            else
+                return _("Guard Zone Name") + wxString(_T(": ")) + m_GuardZoneName;
         }
-        return s;
+        default: return _T("");
+        }
     }
 
     bool Test() {
@@ -289,19 +299,25 @@ public:
         if(isnan(lastfix.Lat))
             return false;
 
-        double lat1 = lastfix.Lat, lon1 = lastfix.Lon, lat2, lon2;
-        double dist = 0, dist1 = 1000;
-        int count = 0;
+        double lat, lon;
+        double dist = 0;
                 
-        m_crossinglat1 = m_crossinglon1 = NAN;
         m_BoundaryTime = wxTimeSpan();
 
         switch(m_Mode) {
             case TIME: {
-                while(count < 10) {
-                    PositionBearingDistanceMercator_Plugin
-                        (lastfix.Lat, lastfix.Lon, lastfix.Cog, lastfix.Sog * ( m_TimeMinutes / 60 ) + dist1, &lat2, &lon2);
-
+                if(wxIsNaN(lastfix.Lat) || wxIsNaN(lastfix.Lon) ||wxIsNaN(lastfix.Cog) || wxIsNaN(lastfix.Sog)) break;
+                for(int count = 11; count > 0; count--) {
+                    if(count == 11) {
+                        lat = lastfix.Lat;
+                        lon = lastfix.Lon;
+                        m_bCurrentBoatPos = true;
+                    } else {
+                        dist = lastfix.Sog * ( m_TimeMinutes / 60 ) / count;
+                        PositionBearingDistanceMercator_Plugin(lastfix.Lat, lastfix.Lon, lastfix.Cog, dist , &lat, &lon);
+                        m_bCurrentBoatPos = false;
+                    }
+                            
                     // Do JSON message to OD Plugin to check if boundary m_crossinglat
                     wxJSONValue jMsg;
                     wxJSONWriter writer;
@@ -310,8 +326,25 @@ public:
                     jMsg[wxT("Type")] = wxT("Request");
                     jMsg[wxT("Msg")] = wxS("FindPointInAnyBoundary");
                     jMsg[wxT("MsgId")] = wxS("time");
-                    jMsg[wxS("lat")] = lat2;
-                    jMsg[wxS("lon")] = lon2;
+                    jMsg[wxS("lat")] = lat;
+                    jMsg[wxS("lon")] = lon;
+                    switch (m_BoundaryType) {
+                        case ID_BOUNDARY_ANY:
+                            jMsg[wxS("BoundaryType")] = wxT("Any");
+                            break;
+                        case ID_BOUNDARY_EXCLUSION:
+                            jMsg[wxS("BoundaryType")] = wxT("Exclusion");
+                            break;
+                        case ID_BOUNDARY_INCLUSION:
+                            jMsg[wxS("BoundaryType")] = wxT("Inclusion");
+                            break;
+                        case ID_BOUNDARY_NEITHER:
+                            jMsg[wxS("BoundaryType")] = wxT("Neither");
+                            break;
+                        default:
+                            jMsg[wxS("BoundaryType")] = wxT("Any");
+                            break;
+                    }
                     writer.Write( jMsg, MsgString );
                     SendPluginMessage( wxS("OCPN_DRAW_PI"), MsgString );
                     if(g_ReceivedBoundaryTimeMessage != wxEmptyString &&
@@ -323,26 +356,16 @@ public:
                         else if(g_ReceivedBoundaryTimeJSONMsg[wxS("BoundaryType")].AsString() == wxT("Inclusion")) l_BoundaryType = ID_BOUNDARY_INCLUSION;
                         else if(g_ReceivedBoundaryTimeJSONMsg[wxS("BoundaryType")].AsString() == wxT("Neither")) l_BoundaryType = ID_BOUNDARY_NEITHER;
                         if(m_BoundaryType == ID_BOUNDARY_ANY || m_BoundaryType == l_BoundaryType ) {
-                            if(dist1 < 1) {
+                            if(m_bCurrentBoatPos)
+                                m_BoundaryTime = wxTimeSpan();
+                            else
                                 m_BoundaryTime = wxTimeSpan::Seconds(3600.0 * dist / lastfix.Sog);
-                                m_crossinglat1 = lat1, m_crossinglon1 = lon1;
-                                m_crossinglat2 = lat2, m_crossinglon2 = lon2;
-                                if(m_BoundaryTime.GetMinutes() <= m_TimeMinutes) {
-                                    m_MsgBoundaryName = g_ReceivedBoundaryTimeJSONMsg[wxS("Name")].AsString();
-                                    m_MsgBoundaryDescription = g_ReceivedBoundaryTimeJSONMsg[wxS("Description")].AsString();
-                                    m_MsgBoundaryGUID = g_ReceivedBoundaryTimeJSONMsg[wxS("GUID")].AsString();
-                                    g_ReceivedBoundaryDistanceMessage = wxEmptyString;
-                                    return true;
-                                }
-                            }
+                            m_BoundaryName = g_ReceivedBoundaryTimeJSONMsg[wxS("Name")].AsString();
+                            m_BoundaryDescription = g_ReceivedBoundaryTimeJSONMsg[wxS("Description")].AsString();
+                            m_BoundaryGUID = g_ReceivedBoundaryTimeJSONMsg[wxS("GUID")].AsString();
+                            g_ReceivedBoundaryDistanceMessage = wxEmptyString;
+                            return true;
                         }
-                        count = 0;
-                        dist1 /= 2;
-                    } else {
-                        dist += dist1;
-                        lat1 = lat2;
-                        lon1 = lon2;
-                        count++;
                     }
                     g_ReceivedBoundaryTimeMessage = wxEmptyString;
                     //g_ReceivedBoundaryTimeJSONMsg.Clear();
@@ -350,43 +373,86 @@ public:
                 break;
             }
             case DISTANCE: {
-                for(double t = 0; t<360; t+=9) {
-                    double dlat, dlon;
-                    PositionBearingDistanceMercator_Plugin(lastfix.Lat, lastfix.Lon, t,
-                                                        m_Distance, &dlat, &dlon);
+                if(wxIsNaN(lastfix.Lat) || wxIsNaN(lastfix.Lon)) break;
+                int step_count = 0;
+                for(int count = 11; count > 0; count--) {
+                    double t_step;
+                    if(count == 11 || step_count < 6) t_step = 45;      // increase the angle between checks when looking close to boat
+                    else t_step = 360 / (8 + ((32/6) * (step_count - 5)));
+                    step_count++;
                     
-                    wxJSONValue jMsg;
-                    wxJSONWriter writer;
-                    wxString    MsgString;
-                    jMsg[wxS("Source")] = wxS("WATCHDOG_PI");
-                    jMsg[wxT("Type")] = wxT("Request");
-                    jMsg[wxT("Msg")] = wxS("FindPointInAnyBoundary");
-                    jMsg[wxT("MsgId")] = wxS("distance");
-                    jMsg[wxS("lat")] = dlat;
-                    jMsg[wxS("lon")] = dlon;
-                    writer.Write( jMsg, MsgString );
-                    SendPluginMessage( wxS("OCPN_DRAW_PI"), MsgString );
-                    if(g_ReceivedBoundaryDistanceMessage != wxEmptyString &&
-                    g_ReceivedBoundaryDistanceJSONMsg[wxS("MsgId")].AsString() == wxS("distance") &&
-                    g_ReceivedBoundaryDistanceJSONMsg[wxS("Found")].AsBool() == true ) {
-                        // This is our message
-                        int l_BoundaryType = ID_BOUNDARY_ANY;
-                        if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Exclusion")) l_BoundaryType = ID_BOUNDARY_EXCLUSION;
-                        else if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Inclusion")) l_BoundaryType = ID_BOUNDARY_INCLUSION;
-                        else if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Neither")) l_BoundaryType = ID_BOUNDARY_NEITHER;
-                        if(m_BoundaryType == ID_BOUNDARY_ANY || m_BoundaryType == l_BoundaryType ) {
-                            m_MsgBoundaryName = g_ReceivedBoundaryDistanceJSONMsg[wxS("Name")].AsString();
-                            m_MsgBoundaryDescription = g_ReceivedBoundaryDistanceJSONMsg[wxS("Description")].AsString();
-                            m_MsgBoundaryGUID = g_ReceivedBoundaryDistanceJSONMsg[wxS("GUID")].AsString();
-                            g_ReceivedBoundaryDistanceMessage = wxEmptyString;
-                            return true;
+                    for(double t = 0; t<360; t+=t_step) {
+                        if(count == 11) {
+                            lat = lastfix.Lat;
+                            lon = lastfix.Lon;
+                            t = 360; // no point looking around if we are checking current boat position
+                            m_bCurrentBoatPos = true;
+                        } else {
+                            dist = m_Distance / count;      // be more accurate the closer to the boundary the boat is.
+                            PositionBearingDistanceMercator_Plugin(lastfix.Lat, lastfix.Lon, t, dist , &lat, &lon);
+                            m_bCurrentBoatPos = false;
                         }
+
+                        wxJSONValue jMsg;
+                        wxJSONWriter writer;
+                        wxString    MsgString;
+                        jMsg[wxS("Source")] = wxS("WATCHDOG_PI");
+                        jMsg[wxT("Type")] = wxT("Request");
+                        jMsg[wxT("Msg")] = wxS("FindPointInAnyBoundary");
+                        jMsg[wxT("MsgId")] = wxS("distance");
+                        jMsg[wxS("lat")] = lat;
+                        jMsg[wxS("lon")] = lon;
+                        switch (m_BoundaryType) {
+                            case ID_BOUNDARY_ANY:
+                                jMsg[wxS("BoundaryType")] = wxT("Any");
+                                break;
+                            case ID_BOUNDARY_EXCLUSION:
+                                jMsg[wxS("BoundaryType")] = wxT("Exclusion");
+                                break;
+                            case ID_BOUNDARY_INCLUSION:
+                                jMsg[wxS("BoundaryType")] = wxT("Inclusion");
+                                break;
+                            case ID_BOUNDARY_NEITHER:
+                                jMsg[wxS("BoundaryType")] = wxT("Neither");
+                                break;
+                            default:
+                                jMsg[wxS("BoundaryType")] = wxT("Any");
+                                break;
+                        }
+                        writer.Write( jMsg, MsgString );
+                        SendPluginMessage( wxS("OCPN_DRAW_PI"), MsgString );
+                        if(g_ReceivedBoundaryDistanceMessage != wxEmptyString &&
+                        g_ReceivedBoundaryDistanceJSONMsg[wxS("MsgId")].AsString() == wxS("distance") &&
+                        g_ReceivedBoundaryDistanceJSONMsg[wxS("Found")].AsBool() == true ) {
+                            // This is our message
+                            int l_BoundaryType = ID_BOUNDARY_ANY;
+                            if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Exclusion")) l_BoundaryType = ID_BOUNDARY_EXCLUSION;
+                            else if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Inclusion")) l_BoundaryType = ID_BOUNDARY_INCLUSION;
+                            else if(g_ReceivedBoundaryDistanceJSONMsg[wxS("BoundaryType")].AsString() == wxS("Neither")) l_BoundaryType = ID_BOUNDARY_NEITHER;
+                            if(m_BoundaryType == ID_BOUNDARY_ANY || m_BoundaryType == l_BoundaryType ) {
+                                if(m_bCurrentBoatPos)
+                                    m_BoundaryDistance = 0;
+                                else
+                                    m_BoundaryDistance = dist;
+                                m_BoundaryName = g_ReceivedBoundaryDistanceJSONMsg[wxS("Name")].AsString();
+                                m_BoundaryDescription = g_ReceivedBoundaryDistanceJSONMsg[wxS("Description")].AsString();
+                                m_BoundaryGUID = g_ReceivedBoundaryDistanceJSONMsg[wxS("GUID")].AsString();
+                                g_ReceivedBoundaryDistanceMessage = wxEmptyString;
+                                return true;
+                            }
+                        }
+                        g_ReceivedBoundaryDistanceMessage = wxEmptyString;
                     }
-                    g_ReceivedBoundaryDistanceMessage = wxEmptyString;
                 }
                 break;
             }
             case ANCHOR: {
+                if(wxIsNaN(lastfix.Lat) || wxIsNaN(lastfix.Lon)) break;
+                if(m_BoundaryName == wxEmptyString)
+                    m_BoundaryName = g_BoundaryName;
+                if(m_BoundaryDescription == wxEmptyString)
+                    m_BoundaryDescription = g_BoundaryDescription;
+                
                 wxJSONValue jMsg;
                 wxJSONWriter writer;
                 wxString    MsgString;
@@ -405,9 +471,6 @@ public:
                     g_ReceivedBoundaryAnchorJSONMsg[wxS("Found")].AsBool() == false ) {
                     // This is our message
                     g_ReceivedBoundaryDistanceMessage = wxEmptyString;
-                    m_MsgBoundaryName = wxEmptyString;
-                    m_MsgBoundaryDescription = wxEmptyString;
-                    m_MsgBoundaryGUID = wxEmptyString;
                     m_bAnchorOutside = true;
                     return true;
                 }
@@ -416,7 +479,7 @@ public:
                 break;
             }
             case GUARD: {
-                if(g_ReceivedGuardZoneMessage == wxEmptyString) return false;
+                if(wxIsNaN(g_AISTarget.m_dLat) || wxIsNaN(g_AISTarget.m_dLat)) break;
                 wxJSONValue jMsg;
                 wxJSONWriter writer;
                 wxString    MsgString;
@@ -435,9 +498,9 @@ public:
                     g_ReceivedGuardZoneJSONMsg[wxS("Found")].AsBool() == true ) {
                     // This is our message
                     g_ReceivedGuardZoneMessage = wxEmptyString;
-                    m_MsgBoundaryName = g_ReceivedGuardZoneJSONMsg[wxS("Name")].AsString();
-                    m_MsgBoundaryDescription = g_ReceivedGuardZoneJSONMsg[wxS("Description")].AsString();
-                    m_MsgBoundaryGUID = g_ReceivedGuardZoneJSONMsg[wxS("GUID")].AsString();
+                    m_GuardZoneName = g_ReceivedGuardZoneJSONMsg[wxS("Name")].AsString();
+                    m_GuardZoneDescription = g_ReceivedGuardZoneJSONMsg[wxS("Description")].AsString();
+                    m_GuardZoneGUID = g_ReceivedGuardZoneJSONMsg[wxS("GUID")].AsString();
                     return true;
                 }
                 g_ReceivedGuardZoneMessage = wxEmptyString;
@@ -452,60 +515,63 @@ public:
         switch(m_Mode) {
             case TIME:
             {
-                if(m_BoundaryTime.IsNull())
-                    return _("Boundary Time Invalid");
+                wxString l_s;
+                if(m_BoundaryName != wxEmptyString)
+                    l_s = _T(" ") + wxString(_("Boundary name")) + _T(": ") + m_BoundaryName;
+                else
+                    l_s =  _T(" ") + wxString(_("Boundary GUID")) + _T(": ") + m_BoundaryGUID;
 
-                wxString s, fmt(_T(" %d "));
-                int days = m_BoundaryTime.GetDays();
-                if(days > 1)
-                    s = wxString::Format(fmt + _("Days"), days);
-                else {
-                    if(days)
-                        s = wxString::Format(fmt + _("Day"), days);
-                        
-                    int hours = m_BoundaryTime.GetHours();
-                    if(hours > 1)
-                        s += wxString::Format(fmt + _("Hours"), hours);
-                    else {
-                        if(hours)
-                            s += wxString::Format(fmt + _("Hour"), hours);
-
-                        int minutes = m_BoundaryTime.GetMinutes() - 60*hours;
-                        if(minutes > 1)
-                            s += wxString::Format(fmt + _("Minutes"), minutes);
-                        else {
-                            if(minutes)
-                                s += wxString::Format(fmt + _("Minute"), minutes);
-                                
-                            int seconds = m_BoundaryTime.GetSeconds().ToLong() - 60*minutes;
-                            if(seconds > 1)
-                                s += wxString::Format(fmt + _("Seconds"), seconds);
-                            else
-                                s += wxString::Format(fmt + _("Second"), seconds);
-                        }
+                if(m_BoundaryTime.IsNull()) {
+                    if(!m_bCurrentBoatPos) {
+                        l_s = _("No Boundary within ");
+                        l_s << m_TimeMinutes;
+                        l_s += _(" minutes");
                     }
+                    else
+                        l_s.append(_T(" - ") + wxString(_("inside boundary")));
+                } else {
+                    l_s.append(_(" in ") + TimeBoundaryMsg());
                 }
-                return s;
+                return l_s;
+                break;
             }
             case DISTANCE:
             {
-                return wxString::Format(_T(" ") + wxString(_("Distance")) +
-                                        (m_bFired ? _T(" <") : _T(" >")) +
-                                        _T(" %.2f nm"), m_Distance);
+                wxString l_s;
+                if(m_bFired) {
+                    if(m_BoundaryName != wxEmptyString)
+                        l_s = _T(" ") + wxString(_("Boundary name")) + _T(": ") + m_BoundaryName;
+                    else
+                        l_s =  _T(" ") + wxString(_("Boundary GUID")) + _T(": ") + m_BoundaryGUID;
+                    if(m_bCurrentBoatPos)
+                        l_s.append(_T(" - ") + wxString(_("inside boundary")));
+                    else {
+                        l_s.append(_T(" <= "));
+                        l_s << m_BoundaryDistance;
+                        l_s.append(_T(" nm"));
+                    }
+                } else
+                    l_s = wxString::Format(_T(" ") + wxString(_("Distance")) + _T(" >") + _T(" %.2f nm"), m_Distance);
+                return l_s;
                 break;
             } 
             case ANCHOR:
             {
-                return _T(" ") + wxString(_("Anchor")) + _T(" ") +
+                if(m_BoundaryName != wxEmptyString) {
+                    return _T(" ") + wxString(_("Anchor")) + _T(" ") +
                     (m_bAnchorOutside ? _("Outside") : _("Inside")) +
-                    wxString(_T(" boundary ")) + m_BoundaryGUID;
+                    wxString(_T(" boundary ")) + m_BoundaryName;
+                } else {
+                return _T(" ") + wxString(_("Anchor")) + _T(" ") +
+                    (m_bAnchorOutside ? wxString(_("Outside")) : wxString(_("Inside"))) +
+                    wxString(_(" boundary ")) + m_BoundaryGUID;
+                }
                 break;
             }
             case GUARD:
             {
-                return _T(" ") + wxString(_("Guard")) + _T(" ") +
-                (m_bFired ? _("AIS Target in zone") : _("NO AIS tagets found in zone")) +
-                wxString(_T("Zone name  ")) ;
+                return _T(" ") + wxString(_("Guard Zone")) + _T(": ") + m_GuardZoneName + _T(": ") +
+                (m_bGuardZoneFired ? wxString(_("AIS Target in zone")) : wxString(_("NO AIS tagets found in zone")));
                 break;
             }
         }
@@ -520,7 +586,23 @@ public:
         panel->m_rbGuard->SetValue(m_Mode == GUARD);
         panel->m_sTimeMinutes->SetValue(m_TimeMinutes);
         panel->m_tDistance->SetValue(wxString::Format(_T("%f"), m_Distance));
-        panel->m_radioBoxBoundaryType->SetSelection(m_BoundaryType);
+        switch (m_BoundaryType) {
+            case ID_BOUNDARY_ANY:
+                panel->m_radioBoxBoundaryType->SetSelection(0);
+                break;
+            case ID_BOUNDARY_EXCLUSION:
+                panel->m_radioBoxBoundaryType->SetSelection(1);
+                break;
+            case ID_BOUNDARY_INCLUSION:
+                panel->m_radioBoxBoundaryType->SetSelection(2);
+                break;
+            case ID_BOUNDARY_NEITHER:
+                panel->m_radioBoxBoundaryType->SetSelection(3);
+                break;
+            default:
+                panel->m_radioBoxBoundaryType->SetSelection(0);
+                break;
+        }
         panel->m_tBoundaryGUID->SetValue(m_BoundaryGUID);
         panel->m_tGuardZoneGUID->SetValue(m_GuardZoneGUID);
         return panel;
@@ -535,9 +617,29 @@ public:
         else m_Mode = TIME;
         m_TimeMinutes = panel->m_sTimeMinutes->GetValue();
         panel->m_tDistance->GetValue().ToDouble(&m_Distance);
-        m_BoundaryType = panel->m_radioBoxBoundaryType->GetSelection();
+        switch (panel->m_radioBoxBoundaryType->GetSelection()) {
+            case 0:
+                m_BoundaryType = ID_BOUNDARY_ANY;
+                break;
+            case 1:
+                m_BoundaryType = ID_BOUNDARY_EXCLUSION;
+                break;
+            case 2:
+                m_BoundaryType = ID_BOUNDARY_INCLUSION;
+                break;
+            case 3:
+                m_BoundaryType = ID_BOUNDARY_NEITHER;
+                break;
+            default:
+                m_BoundaryType = ID_BOUNDARY_ANY;
+                break;
+        }
         m_BoundaryGUID = panel->m_tBoundaryGUID->GetValue();
         m_GuardZoneGUID = panel->m_tGuardZoneGUID->GetValue();
+        if(g_GuardZoneName != wxEmptyString) {
+            m_GuardZoneName = g_GuardZoneName;
+            g_GuardZoneName = wxEmptyString;
+        }
     }
 
     void LoadConfig(TiXmlElement *e) {
@@ -553,7 +655,11 @@ public:
         e->Attribute("Distance", &m_Distance);
         e->Attribute("BoundaryType", &m_BoundaryType);
         m_BoundaryGUID = wxString::FromUTF8(e->Attribute("BoundaryGUID"));
+        m_BoundaryDescription = wxString::FromUTF8(e->Attribute("BoundaryDescription"));
+        m_BoundaryName = wxString::FromUTF8(e->Attribute("BoundaryName"));
         m_GuardZoneGUID = wxString::FromUTF8(e->Attribute("GuardZoneGUID"));
+        m_GuardZoneName = wxString::FromUTF8(e->Attribute("GuardZoneName"));
+        if(m_GuardZoneName == wxEmptyString) m_GuardZoneName = m_GuardZoneGUID;
     }
 
     void SaveConfig(TiXmlElement *c) {
@@ -577,8 +683,10 @@ public:
         c->SetAttribute("TimeMinutes", m_TimeMinutes);
         c->SetDoubleAttribute("Distance", m_Distance);
         c->SetAttribute("BoundaryGUID", m_BoundaryGUID.mb_str());
+        c->SetAttribute("BoundaryName", m_BoundaryName.mb_str());
+        c->SetAttribute("BoundaryDescription", m_BoundaryDescription.mb_str());
         c->SetAttribute("GuardZoneGUID", m_GuardZoneGUID.mb_str());
-        //        alarm->ConfigItem(read, _T ( "LatLonorBoundary" ), m_rbUse );
+        c->SetAttribute("GuardZoneName", m_GuardZoneName.mb_str());
     }
 
     void Run()
@@ -597,30 +705,192 @@ public:
             }
             
             if(m_bMessageBox) {
-                wxMessageDialog mdlg(GetOCPNCanvasWindow(), Type() + _T(" ") + _("ALARM!") + _T("\n") 
-                                    + _("Name") + _T(": ") + m_MsgBoundaryName + _T("\n")
-                                    + _("Description") + _T(": ") + m_MsgBoundaryDescription + _T("\n")
-                                    + _("GUID") + _T(": ") + m_MsgBoundaryGUID, 
-                                     _("Watchman"), wxOK | wxICON_WARNING);
-                mdlg.ShowModal();
+                switch (m_Mode) {
+                    case TIME: {
+                        wxString  l_s = Type() + _T(" ") + _("ALARM!") + _T("\n") 
+                            + _("Name") + _T(": ") + m_BoundaryName + _T("\n")
+                            + _("Description") + _T(": ") + m_BoundaryDescription + _T("\n")
+                            + _("GUID") + _T(": ") + m_BoundaryGUID + _T("\n");
+                        if(m_bCurrentBoatPos)
+                            l_s.append(wxString(_("inside boundary")));
+                        else
+                            l_s.append(wxString(_("in")) + _T(": ") + TimeBoundaryMsg());
+                        wxMessageDialog mdlg(GetOCPNCanvasWindow(), l_s, _("Watchman"), wxOK | wxICON_WARNING);
+                        mdlg.ShowModal();
+                        break;
+                    }
+                    case DISTANCE: {
+                        wxString l_s = Type() + _T(" ") + _("ALARM!") + _T("\n") 
+                            + _("Name") + _T(": ") + m_BoundaryName + _T("\n")
+                            + _("Description") + _T(": ") + m_BoundaryDescription + _T("\n")
+                            + _("GUID") + _T(": ") + m_BoundaryGUID + _T("\n");
+                        if(m_bCurrentBoatPos)
+                            l_s.append(wxString(_("inside boundary")));
+                        else {
+                            l_s += wxString(_("in")) + _T(": ");
+                            l_s << m_BoundaryDistance;
+                            l_s += _T(" nm");
+                        }
+                        wxMessageDialog mdlg(GetOCPNCanvasWindow(), l_s, _("Watchman"), wxOK | wxICON_WARNING);
+                        mdlg.ShowModal();
+                        break;
+                    }
+                    case ANCHOR: {
+                        wxString l_s = Type() + _T(" ") + _("ALARM!") + _T("\n") 
+                            + _("Outside") + _T("\n")
+                            + _("Name") + _T(": ") + m_BoundaryName + _T("\n")
+                            + _("Description") + _T(": ") + m_BoundaryDescription + _T("\n")
+                            + _("GUID") + _T(": ") + m_BoundaryGUID;
+                        wxMessageDialog mdlg(GetOCPNCanvasWindow(), l_s, _("Watchman"), wxOK | wxICON_WARNING);
+                        mdlg.ShowModal();
+                        break;
+                    }
+                    case GUARD: {
+                        wxString l_s = Type() + _T(" ") + _("ALARM!") + _T("\n") 
+                            + _("Guard Zone Name") + _T(": ") + m_GuardZoneName + _T("\n")
+                            + _("Description") + _T(": ") + m_GuardZoneDescription + _T("\n")
+                            + _("GUID") + _T(": ") + m_GuardZoneGUID + _T("\n") 
+                            + _("Ship Name") + _T(": ") + g_AISTarget.m_sShipName + _T("\n")
+                            + _("Ship MMSI") + _T(": ") + wxString::Format(_T("%i"), g_AISTarget.m_iMMSI);
+                            wxMessageDialog mdlg(GetOCPNCanvasWindow(), l_s, _("Watchman"), wxOK | wxICON_WARNING);
+                            mdlg.ShowModal();
+                            break;
+                    }
+                }
             }
     }
     
+    void OnAISMessage (int iAlarmIndex) 
+    {
+        bool l_bFoundMMSI = false;
+        AISMMSITIME l_AISMsgInfo;
+        
+        if(m_bEnabled) {
+            std::list<AISMMSITIME>::iterator it = AISMsgInfoList.begin();
+            while(it != AISMsgInfoList.end()) {
+                if((wxDateTime::Now() - it->MsgTime).GetSeconds() > m_iRepeatSeconds) {
+                    AISMsgInfoList.erase(it);
+                    it = AISMsgInfoList.begin();
+                    continue;
+                } else if(it->MMSI == g_AISTarget.m_iMMSI) {
+                    l_bFoundMMSI = true;
+                    break;
+                } else if(it == AISMsgInfoList.end()) break;
+                else {
+                    it++;
+                }
+            }
+            
+            if(Test()) {  
+                wxDateTime now = wxDateTime::Now();
+                if(l_bFoundMMSI) {
+                    if((now - it->MsgTime).GetSeconds() > m_iRepeatSeconds && m_bRepeat) {
+                        AISMsgInfoList.erase(it);
+                        l_AISMsgInfo.MMSI = g_AISTarget.m_iMMSI;
+                        l_AISMsgInfo.MsgTime = now;
+                        AISMsgInfoList.push_back(l_AISMsgInfo);
+                        Run();
+                    }
+                } else {
+                    l_AISMsgInfo.MMSI = g_AISTarget.m_iMMSI;
+                    l_AISMsgInfo.MsgTime = wxDateTime::Now();
+                    AISMsgInfoList.push_back(l_AISMsgInfo);
+                    Run();
+                }
+            }
+            
+            if(AISMsgInfoList.empty()) {
+                if(m_bAutoReset) {
+                    m_bGuardZoneFired = false;
+                    m_bFired = false;
+                }
+            }
+            else {
+                m_bGuardZoneFired = true;
+                m_bFired = true;
+            }
+            if(g_watchdog_pi->m_WatchdogDialog && g_watchdog_pi->m_WatchdogDialog->IsShown())
+                g_watchdog_pi->m_WatchdogDialog->UpdateStatus(iAlarmIndex);
+            
+        }
+    }
+
+    void OnTimer( wxTimerEvent &tEvent )
+    {
+        switch (m_Mode) {
+            case TIME:
+            case DISTANCE:
+            case ANCHOR:
+                Alarm::OnTimer( tEvent );
+                break;
+            case GUARD:
+                if(g_watchdog_pi->m_WatchdogDialog && g_watchdog_pi->m_WatchdogDialog->IsShown())
+                    for(unsigned int i=0; i<Alarm::s_Alarms.size(); i++)
+                        if(Alarm::s_Alarms[i] == this)
+                            g_watchdog_pi->m_WatchdogDialog->UpdateStatus(i);
+                break;
+        }
+        return;
+    }
+    
+    wxString TimeBoundaryMsg()
+    {
+        wxString s, fmt(_T(" %d "));
+        int days = m_BoundaryTime.GetDays();
+        if(days > 1)
+            s = wxString::Format(fmt + _("Days"), days);
+        else {
+            if(days)
+                s = wxString::Format(fmt + _("Day"), days);
+            
+            int hours = m_BoundaryTime.GetHours();
+            if(hours > 1)
+                s += wxString::Format(fmt + _("Hours"), hours);
+            else {
+                if(hours)
+                    s += wxString::Format(fmt + _("Hour"), hours);
+                
+                int minutes = m_BoundaryTime.GetMinutes() - 60*hours;
+                if(minutes > 1)
+                    s += wxString::Format(fmt + _("Minutes"), minutes);
+                else {
+                    if(minutes)
+                        s += wxString::Format(fmt + _("Minute"), minutes);
+                    
+                    int seconds = m_BoundaryTime.GetSeconds().ToLong() - 60*minutes;
+                    if(seconds > 1)
+                        s += wxString::Format(fmt + _("Seconds"), seconds);
+                    else
+                        s += wxString::Format(fmt + _("Second"), seconds);
+                }
+            }
+        }
+        return s;
+    }
     
 private:
-    double m_crossinglat1, m_crossinglon1;
-    double m_crossinglat2, m_crossinglon2;
-    wxTimeSpan m_BoundaryTime;
 
     enum Mode { TIME, DISTANCE, ANCHOR, GUARD } m_Mode;
-    double m_TimeMinutes, m_Distance;
-    int m_BoundaryType;
-    bool m_bAnchorOutside;
-    wxString m_BoundaryGUID;
-    wxString m_GuardZoneGUID;
-    wxString m_MsgBoundaryName;
-    wxString m_MsgBoundaryDescription;
-    wxString m_MsgBoundaryGUID;
+    double      m_TimeMinutes, m_Distance;
+    wxTimeSpan  m_BoundaryTime;
+    double      m_BoundaryDistance;
+    int         m_BoundaryType;
+    bool        m_bAnchorOutside;
+    wxString    m_BoundaryGUID;
+    wxString    m_BoundaryName;
+    wxString    m_BoundaryDescription;
+    wxString    m_GuardZoneName;
+    wxString    m_GuardZoneDescription;
+    wxString    m_GuardZoneGUID;
+    bool        m_bGuardZoneFired;
+    bool        m_bCurrentBoatPos;
+    
+    struct AISMMSITIME {
+        int MMSI;
+        wxDateTime MsgTime;
+    };
+    
+    std::list<AISMMSITIME> AISMsgInfoList;
 };
 
 class NMEADataAlarm : public Alarm
@@ -1030,9 +1300,9 @@ public:
         else {
             wxString fmt(_T("%.1f"));
             double knots = Knots();
-            s = wxString::Format(fmt + (g_watchdog_pi->m_sog < knots ?
+            s = wxString::Format(fmt + (g_watchdog_pi->LastFix().Sog < m_Speed ?
                                         _T(" < ") : _T(" > "))
-                                 + fmt, g_watchdog_pi->m_sog, knots);
+                                 + fmt, g_watchdog_pi->LastFix().Sog, m_Speed);
         }
 
         return s;
@@ -1060,9 +1330,9 @@ public:
 
     bool Test() {
         if(m_Mode == UNDERSPEED)
-            return g_watchdog_pi->m_sog < Knots();
+            return m_Speed > Knots();
         else
-            return g_watchdog_pi->m_sog > Knots();
+            return m_Speed < Knots();
     }
 
     wxWindow *OpenPanel(wxWindow *parent) {
@@ -1080,8 +1350,8 @@ public:
 
     void LoadConfig(TiXmlElement *e) {
         const char *mode = e->Attribute("Mode");
-        if(!strcasecmp(mode, "Underspeed")) m_Mode = UNDERSPEED;
-        else if(!strcasecmp(mode, "Overspeed")) m_Mode = OVERSPEED;
+        if(strcasecmp(mode, "Underspeed")) m_Mode = UNDERSPEED;
+        else if(strcasecmp(mode, "Overspeed")) m_Mode = OVERSPEED;
         else wxLogMessage(_T("Watchdog: ") + wxString(_("invalid Speed mode")) + _T(": ")
                          + wxString::FromUTF8(mode));
 
@@ -1100,7 +1370,8 @@ public:
 
 private:
     double Knots() {
-        return g_watchdog_pi->m_sog;
+        if(isnan(g_watchdog_pi->LastFix().Sog)) return 0.;
+        else return g_watchdog_pi->LastFix().Sog;
     }
 
     enum Mode { UNDERSPEED, OVERSPEED } m_Mode;
