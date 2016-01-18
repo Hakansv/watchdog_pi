@@ -30,8 +30,8 @@
 #include <wx/panel.h>
 #include <wx/radiobox.h>
 #include <wx/statline.h>
-#include <wx/choice.h>
 #include <wx/slider.h>
+#include <wx/choice.h>
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -202,6 +202,7 @@ class BoundaryPanel : public wxPanel
 		wxButton* m_button12;
 		wxStaticText* m_staticText321;
 		wxStaticLine* m_staticline2;
+		wxStaticText* m_staticTextCheckFrequency;
 		wxStaticText* m_staticText39122;
 		
 		// Virtual event handlers, overide them in your derived class
@@ -219,6 +220,7 @@ class BoundaryPanel : public wxPanel
 		wxTextCtrl* m_tBoundaryGUID;
 		wxRadioButton* m_rbGuard;
 		wxTextCtrl* m_tGuardZoneGUID;
+		wxSlider* m_sliderCheckFrequency;
 		
 		BoundaryPanel( wxWindow* parent, wxWindowID id = wxID_ANY, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxTAB_TRAVERSAL ); 
 		~BoundaryPanel();
