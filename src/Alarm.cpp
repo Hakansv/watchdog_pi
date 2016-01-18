@@ -257,7 +257,7 @@ enum
 class BoundaryAlarm : public Alarm
 {
 public:
-    BoundaryAlarm() : Alarm(false, 5 /* seconds */),
+    BoundaryAlarm() : Alarm(true, 3 /* seconds */),
                       m_Mode(TIME),
                       m_TimeMinutes(20),
                       m_Distance(3),
@@ -266,6 +266,8 @@ public:
                       m_bGuardZoneFired(false)
         {
             g_GuardZoneName = wxEmptyString;
+            m_baTimer.Connect(wxEVT_TIMER, wxTimerEventHandler( BoundaryAlarm::OnFlashTimer ), NULL, this);
+            m_baTimer.Start(1000, wxTIMER_CONTINUOUS);
         }
 
     wxString Type() { 
@@ -434,6 +436,9 @@ public:
                                     m_BoundaryDistance = 0;
                                 else
                                     m_BoundaryDistance = dist;
+                                m_BoundaryDirection = t;
+                                m_BoundaryAtLat = lat;
+                                m_BoundaryAtLon = lon;
                                 m_BoundaryName = g_ReceivedBoundaryDistanceJSONMsg[wxS("Name")].AsString();
                                 m_BoundaryDescription = g_ReceivedBoundaryDistanceJSONMsg[wxS("Description")].AsString();
                                 m_BoundaryGUID = g_ReceivedBoundaryDistanceJSONMsg[wxS("GUID")].AsString();
@@ -578,6 +583,22 @@ public:
         return _T("");
     }
 
+    void Render(wdDC &dc, PlugIn_ViewPort &vp) {
+        if(m_bFired) {
+            PlugIn_Position_Fix_Ex lastfix = g_watchdog_pi->LastFix();
+            wxPoint r1, r2;
+
+            GetCanvasPixLL(&vp, &r1, lastfix.Lat, lastfix.Lon);
+            GetCanvasPixLL(&vp, &r2, m_BoundaryAtLat, m_BoundaryAtLon);
+            if(m_bHighlight) {
+                dc.SetPen(wxPen(*wxRED, 3));
+            } else {
+                dc.SetPen(wxPen(*wxLIGHT_GREY, 2));
+            }
+            dc.DrawLine( r1.x, r1.y, r2.x, r2.y );
+        }
+    }
+    
     wxWindow *OpenPanel(wxWindow *parent) {
         BoundaryPanel *panel = new BoundaryPanel(parent);
         panel->m_rbTime->SetValue(m_Mode == TIME);
@@ -833,7 +854,25 @@ public:
         return;
     }
     
-    wxString TimeBoundaryMsg()
+    void OnFlashTimer( wxTimerEvent &tEvent )
+    {
+        if(m_bFired) {
+            switch (m_Mode) {
+                case TIME:
+                    break;
+                case DISTANCE:
+                    m_bHighlight = (m_bHighlight ? false : true);
+                    RequestRefresh(GetOCPNCanvasWindow());
+                    break;
+                case ANCHOR:
+                    break;
+                case GUARD:
+                    break;
+            }
+        }
+    }
+    
+        wxString TimeBoundaryMsg()
     {
         wxString s, fmt(_T(" %d "));
         int days = m_BoundaryTime.GetDays();
@@ -874,6 +913,9 @@ private:
     double      m_TimeMinutes, m_Distance;
     wxTimeSpan  m_BoundaryTime;
     double      m_BoundaryDistance;
+    int         m_BoundaryDirection;
+    double      m_BoundaryAtLat;
+    double      m_BoundaryAtLon;
     int         m_BoundaryType;
     bool        m_bAnchorOutside;
     wxString    m_BoundaryGUID;
@@ -884,6 +926,7 @@ private:
     wxString    m_GuardZoneGUID;
     bool        m_bGuardZoneFired;
     bool        m_bCurrentBoatPos;
+    bool        m_bHighlight;
     
     struct AISMMSITIME {
         int MMSI;
@@ -891,6 +934,9 @@ private:
     };
     
     std::list<AISMMSITIME> AISMsgInfoList;
+    
+    wxTimer    m_baTimer;
+    
 };
 
 class NMEADataAlarm : public Alarm
