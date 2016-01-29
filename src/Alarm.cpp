@@ -879,7 +879,7 @@ public:
         }
     }
     
-        wxString TimeBoundaryMsg()
+    wxString TimeBoundaryMsg()
     {
         wxString s, fmt(_T(" %d "));
         int days = m_BoundaryTime.GetDays();
@@ -1644,7 +1644,7 @@ void Alarm::OnTimer( wxTimerEvent & )
 
     int enabled = pConf->Read ( _T ( "Enabled" ), 1L );
 
-    if(enabled == 2 && !g_watchdog_pi->m_WatchdogDialog)
+    if(enabled == 2 && !g_watchdog_pi->m_bWatchdogDialogShown)
         enabled = 0;
 
     if(enabled == 3 && (!g_watchdog_pi->m_WatchdogDialog || !g_watchdog_pi->m_WatchdogDialog->IsShown()))
@@ -1664,7 +1664,10 @@ void Alarm::OnTimer( wxTimerEvent & )
                 m_LastAlarmTime = now;
             }
         } else if(m_bAutoReset)
-            m_bFired = false;
+            if(m_bFired) {
+                m_bFired = false;
+                RequestRefresh(GetOCPNCanvasWindow());
+            }
     }
 
     if(g_watchdog_pi->m_WatchdogDialog && g_watchdog_pi->m_WatchdogDialog->IsShown())

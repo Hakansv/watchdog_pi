@@ -1,0 +1,577 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: opencpn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-25 18:12+1100\n"
+"PO-Revision-Date: 2016-01-24 18:41+0100\n"
+"Last-Translator: NAV <rider2@kpnmail.nl>\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Crowdin-Project: opencpn\n"
+"X-Crowdin-Language: nl\n"
+"X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
+#
+msgid " boundary "
+msgstr "gebiedsgrens"
+#
+msgid " does not exist"
+msgstr "bestaat niet"
+#
+msgid " in "
+msgstr "in "
+#
+msgid " minutes"
+msgstr " minuten"
+#
+msgid "$GPGGA"
+msgstr "$GPGGA"
+#
+msgid "1"
+msgstr "1"
+#
+msgid "3"
+msgstr "3"
+#
+msgid "AIS Target in zone"
+msgstr "AIS object binnen zone"
+#
+msgid "ALARM!"
+msgstr "ALARM!"
+#
+msgid "About Author"
+msgstr "Over de auteur"
+#
+msgid "Action"
+msgstr "Alarmactie"
+#
+msgid "Alarm Action"
+msgstr "Alarmacties"
+#
+msgid "Alarms"
+msgstr "Alarmen"
+#
+msgid "Anchor"
+msgstr "Ankerpositie"
+#
+msgid "Anchor Watch"
+msgstr "Ankerwacht"
+#
+msgid "Any"
+msgstr "elk"
+#
+msgid "Auto Reset"
+msgstr "Automatisch terugstellen"
+#
+msgid "Automatically Reset"
+msgstr "Automatisch terugstellen"
+#
+msgid "Automatically syncronize to the boat whenever enabled"
+msgstr "Ankerpositie gelijk aan vaartuigpositie indien ingeschakeld"
+#
+msgid "Boundary"
+msgstr "Gebiedsgrens"
+#
+msgid "Boundary Distance"
+msgstr "Afstand tot gebiedsgrens"
+#
+msgid "Boundary GUID"
+msgstr "GUID gebiedsgrens"
+#
+msgid "Boundary Time"
+msgstr "Tijd gebiedsgrens"
+#
+msgid "Boundary Type"
+msgstr "Type gebied"
+#
+msgid "Boundary name"
+msgstr "Naam gebiedsgrens"
+#
+msgid ""
+"Check Frequency  (Secs)\n"
+"(Note: not Guard Zone)"
+msgstr ""
+"Check frequentie (sec)\n"
+"(niet voor bewakingszone) "
+#
+msgid "Close"
+msgstr "Sluiten"
+#
+msgid "Command"
+msgstr "Opdracht"
+#
+msgid "Configuration"
+msgstr "Instellingen"
+#
+msgid "Course"
+msgstr "Koersafwijkin"
+#
+msgid "Current Course"
+msgstr "Gebruik huidige koers"
+#
+msgid "Day"
+msgstr "dag"
+#
+msgid "Days"
+msgstr "dagen"
+#
+msgid "Deadman"
+msgstr "'Deadman'"
+#
+msgid "Degrees"
+msgstr "graden"
+#
+msgid "Delete"
+msgstr "Verwijderen"
+#
+msgid "Delete All"
+msgstr "Alles verwijderen"
+#
+msgid "Description"
+msgstr "Beschrijving"
+#
+msgid "Disable All Alarms"
+msgstr "Alle alarmen uitschakelen"
+#
+msgid "Distance"
+msgstr "Afstand"
+#
+msgid "Edit"
+msgstr "Bewerken"
+#
+msgid "Edit Alarm"
+msgstr "Alarm bewerken"
+#
+msgid "Enable All Alarms"
+msgstr "Alle alarmen inschakelen"
+#
+msgid "Enabled after first time Watchdog Dialog is visible"
+msgstr "Ingeschakeld vanaf eerste opening dialoogvenster"
+#
+msgid "Enabled only if Watchdog Dialog is visible"
+msgstr "Alleen ingeschakeld als dialoogvenster zichtbaar is"
+#
+msgid "Error!"
+msgstr "Fout!"
+#
+msgid "Exclusion"
+msgstr "te ontwijken"
+#
+msgid "Failed to execute command: "
+msgstr "Kon opdracht niet uitvoeren:"
+#
+msgid "Failed to read"
+msgstr "Kon niet lezen"
+#
+msgid "GPS course crosses boundary in <"
+msgstr "Gegist traject kruist gebiedsgrens over <"
+#
+msgid "GPS course crosses land in <"
+msgstr "Gegist traject kruist kustlijn over <"
+#
+msgid "GPS fix is <"
+msgstr "GPS-positie is <"
+#
+msgid "GUID"
+msgstr "GUID"
+#
+msgid "General Setup"
+msgstr "Algemene instellingen"
+#
+msgid "Get Boundary GUID"
+msgstr "Verkrijg GUID van gebied"
+#
+msgid "Graphical overlay displays bounding anchor area"
+msgstr "Grafische overlay toont grenzen ankergebied"
+#
+msgid "Graphical overlay displays circle with radius of this speed"
+msgstr "Grafische overlay toont cirkel met straal van deze vaart"
+#
+msgid "Graphical overlay displays lines bounding valid courses"
+msgstr "Grafische overlay toont grenslijnen van geldige koersen"
+#
+msgid ""
+"Graphical overlay for GPS fix displays line from boat to location of the "
+"point in the found boundary"
+msgstr ""
+"Grafische overlay toont gegist traject van vaartuig naar de gevonden "
+"gebiedsgrens"
+#
+msgid ""
+"Graphical overlay for time displays line from boat to location of land "
+"crossing"
+msgstr ""
+"Grafische overlay toont gegist traject van vaartuig naar landaanlooppunt"
+#
+msgid "Graphics Enabled"
+msgstr "'Graphics' ingeschakeld"
+#
+msgid "Guard Zone"
+msgstr "Bewakingszone"
+#
+msgid "Guard Zone GUID"
+msgstr "GUID bewakingszone"
+#
+msgid "Guard Zone Name"
+msgstr "Naam bewakingszone"
+#
+msgid "Hour"
+msgstr "uur"
+#
+msgid "Hours"
+msgstr "uren"
+#
+msgid "Inclusion"
+msgstr "beperkend"
+#
+msgid "Information"
+msgstr "Informatie"
+#
+msgid "Inside"
+msgstr "Binnen"
+#
+msgid "LandFall"
+msgstr "Landaanloop"
+#
+msgid "LandFall Time Invalid"
+msgstr "Landaanlooptijd is ongeldig"
+#
+msgid "Landfall"
+msgstr "Landaanloop"
+#
+msgid ""
+"Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
+"data.)\n"
+"Consider installing the highest resolution database for best accuracy."
+msgstr ""
+"Landaanloopdetectie gebruikt globale kustlijngegevens (gshhs).\n"
+"Overweeg het installeren van de database met de hoogste resolutie van "
+"kustlijnen voor meer nauwkeurigheid en veiligheid."
+#
+msgid "Latitude"
+msgstr "Breedte"
+#
+msgid "Longitude"
+msgstr "Lengte"
+#
+msgid "Message Box"
+msgstr "Berichtvenster"
+#
+msgid "MessageBox"
+msgstr "Berichtvenster"
+#
+msgid "Minute"
+msgstr "minuut"
+#
+msgid "Minutes"
+msgstr "minuten"
+#
+msgid ""
+"Most alarms should be self-explanatory\n"
+"Normally a sound is played, however you can execute any command you like, "
+"eg:  \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
+"Messagebox may be useful to interrupt other applications (like a movie "
+"player)\n"
+"Automatically Reset will reset the alarm once it is no longer triggered, and "
+"it may be triggered again later."
+msgstr ""
+"De meeste alarmen spreken vanzelf. Standaard wordt een alarmgeluid gegeven, "
+"maar u kunt elke opdracht uitvoeren die u wilt. Een voorbeeld is: \"aplay/usr/"
+"local/share/opencpn/sounds/2bells.wav\".\n"
+"\n"
+"Het berichtenvenster kan handig zijn om andere applicaties te onderbreken "
+"(zoals met een videospeler).\n"
+"\n"
+"Automatisch terugstellen stopt het alarm als de aanleiding wegvalt; het alarm "
+"kan later weer worden gegeven."
+#
+msgid "NMEA Data"
+msgstr "NMEA-gegevens"
+#
+msgid "NO AIS tagets found in zone"
+msgstr "Geen AIS object binnen zone"
+#
+msgid "Name"
+msgstr "Naam"
+#
+msgid "Neither"
+msgstr "algemeen"
+#
+msgid "New"
+msgstr "Nieuw"
+#
+msgid "New Alarm"
+msgstr "Nieuw alarm"
+#
+msgid "No Boundary within "
+msgstr "Geen gebiedsgrens binnen "
+#
+msgid "No User Activity for"
+msgstr "Geen gebruikersactiviteit gedurende"
+#
+msgid "Off Course By >"
+msgstr "Koersafwijking van >"
+#
+msgid "Options"
+msgstr "Opties"
+#
+msgid "Outside"
+msgstr "Buiten"
+#
+msgid "Over Speed"
+msgstr "oversnelheid"
+#
+msgid "OverSpeed"
+msgstr "Oversnelheid"
+#
+msgid "Port"
+msgstr "BB"
+#
+msgid "Port or Starboard"
+msgstr "BB of SB"
+#
+msgid "Radius"
+msgstr "Straal"
+#
+msgid "Repeat"
+msgstr "Herhalen"
+#
+msgid "Repeat Alarm after seconds"
+msgstr "Herhaal alarm na (seconden)"
+#
+msgid "Require following NMEA sentences:"
+msgstr "Vereis de volgende NMEA-berichten:"
+#
+msgid "Reset"
+msgstr "Reset"
+#
+msgid "Second"
+msgstr "seconde"
+#
+msgid "Seconds"
+msgstr "seconden"
+#
+msgid ""
+"Seconds to Average\n"
+"SOG over"
+msgstr ""
+"Seconden middeling\n"
+"SOG over"
+#
+msgid "Select a file"
+msgstr "Selecteer een bestand"
+#
+msgid "Ship MMSI"
+msgstr "Scheep's MMSI"
+#
+msgid "Ship Name"
+msgstr "Scheepsnaam"
+#
+msgid "Sound"
+msgstr "Geluid"
+#
+msgid "Speed"
+msgstr "Vaart"
+#
+msgid "Speed Alarm"
+msgstr "Vaartalarm"
+#
+msgid "Speed over ground"
+msgstr "Vaart over de grond"
+#
+msgid "Starboard"
+msgstr "SB"
+#
+msgid "Status"
+msgstr "Status"
+#
+msgid "Sync to Boat"
+msgstr "Gebruik vaartuigpositie"
+#
+msgid "Test"
+msgstr "Test"
+#
+msgid "Time"
+msgstr "tijd"
+#
+msgid "Type"
+msgstr "Type"
+#
+msgid "Under Speed"
+msgstr "ondersnelheid"
+#
+msgid "UnderSpeed"
+msgstr "Ondersnelheid"
+#
+msgid "WatchDog"
+msgstr "'WatchDog'"
+#
+msgid "Watchdog"
+msgstr "'Watchdog'"
+#
+msgid "Watchdog Configuration"
+msgstr "'Watchdog' informatie"
+#
+msgid "Watchdog Information"
+msgstr "'Watchdog' informatie"
+#
+msgid "Watchdog PlugIn for OpenCPN"
+msgstr "Watchdog PlugIn voor OpenCPN"
+#
+msgid ""
+"Watchdog PlugIn for OpenCPN\n"
+"Alarm user of changing conditions."
+msgstr ""
+"Watchdog PlugIn voor OpenCPN\n"
+"Geeft alarm bij veranderende omstandigheden."
+#
+msgid "Watchman"
+msgstr "Wachtsman"
+#
+msgid "With Course Of"
+msgstr "Bij koers van"
+#
+msgid "at least every"
+msgstr "ten minste elke"
+#
+msgid "bAutoSync"
+msgstr "bAutoSync"
+#
+msgid "course"
+msgstr "koers"
+#
+msgid "degrees(s)"
+msgstr "graden"
+#
+msgid "failed to save"
+msgstr "kon niet opslaan"
+#
+msgid "in"
+msgstr "in"
+#
+msgid "inside boundary"
+msgstr "binnen gebiedsgrens"
+#
+msgid "invalid Boundary mode"
+msgstr "ongeldige gebiedsgrensmodus"
+#
+msgid "invalid Course mode"
+msgstr "ongeldige koersmodus"
+#
+msgid "invalid LandFall mode"
+msgstr "ongeldige landaanloopmodus"
+#
+msgid "invalid Speed mode"
+msgstr "ongeldige vaartmodus"
+#
+msgid "invalid alarm type"
+msgstr "ongeldig alarmtype"
+#
+msgid "knots"
+msgstr "knopen"
+#
+msgid "meter(s)"
+msgstr "meter"
+#
+msgid "meters"
+msgstr "meter"
+#
+msgid "minute(s)"
+msgstr "minuten"
+#
+msgid "minutes"
+msgstr "minuten"
+#
+msgid ""
+"nm from boundary\n"
+"(any direction)"
+msgstr ""
+"zeemijl van gebiedsgrens\n"
+"(alle richtingen)"
+#
+msgid ""
+"nm from coastline\n"
+"(any direction)"
+msgstr ""
+"zeemijl van kustlijn\n"
+"(alle richtingen)"
+#
+msgid "radius"
+msgstr "straal"
+#
+msgid "second(s)"
+msgstr "seconde(n)"
+#
+msgid "seconds"
+msgstr "seconden"
+#
+#~ msgid "12"
+#~ msgstr "12"
+#
+#~ msgid "Course Error"
+#~ msgstr "Koersafwijking"
+#
+#~ msgid "Deadman activity"
+#~ msgstr "'Deadman' activiteit"
+#
+#~ msgid "Depth"
+#~ msgstr "Diepte"
+#
+#~ msgid "Disabled"
+#~ msgstr "Gedeactiveerd"
+#
+#~ msgid "Distance to Anchor"
+#~ msgstr "Afstand tot ankerpositie"
+#
+#~ msgid "Graphical Overlay Display"
+#~ msgstr "Grafische schermoverlay"
+#
+#~ msgid "LandFall not Detected"
+#~ msgstr "Geen landaanloop gedetecteerd"
+#
+#~ msgid "Last NMEA Updates"
+#~ msgstr "Laatste NMEA-update"
+#
+#~ msgid "No NMEA Messages"
+#~ msgstr "Geen NMEA-berichten"
+#
+#~ msgid "No Updates"
+#~ msgstr "Geen updates"
+#
+#~ msgid "Not implemented"
+#~ msgstr "Niet geïmplementeerd"
+#
+#~ msgid "Off Course Starboard"
+#~ msgstr "Koersafwijking SB"
+#
+#~ msgid "Preferences"
+#~ msgstr "Voorkeuren"
+#
+#~ msgid "Second Deadman"
+#~ msgstr "Tweede 'Deadman'"
+#
+#~ msgid "Second Deadman activity"
+#~ msgstr "Tweede 'Deadman'-activiteit"
+#
+#~ msgid "Separate Port and Starboard Alarms"
+#~ msgstr "Afzonderlijke BB- en SB-alarmen"
+#
+#~ msgid ""
+#~ "Settings the same as Off Course Port, with different Alarm Actions "
+#~ "possible."
+#~ msgstr ""
+#~ "Instellingen hetzelfde als Koersafwijking BB; verschillende alarmacties "
+#~ "mogelijk."
+#
+#~ msgid "Speed over ground >"
+#~ msgstr "Vaart over grond >"
+#
+#~ msgid "Watchdog Preferences"
+#~ msgstr "'Watchdog' voorkeuren"
+#
+#~ msgid "degrees(s) Starboard"
+#~ msgstr "graden SB"
