@@ -5,28 +5,28 @@ msgstr ""
 "POT-Creation-Date: 2016-01-30 09:18+1100\n"
 "PO-Revision-Date: 2016-02-12 17:05-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
+"Language-Team: Finnish\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
 msgid " boundary "
-msgstr " límite "
+msgstr " raja "
 #
 msgid " does not exist"
-msgstr " ¡no existe!"
+msgstr " ei ole olemassa"
 #
 msgid " in "
-msgstr " en "
+msgstr " sisällä "
 #
 msgid " minutes"
-msgstr " minutos"
+msgstr " minuuttia"
 #
 msgid "$GPGGA"
 msgstr "$GPGGA"
@@ -38,241 +38,237 @@ msgid "3"
 msgstr "3"
 #
 msgid "AIS Target in zone"
-msgstr "Blanco AIS en la zona"
+msgstr "AIS kohde alueella"
 #
 msgid "ALARM!"
-msgstr "¡ALARMA!"
+msgstr "HÄLYTYS!"
 #
 msgid "About Author"
-msgstr "Sobre el autor"
+msgstr "Tietoa Tekijästä"
 #
 msgid "Action"
-msgstr "Acción"
+msgstr "Toiminto"
 #
 msgid "Alarm Action"
-msgstr "Acciones de Alarma"
+msgstr "Hälytys toiminto"
 #
 msgid "Alarms"
-msgstr "Alarmas"
+msgstr "Hälytykset"
 #
 msgid "Anchor"
-msgstr "Fondeo"
+msgstr "Ankkuri"
 #
 msgid "Anchor Watch"
-msgstr "Garreo"
+msgstr "Ankkuri vahti"
 #
 msgid "Any"
-msgstr "Cualquiera"
+msgstr "Mikä tahansa"
 #
 msgid "Auto Reset"
-msgstr "Auto Reset"
+msgstr "Automaattinen kuittaus"
 #
 msgid "Automatically Reset"
-msgstr "Reiniciar automáticamente"
+msgstr "Automaattinen nollaus"
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Sincronización automática con el barco cuando se activa"
+msgstr "Automaattisesti synkronoi veneeseen, kun mahdollista"
 #
 msgid "Boundary Alarm"
-msgstr "Alarma de límite"
+msgstr "Raja hälytys"
 #
 msgid "Boundary Distance"
-msgstr "Distancia a límite"
+msgstr "Raja etäisyys"
 #
 msgid "Boundary GUID"
-msgstr "GUID del Límite"
+msgstr "Rajan GUID"
 #
 msgid "Boundary Time"
-msgstr "Tiempo hasta límite"
+msgstr "Raja aika"
 #
 msgid "Boundary Type"
-msgstr "Tipo de límite"
+msgstr "Reunan tyyppi"
 #
 msgid "Boundary name"
-msgstr "Nombre del límite"
+msgstr "Rajan nimi"
 #
 msgid ""
 "Check Frequency  (Secs)\n"
 "(Note: not Guard Zone)"
 msgstr ""
-"Frecuencia de comprobaciones (seg)\n"
-"(Nota: no en zona de guardia)"
+"Tarkista taajuus (s) \n"
+" (Huom: ei rajavyöhyke)"
 #
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Sulje"
 #
 msgid "Command"
-msgstr "Comando"
+msgstr "Komento"
 #
 msgid "Configuration"
-msgstr "Configuración"
+msgstr "Kokoonpano"
 #
 msgid "Course"
-msgstr "Rumbo"
+msgstr "Kurssi"
 #
 msgid "Current Course"
-msgstr "Rumbo actual"
+msgstr "Nykyinen kurssi"
 #
 msgid "Day"
-msgstr "Día"
+msgstr "Päivä"
 #
 msgid "Days"
-msgstr "Días"
+msgstr "Päivät"
 #
 msgid "Deadman"
-msgstr "Inactividad"
+msgstr "Pitoarvo"
 #
 msgid "Degrees"
-msgstr "Grados"
+msgstr "Astetta"
 #
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Poista"
 #
 msgid "Delete All"
-msgstr "Borrar Todo"
+msgstr "Poista kaikki"
 #
 msgid "Description"
-msgstr "Descripción"
+msgstr "Kuvaus"
 #
 msgid "Disable All Alarms"
-msgstr "Desactivar todas las alarmas"
+msgstr "Estä kaikki hälytykset"
 #
 msgid "Distance"
-msgstr "Distancia"
+msgstr "Etäisyys"
 #
 msgid "Edit"
-msgstr "Editar"
+msgstr "Muokkaa"
 #
 msgid "Edit Alarm"
-msgstr "Editar alarma"
+msgstr "Muokkaa hälytystä"
 #
 msgid "Enable All Alarms"
-msgstr "Activar todas las alarmas"
+msgstr "Salli kaikki hälytykset"
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
-msgstr ""
-"Activado tras la primera vez que sea visible el cuadro de diálogo de Watchdog"
+msgstr "Käyttöön, kun ensimmäistä kertaa Watchdog-valintaikkuna on näkyvissä"
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Activar solo si el cuadro de diálogo de Watchdog es visible"
+msgstr "Käytössä vain, jos Watchdog-valintaikkuna on näkyvissä"
 #
 msgid "Error!"
-msgstr "¡Error!"
+msgstr "Virhe!"
 #
 msgid "Exclusion"
-msgstr "Exclusión"
+msgstr "Poisjättäminen"
 #
 msgid "Failed to execute command: "
-msgstr "Error ejecutando el comando: "
+msgstr "Komennon suoritus epäonnistui: "
 #
 msgid "Failed to read"
-msgstr "Fallo al leer"
+msgstr "Ei voitu lukea"
 #
 msgid "GPS course crosses boundary in <"
-msgstr "Curso GPS cruza límite en <"
+msgstr "GPS kurssi ylittää rajan <"
 #
 msgid "GPS course crosses land in <"
-msgstr "El rumbo de GPS cruza tierra en < de "
+msgstr "GPS kurssi kohtaa maan <"
 #
 msgid "GPS fix is <"
-msgstr "Posición GPS está a < de "
+msgstr "GPS-fix on <"
 #
 msgid "GUID"
 msgstr "GUID"
 #
 msgid "General Setup"
-msgstr "Configuración general"
+msgstr "Yleisasetukset"
 #
 msgid "Get Boundary GUID"
-msgstr "Obtener el GUID del límite"
+msgstr "Nouda rajan GUID"
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "La representación gráfica muestra un área delimitando la zona segura"
+msgstr "Graafinen kuvio näyttää ankkuroinin liikealueen"
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr ""
-"La representación gráfica muestra un círculo con esta velocidad como radio"
+msgstr "Graafinen kuvio näyttää ympyrän tämä nopeus säteenä"
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "La representación gráfica muestra lineas delimitando los rumbos válidos"
+msgstr "Graafinen kuvio näyttää valitun kurssin reunalinjat"
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
 msgstr ""
-"Superposición gráfica de la línea desde la posición GPS del barco hasta el "
-"punto en el límite encontrado"
+"Graafinen käyttöliittymän GPS fix näyttää linjan veneestä löydety rajan "
+"sijaintipiteeseen"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
-msgstr ""
-"La representación gráfica muestra una linea desde el barco hasta el punto de "
-"la costa"
+msgstr "Graafinen aikaikkuna näyttää linjan aluksesta maihintörmäyspaikkaan"
 #
 msgid "Graphics Enabled"
-msgstr "Gráficos habilitados"
+msgstr "Grafiikka käytössä"
 #
 msgid "Guard Zone"
-msgstr "Zona de vigilancia"
+msgstr "Suojavyöhyke"
 #
 msgid "Guard Zone GUID"
-msgstr "GUID de la Zona de vigilancia"
+msgstr "Suojavyöhyke GUID"
 #
 msgid "Guard Zone Name"
-msgstr "Nombre Zona de vigilancia"
+msgstr "Suojavyöhykkeen nimi"
 #
 msgid "Hour"
-msgstr "Hora"
+msgstr "Tunti"
 #
 msgid "Hours"
-msgstr "Horas"
+msgstr "Tunnit"
 #
 msgid "Inclusion"
-msgstr "Inclusión"
+msgstr "Mukaan ottaminen"
 #
 msgid "Information"
-msgstr "Información"
+msgstr "Informaatiota"
 #
 msgid "Inside"
-msgstr "Interior"
+msgstr "Sisällä"
 #
 msgid "LandFall"
-msgstr "Recalada"
+msgstr "Maakosketus"
 #
 msgid "LandFall Time Invalid"
-msgstr "Hora de recalada no válida"
+msgstr "Maakosketus aika virheellinen"
 #
 msgid "Landfall"
-msgstr "Tierra a la vista"
+msgstr "Maakosketus"
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Detección de recalada utiliza gshhs (datos de alta resolución de costas "
-"jerárquicos global.) \n"
-"Considere la instalación de la base de datos de resolución más alta para "
-"mejorar precisión."
+"Rantaviivan tunnistaminen käyttää gshhs:ää (global heirarchical high-"
+"resolution shoreline data.) \n"
+"Harkitse korkeimman resoluution tietokannan asennusta parhaan tarkkuuden "
+"varmistamiseksi."
 #
 msgid "Latitude"
-msgstr "Latitud"
+msgstr "Leveysaste"
 #
 msgid "Longitude"
-msgstr "Longitud"
+msgstr "Pituusaste"
 #
 msgid "Message Box"
-msgstr "Mensaje en ventana"
+msgstr "Sanomaruudun"
 #
 msgid "MessageBox"
-msgstr "Cuadro de mensaje"
+msgstr "MessageBox"
 #
 msgid "Minute"
-msgstr "Minuto"
+msgstr "Minuutti"
 #
 msgid "Minutes"
-msgstr "Minutos"
+msgstr "Minuuttia"
 #
 msgid ""
 "Most alarms should be self-explanatory\n"
@@ -283,131 +279,131 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"La mayoría de las alarmas deberían explicarse por si solas\n"
-"Normalmente se activará un sonido, sin embargo puedes ejecutar cualquier "
-"comando, por ejemplo: \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
-"Los mensajes en ventana pueden ser útiles para interrumpir otras aplicaciones "
-"(como un reproductor de vídeo)\n"
-"\"Reiniciar automáticamente\" reseteará la alarma una vez haya dejado de "
-"estar activa para que pueda activarse de nuevo."
+"Useimpien hälytysten pitäisi olla itsetäänselviä\n"
+"Normaalisti hälytys soitetaan. Kuitenkin voit suorittaa haluamasi komennon, "
+"esim.  \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
+"Viestiruutu voi olla käyttökelpoinen pysäyttämään muita sovelluksia(kuten "
+"elokuvasoitin)\n"
+"Automaattinollaus kuittaa hälytyksen, kun sitä ei ole enää laukaistu ja se "
+"voidaan laukaista myöhemmin uudelleen."
 #
 msgid "NMEA Data"
-msgstr "Datos NMEA"
+msgstr "NMEA Data"
 #
 msgid "NO AIS tagets found in zone"
-msgstr "No hay blancos AIS en la zona"
+msgstr "EI AIS kohdetta alueella"
 #
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nimi"
 #
 msgid "Neither"
-msgstr "Ni"
+msgstr "Ei kumpikaan"
 #
 msgid "New"
-msgstr "Nuevo"
+msgstr "Uusi"
 #
 msgid "New Alarm"
-msgstr "Nueva alarma"
+msgstr "Uusi hälytys"
 #
 msgid "No Boundary within "
-msgstr "Sin límite a menos de "
+msgstr "Ei ole rajan sisällä "
 #
 msgid "No User Activity for"
-msgstr "Sin actividad del usuario por "
+msgstr "Ei ole käyttäjän toimintoja"
 #
 msgid "Off Course By >"
-msgstr "Desvío > de"
+msgstr "Hakoteillä suuntaan >"
 #
 msgid "Options"
-msgstr "Opciones"
+msgstr "Vaihtoehdot"
 #
 msgid "Outside"
-msgstr "Exterior"
+msgstr "Ulkopuolella"
 #
 msgid "Over Speed"
-msgstr "Velocidad alta"
+msgstr "Ylinopeus"
 #
 msgid "OverSpeed"
-msgstr "Velocidad alta"
+msgstr "Ylinopeus"
 #
 msgid "Port"
-msgstr "babor"
+msgstr "Vasen"
 #
 msgid "Port or Starboard"
-msgstr "Babor o estribor"
+msgstr "vasemmalle tai oikealle"
 #
 msgid "Radius"
-msgstr "Radio"
+msgstr "Säde"
 #
 msgid "Repeat"
-msgstr "Repetir"
+msgstr "Toista"
 #
 msgid "Repeat Alarm after seconds"
-msgstr "Repetir alarma tras segundos"
+msgstr "Toista hälytys sekuntien kuluttua"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Requiere las siguientes frases NMEA"
+msgstr "Tarvitsee seuraavat NMEA-lauseet:"
 #
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Tyhjennä"
 #
 msgid "Second"
-msgstr "Segundo"
+msgstr "Sekuntti"
 #
 msgid "Seconds"
-msgstr "Segundos"
+msgstr "sekunnit"
 #
 msgid ""
 "Seconds to Average\n"
 "SOG over"
 msgstr ""
-"Segundos para promediar\n"
+"Sekunnit haveriin\n"
 "SOG"
 #
 msgid "Select a file"
-msgstr "Seleccionar archivo"
+msgstr "Valitse tiedosto"
 #
 msgid "Ship MMSI"
-msgstr "MMSI del barco"
+msgstr "Aluksen MMSI"
 #
 msgid "Ship Name"
-msgstr "Nombre del barco"
+msgstr "Aluksen nimi"
 #
 msgid "Sound"
-msgstr "Sonido"
+msgstr "Ääni"
 #
 msgid "Speed"
-msgstr "Velocidad"
+msgstr "Nopeus"
 #
 msgid "Speed Alarm"
-msgstr "Alarma de velocidad"
+msgstr "Nopeushälytys"
 #
 msgid "Speed over ground"
-msgstr "Velocidad efectiva"
+msgstr "Nopeus pohjan suhteen"
 #
 msgid "Starboard"
-msgstr "Estribor"
+msgstr "Oikea"
 #
 msgid "Status"
-msgstr "Estado"
+msgstr "Tila"
 #
 msgid "Sync to Boat"
-msgstr "Posición actual"
+msgstr "Synkronoi veneeseen"
 #
 msgid "Test"
-msgstr "Prueba"
+msgstr "Testi"
 #
 msgid "Time"
-msgstr "Hora"
+msgstr "Aika"
 #
 msgid "Type"
-msgstr "Tipo"
+msgstr "Tyyppi"
 #
 msgid "Under Speed"
-msgstr "Velocidad baja"
+msgstr "Alinopeus"
 #
 msgid "UnderSpeed"
-msgstr "Velocidad baja"
+msgstr "Alinopeus"
 #
 msgid "WatchDog"
 msgstr "WatchDog"
@@ -416,97 +412,97 @@ msgid "Watchdog"
 msgstr "Watchdog"
 #
 msgid "Watchdog Configuration"
-msgstr "Configuración de Watchdog"
+msgstr "Vahdin konfigurointi"
 #
 msgid "Watchdog Information"
-msgstr "Información de Watchdog"
+msgstr "Watchdog tietoja"
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Plugin Watchdog para OpenCPN"
+msgstr "Watchdog lisäosa OpenCPN:lle"
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Plugin Watchdog para OpenCPN\n"
-"Alarma de usuario para condiciones inestables."
+"Watchdog lisäosa OpenCPN:lle\n"
+"Hälyyttää käyttäjää olosuhteiden muuttuessa."
 #
 msgid "Watchman"
-msgstr "Vigilante"
+msgstr "Vartija"
 #
 msgid "With Course Of"
-msgstr "Con rumbo"
+msgstr "Kurssiin"
 #
 msgid "at least every"
-msgstr "por lo menos cada "
+msgstr "vähintään joka"
 #
 msgid "bAutoSync"
 msgstr "bAutoSync"
 #
 msgid "course"
-msgstr "rumbo"
+msgstr "kurssi"
 #
 msgid "degrees(s)"
-msgstr "grado(s)"
+msgstr "aste(et)"
 #
 msgid "failed to save"
-msgstr "Error al guardar"
+msgstr "tallennus epäonnistui"
 #
 msgid "in"
-msgstr "en"
+msgstr "paikassa"
 #
 msgid "inside boundary"
-msgstr "dentro del límite"
+msgstr "rajan sisällä"
 #
 msgid "invalid Boundary mode"
-msgstr "Modo límite no válido"
+msgstr "kelvoton rajatila"
 #
 msgid "invalid Course mode"
-msgstr "Modo Rumbo no válido"
+msgstr "kurssin tila ei kelpaa"
 #
 msgid "invalid LandFall mode"
-msgstr "modo de recalada no válido"
+msgstr "kelvoton maakosketus tila"
 #
 msgid "invalid Speed mode"
-msgstr "modo de velocidad no válido"
+msgstr "virheellinen Speed-tila"
 #
 msgid "invalid alarm type"
-msgstr "tipo de alarma no válido"
+msgstr "virheellisen hälytyksen tyyppi"
 #
 msgid "knots"
-msgstr "nudos"
+msgstr "solmua"
 #
 msgid "meter(s)"
-msgstr "metro(s)"
+msgstr "metri(t)"
 #
 msgid "meters"
-msgstr "metros"
+msgstr "metriä"
 #
 msgid "minute(s)"
-msgstr "minuto(s)"
+msgstr "minuutti(a)"
 #
 msgid "minutes"
-msgstr "minutos"
+msgstr "minuuttia"
 #
 msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"nm de límite\n"
-" (cualquier dirección)"
+"nm rajasta\n"
+" (jossain suunnassa)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"mn de la costa\n"
-"(cualquier dirección)"
+"nm rantaviivasta\n"
+" (jossakin suunnassa)"
 #
 msgid "radius"
-msgstr "radio"
+msgstr "säde"
 #
 msgid "second(s)"
-msgstr "segundo(s)"
+msgstr "sekunnit"
 #
 msgid "seconds"
-msgstr "segundos"
+msgstr "sekuntti"

@@ -3,30 +3,31 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-30 09:18+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"PO-Revision-Date: 2016-02-07 02:50-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: tr\n"
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
 msgid " boundary "
-msgstr " límite "
+msgstr ""
 #
 msgid " does not exist"
-msgstr " ¡no existe!"
+msgstr ""
 #
 msgid " in "
-msgstr " en "
+msgstr ""
 #
 msgid " minutes"
-msgstr " minutos"
+msgstr ""
 #
 msgid "$GPGGA"
 msgstr "$GPGGA"
@@ -38,241 +39,230 @@ msgid "3"
 msgstr "3"
 #
 msgid "AIS Target in zone"
-msgstr "Blanco AIS en la zona"
+msgstr ""
 #
 msgid "ALARM!"
-msgstr "¡ALARMA!"
+msgstr ""
 #
 msgid "About Author"
-msgstr "Sobre el autor"
+msgstr "Yazar Hakkında"
 #
 msgid "Action"
-msgstr "Acción"
+msgstr ""
 #
 msgid "Alarm Action"
-msgstr "Acciones de Alarma"
+msgstr "Alarm Türü"
 #
 msgid "Alarms"
-msgstr "Alarmas"
+msgstr ""
 #
 msgid "Anchor"
-msgstr "Fondeo"
+msgstr "Demir"
 #
 msgid "Anchor Watch"
-msgstr "Garreo"
+msgstr "Demir Nöbetçisi"
 #
 msgid "Any"
-msgstr "Cualquiera"
+msgstr ""
 #
 msgid "Auto Reset"
-msgstr "Auto Reset"
+msgstr ""
 #
 msgid "Automatically Reset"
-msgstr "Reiniciar automáticamente"
+msgstr ""
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Sincronización automática con el barco cuando se activa"
+msgstr ""
 #
 msgid "Boundary Alarm"
-msgstr "Alarma de límite"
+msgstr ""
 #
 msgid "Boundary Distance"
-msgstr "Distancia a límite"
+msgstr ""
 #
 msgid "Boundary GUID"
-msgstr "GUID del Límite"
+msgstr ""
 #
 msgid "Boundary Time"
-msgstr "Tiempo hasta límite"
+msgstr ""
 #
 msgid "Boundary Type"
-msgstr "Tipo de límite"
+msgstr ""
 #
 msgid "Boundary name"
-msgstr "Nombre del límite"
+msgstr ""
 #
 msgid ""
 "Check Frequency  (Secs)\n"
 "(Note: not Guard Zone)"
 msgstr ""
-"Frecuencia de comprobaciones (seg)\n"
-"(Nota: no en zona de guardia)"
 #
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Kapat"
 #
 msgid "Command"
-msgstr "Comando"
+msgstr "Komut"
 #
 msgid "Configuration"
-msgstr "Configuración"
+msgstr ""
 #
 msgid "Course"
-msgstr "Rumbo"
+msgstr ""
 #
 msgid "Current Course"
-msgstr "Rumbo actual"
+msgstr "Şimdiki Rota"
 #
 msgid "Day"
-msgstr "Día"
+msgstr "Gün"
 #
 msgid "Days"
-msgstr "Días"
+msgstr "Gün"
 #
 msgid "Deadman"
-msgstr "Inactividad"
+msgstr "ÖlüAdam"
 #
 msgid "Degrees"
-msgstr "Grados"
+msgstr "Derece"
 #
 msgid "Delete"
-msgstr "Eliminar"
+msgstr ""
 #
 msgid "Delete All"
-msgstr "Borrar Todo"
+msgstr ""
 #
 msgid "Description"
-msgstr "Descripción"
+msgstr ""
 #
 msgid "Disable All Alarms"
-msgstr "Desactivar todas las alarmas"
+msgstr ""
 #
 msgid "Distance"
-msgstr "Distancia"
+msgstr "Mesafe"
 #
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 #
 msgid "Edit Alarm"
-msgstr "Editar alarma"
+msgstr ""
 #
 msgid "Enable All Alarms"
-msgstr "Activar todas las alarmas"
+msgstr ""
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
 msgstr ""
-"Activado tras la primera vez que sea visible el cuadro de diálogo de Watchdog"
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Activar solo si el cuadro de diálogo de Watchdog es visible"
+msgstr ""
 #
 msgid "Error!"
-msgstr "¡Error!"
+msgstr ""
 #
 msgid "Exclusion"
-msgstr "Exclusión"
+msgstr ""
 #
 msgid "Failed to execute command: "
-msgstr "Error ejecutando el comando: "
+msgstr "Komut dinlemiyor"
 #
 msgid "Failed to read"
-msgstr "Fallo al leer"
+msgstr ""
 #
 msgid "GPS course crosses boundary in <"
-msgstr "Curso GPS cruza límite en <"
+msgstr ""
 #
 msgid "GPS course crosses land in <"
-msgstr "El rumbo de GPS cruza tierra en < de "
+msgstr "GPS rotası karadan geçiyor <"
 #
 msgid "GPS fix is <"
-msgstr "Posición GPS está a < de "
+msgstr "GPS sabiti <"
 #
 msgid "GUID"
-msgstr "GUID"
+msgstr ""
 #
 msgid "General Setup"
-msgstr "Configuración general"
+msgstr ""
 #
 msgid "Get Boundary GUID"
-msgstr "Obtener el GUID del límite"
+msgstr ""
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "La representación gráfica muestra un área delimitando la zona segura"
+msgstr "Haritada grafik olarak demir sahasının sınırlarını gösterir"
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr ""
-"La representación gráfica muestra un círculo con esta velocidad como radio"
+msgstr "Haritaya grafik bindirme hızın etrafına bir halka çizerek yapılır"
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "La representación gráfica muestra lineas delimitando los rumbos válidos"
+msgstr "Haritada grafik olarak geçerli rotanın sınırlar çizgilerini gösterir"
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
 msgstr ""
-"Superposición gráfica de la línea desde la posición GPS del barco hasta el "
-"punto en el límite encontrado"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
 msgstr ""
-"La representación gráfica muestra una linea desde el barco hasta el punto de "
-"la costa"
+"Haritaya grafik bindirimi teknden karadan geçişe doğru bir hat olarak gözükür."
 #
 msgid "Graphics Enabled"
-msgstr "Gráficos habilitados"
+msgstr ""
 #
 msgid "Guard Zone"
-msgstr "Zona de vigilancia"
+msgstr ""
 #
 msgid "Guard Zone GUID"
-msgstr "GUID de la Zona de vigilancia"
+msgstr ""
 #
 msgid "Guard Zone Name"
-msgstr "Nombre Zona de vigilancia"
+msgstr ""
 #
 msgid "Hour"
-msgstr "Hora"
+msgstr "Saat"
 #
 msgid "Hours"
-msgstr "Horas"
+msgstr "Saat"
 #
 msgid "Inclusion"
-msgstr "Inclusión"
+msgstr ""
 #
 msgid "Information"
-msgstr "Información"
+msgstr "Bilgilendirme"
 #
 msgid "Inside"
-msgstr "Interior"
+msgstr ""
 #
 msgid "LandFall"
-msgstr "Recalada"
+msgstr "Karaya Düşmek"
 #
 msgid "LandFall Time Invalid"
-msgstr "Hora de recalada no válida"
+msgstr ""
 #
 msgid "Landfall"
-msgstr "Tierra a la vista"
+msgstr "KarayaDüşüş"
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Detección de recalada utiliza gshhs (datos de alta resolución de costas "
-"jerárquicos global.) \n"
-"Considere la instalación de la base de datos de resolución más alta para "
-"mejorar precisión."
 #
 msgid "Latitude"
-msgstr "Latitud"
+msgstr "Enlem"
 #
 msgid "Longitude"
-msgstr "Longitud"
+msgstr "Boylam"
 #
 msgid "Message Box"
-msgstr "Mensaje en ventana"
+msgstr "Mesaj Kutusu"
 #
 msgid "MessageBox"
-msgstr "Cuadro de mensaje"
+msgstr ""
 #
 msgid "Minute"
-msgstr "Minuto"
+msgstr "Dakika"
 #
 msgid "Minutes"
-msgstr "Minutos"
+msgstr "Dakika"
 #
 msgid ""
 "Most alarms should be self-explanatory\n"
@@ -283,230 +273,227 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"La mayoría de las alarmas deberían explicarse por si solas\n"
-"Normalmente se activará un sonido, sin embargo puedes ejecutar cualquier "
-"comando, por ejemplo: \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
-"Los mensajes en ventana pueden ser útiles para interrumpir otras aplicaciones "
-"(como un reproductor de vídeo)\n"
-"\"Reiniciar automáticamente\" reseteará la alarma una vez haya dejado de "
-"estar activa para que pueda activarse de nuevo."
+"Çoğu alarm ne demek istediğini kendisi anlatıyor olmalı.\n"
+"Normal olarak bir ses çıkarıyor olsa da kendiniz de beğendiğiniz bir ses "
+"belirleyebilirsiniz. Ör.:  \"aplay /usr/local/share/opencpn/sounds/2bells.wav"
+"\"\n"
+"Mesaj kutusu diğer uygulamaları kesintiye uğratması (bir video oynatıcısı "
+"gibi) bakımından faydalı olabilir.\n"
+"Otomatik yeniden yapılandırma daha önce çalmayan bir alarmı yeniden devreye "
+"sokabilir ve belki sonra yeniden çaldırabilir."
 #
 msgid "NMEA Data"
-msgstr "Datos NMEA"
+msgstr "NMEA Verisi"
 #
 msgid "NO AIS tagets found in zone"
-msgstr "No hay blancos AIS en la zona"
+msgstr ""
 #
 msgid "Name"
-msgstr "Nombre"
+msgstr ""
 #
 msgid "Neither"
-msgstr "Ni"
+msgstr ""
 #
 msgid "New"
-msgstr "Nuevo"
+msgstr ""
 #
 msgid "New Alarm"
-msgstr "Nueva alarma"
+msgstr ""
 #
 msgid "No Boundary within "
-msgstr "Sin límite a menos de "
+msgstr ""
 #
 msgid "No User Activity for"
-msgstr "Sin actividad del usuario por "
+msgstr "Bir kullanıcı hareketi yok"
 #
 msgid "Off Course By >"
-msgstr "Desvío > de"
+msgstr "Rotadan sapma >"
 #
 msgid "Options"
-msgstr "Opciones"
+msgstr ""
 #
 msgid "Outside"
-msgstr "Exterior"
+msgstr ""
 #
 msgid "Over Speed"
-msgstr "Velocidad alta"
+msgstr "Aşırı Hız"
 #
 msgid "OverSpeed"
-msgstr "Velocidad alta"
+msgstr ""
 #
 msgid "Port"
-msgstr "babor"
+msgstr "İskele"
 #
 msgid "Port or Starboard"
-msgstr "Babor o estribor"
+msgstr ""
 #
 msgid "Radius"
-msgstr "Radio"
+msgstr "Çap"
 #
 msgid "Repeat"
-msgstr "Repetir"
+msgstr ""
 #
 msgid "Repeat Alarm after seconds"
-msgstr "Repetir alarma tras segundos"
+msgstr "Alarmı saniye sonra tekrarla"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Requiere las siguientes frases NMEA"
+msgstr "Aşağıdaki NMEA cümleleri gerekiyor."
 #
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Yeniden düzenle"
 #
 msgid "Second"
-msgstr "Segundo"
+msgstr "saniye"
 #
 msgid "Seconds"
-msgstr "Segundos"
+msgstr "Saniye"
 #
 msgid ""
 "Seconds to Average\n"
 "SOG over"
 msgstr ""
-"Segundos para promediar\n"
-"SOG"
 #
 msgid "Select a file"
-msgstr "Seleccionar archivo"
+msgstr "Bir dosya seçin"
 #
 msgid "Ship MMSI"
-msgstr "MMSI del barco"
+msgstr ""
 #
 msgid "Ship Name"
-msgstr "Nombre del barco"
+msgstr ""
 #
 msgid "Sound"
-msgstr "Sonido"
+msgstr "Ses"
 #
 msgid "Speed"
-msgstr "Velocidad"
+msgstr ""
 #
 msgid "Speed Alarm"
-msgstr "Alarma de velocidad"
+msgstr "Hız Alarmı"
 #
 msgid "Speed over ground"
-msgstr "Velocidad efectiva"
+msgstr ""
 #
 msgid "Starboard"
-msgstr "Estribor"
+msgstr ""
 #
 msgid "Status"
-msgstr "Estado"
+msgstr ""
 #
 msgid "Sync to Boat"
-msgstr "Posición actual"
+msgstr "Bota uyumlu"
 #
 msgid "Test"
-msgstr "Prueba"
+msgstr ""
 #
 msgid "Time"
-msgstr "Hora"
+msgstr ""
 #
 msgid "Type"
-msgstr "Tipo"
+msgstr ""
 #
 msgid "Under Speed"
-msgstr "Velocidad baja"
+msgstr "Düşük Hız"
 #
 msgid "UnderSpeed"
-msgstr "Velocidad baja"
+msgstr ""
 #
 msgid "WatchDog"
-msgstr "WatchDog"
+msgstr "BekçiKöpeği"
 #
 msgid "Watchdog"
-msgstr "Watchdog"
+msgstr "BekçiKöpeği"
 #
 msgid "Watchdog Configuration"
-msgstr "Configuración de Watchdog"
+msgstr ""
 #
 msgid "Watchdog Information"
-msgstr "Información de Watchdog"
+msgstr "BekçiKöpeği Üzerine"
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Plugin Watchdog para OpenCPN"
+msgstr "OpenCPN için BekçiKöpeği eklentisi"
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Plugin Watchdog para OpenCPN\n"
-"Alarma de usuario para condiciones inestables."
+"BekçiKöpeği OpenCPN Eklentisi\n"
+"Değişen koşullara göre alarm verir."
 #
 msgid "Watchman"
-msgstr "Vigilante"
+msgstr "Nöbetçi"
 #
 msgid "With Course Of"
-msgstr "Con rumbo"
+msgstr "Rotayla"
 #
 msgid "at least every"
-msgstr "por lo menos cada "
+msgstr "en azından herbiri"
 #
 msgid "bAutoSync"
-msgstr "bAutoSync"
+msgstr ""
 #
 msgid "course"
-msgstr "rumbo"
+msgstr ""
 #
 msgid "degrees(s)"
-msgstr "grado(s)"
+msgstr "derece"
 #
 msgid "failed to save"
-msgstr "Error al guardar"
+msgstr ""
 #
 msgid "in"
-msgstr "en"
+msgstr ""
 #
 msgid "inside boundary"
-msgstr "dentro del límite"
+msgstr ""
 #
 msgid "invalid Boundary mode"
-msgstr "Modo límite no válido"
+msgstr ""
 #
 msgid "invalid Course mode"
-msgstr "Modo Rumbo no válido"
+msgstr ""
 #
 msgid "invalid LandFall mode"
-msgstr "modo de recalada no válido"
+msgstr ""
 #
 msgid "invalid Speed mode"
-msgstr "modo de velocidad no válido"
+msgstr ""
 #
 msgid "invalid alarm type"
-msgstr "tipo de alarma no válido"
+msgstr ""
 #
 msgid "knots"
-msgstr "nudos"
+msgstr "Knot"
 #
 msgid "meter(s)"
-msgstr "metro(s)"
+msgstr "metre"
 #
 msgid "meters"
-msgstr "metros"
+msgstr "metre"
 #
 msgid "minute(s)"
-msgstr "minuto(s)"
+msgstr "dakika"
 #
 msgid "minutes"
-msgstr "minutos"
+msgstr "dakika"
 #
 msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"nm de límite\n"
-" (cualquier dirección)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"mn de la costa\n"
-"(cualquier dirección)"
+"kıyıdan mesafe nm \n"
+"   (her yönden)"
 #
 msgid "radius"
-msgstr "radio"
+msgstr ""
 #
 msgid "second(s)"
-msgstr "segundo(s)"
+msgstr "saniye"
 #
 msgid "seconds"
-msgstr "segundos"
+msgstr "saniye"

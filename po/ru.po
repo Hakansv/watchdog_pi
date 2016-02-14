@@ -3,271 +3,265 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-30 09:18+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"PO-Revision-Date: 2016-02-07 02:49-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Dutch\n"
-"Language: nl_NL\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: nl\n"
+"X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
 msgid " boundary "
-msgstr "gebiedsgrens"
+msgstr ""
 #
 msgid " does not exist"
-msgstr "bestaat niet"
+msgstr ""
 #
 msgid " in "
-msgstr "in "
+msgstr ""
 #
 msgid " minutes"
-msgstr " minuten"
+msgstr ""
 #
 msgid "$GPGGA"
-msgstr "$GPGGA"
+msgstr ""
 #
 msgid "1"
-msgstr "1"
+msgstr ""
 #
 msgid "3"
-msgstr "3"
+msgstr ""
 #
 msgid "AIS Target in zone"
-msgstr "AIS object binnen zone"
+msgstr ""
 #
 msgid "ALARM!"
-msgstr "ALARM!"
+msgstr "ТРЕВОГА!"
 #
 msgid "About Author"
-msgstr "Over de auteur"
+msgstr "Об авторе"
 #
 msgid "Action"
-msgstr "Alarmactie"
+msgstr ""
 #
 msgid "Alarm Action"
-msgstr "Alarmacties"
+msgstr "Действия при тревоги"
 #
 msgid "Alarms"
-msgstr "Alarmen"
+msgstr ""
 #
 msgid "Anchor"
-msgstr "Ankerpositie"
+msgstr "Якорь"
 #
 msgid "Anchor Watch"
-msgstr "Ankerwacht"
+msgstr "Якорная Стоянка"
 #
 msgid "Any"
-msgstr "elk"
+msgstr ""
 #
 msgid "Auto Reset"
-msgstr "Automatisch terugstellen"
+msgstr ""
 #
 msgid "Automatically Reset"
-msgstr "Automatisch terugstellen"
+msgstr ""
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Ankerpositie gelijk aan vaartuigpositie indien ingeschakeld"
+msgstr ""
 #
 msgid "Boundary Alarm"
-msgstr "Gebiedsgrens"
+msgstr ""
 #
 msgid "Boundary Distance"
-msgstr "Gebiedsgrens (afstand)"
+msgstr ""
 #
 msgid "Boundary GUID"
-msgstr "GUID gebied"
+msgstr ""
 #
 msgid "Boundary Time"
-msgstr "Gebiedsgrens (tijd)"
+msgstr ""
 #
 msgid "Boundary Type"
-msgstr "Alarm werkt voor het volgende gebiedstype"
+msgstr ""
 #
 msgid "Boundary name"
-msgstr "gebied"
+msgstr ""
 #
 msgid ""
 "Check Frequency  (Secs)\n"
 "(Note: not Guard Zone)"
 msgstr ""
-"Check frequentie (sec)\n"
-"(niet voor bewakingszone) "
 #
 msgid "Close"
-msgstr "Sluiten"
+msgstr "Закрыть"
 #
 msgid "Command"
-msgstr "Opdracht"
+msgstr "Команда"
 #
 msgid "Configuration"
-msgstr "Instellingen"
+msgstr ""
 #
 msgid "Course"
-msgstr "Koersafwijking"
+msgstr ""
 #
 msgid "Current Course"
-msgstr "Gebruik huidige koers"
+msgstr ""
 #
 msgid "Day"
-msgstr "dag"
+msgstr "День"
 #
 msgid "Days"
-msgstr "dagen"
+msgstr "Дней"
 #
 msgid "Deadman"
-msgstr "Wachtalarm"
+msgstr "Контроль Дееспособности"
 #
 msgid "Degrees"
-msgstr "graden"
+msgstr "Градусов"
 #
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr ""
 #
 msgid "Delete All"
-msgstr "Alles verwijderen"
+msgstr ""
 #
 msgid "Description"
-msgstr "Beschrijving"
+msgstr ""
 #
 msgid "Disable All Alarms"
-msgstr "Alle alarmen uitschakelen"
+msgstr ""
 #
 msgid "Distance"
-msgstr "Afstand"
+msgstr "Расстояние"
 #
 msgid "Edit"
-msgstr "Bewerken"
+msgstr ""
 #
 msgid "Edit Alarm"
-msgstr "Alarm bewerken"
+msgstr ""
 #
 msgid "Enable All Alarms"
-msgstr "Alle alarmen inschakelen"
+msgstr ""
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
-msgstr "Ingeschakeld vanaf eerste opening dialoogvenster"
+msgstr ""
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Alleen ingeschakeld als dialoogvenster zichtbaar is"
+msgstr ""
 #
 msgid "Error!"
-msgstr "Fout!"
+msgstr ""
 #
 msgid "Exclusion"
-msgstr "te ontwijken"
+msgstr ""
 #
 msgid "Failed to execute command: "
-msgstr "Kon opdracht niet uitvoeren:"
+msgstr "Не удалось выполнить команду: "
 #
 msgid "Failed to read"
-msgstr "Kon niet lezen"
+msgstr ""
 #
 msgid "GPS course crosses boundary in <"
-msgstr "Gegist traject kruist gebiedsgrens over <"
+msgstr ""
 #
 msgid "GPS course crosses land in <"
-msgstr "Gegist traject kruist kustlijn over <"
+msgstr ""
 #
 msgid "GPS fix is <"
-msgstr "GPS-positie is <"
+msgstr ""
 #
 msgid "GUID"
-msgstr "GUID"
+msgstr ""
 #
 msgid "General Setup"
-msgstr "Algemene instellingen"
+msgstr "Основные Настройки"
 #
 msgid "Get Boundary GUID"
-msgstr "Zoek GUID gebied"
+msgstr ""
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "Grafische overlay toont grenzen ankergebied"
+msgstr ""
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr "Grafische overlay toont cirkel met straal van deze vaart"
+msgstr ""
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "Grafische overlay toont grenslijnen van geldige koersen"
+msgstr ""
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
 msgstr ""
-"Grafische overlay toont gegist traject van vaartuig naar de gevonden "
-"gebiedsgrens"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
-msgstr "Grafische overlay toont lijn van schip naar kruising met kustlijn"
+msgstr ""
 #
 msgid "Graphics Enabled"
-msgstr "'Graphics' ingeschakeld"
+msgstr ""
 #
 msgid "Guard Zone"
-msgstr "Bewakingszone"
+msgstr ""
 #
 msgid "Guard Zone GUID"
-msgstr "GUID bewakingszone"
+msgstr ""
 #
 msgid "Guard Zone Name"
-msgstr "Naam bewakingszone"
+msgstr ""
 #
 msgid "Hour"
-msgstr "uur"
+msgstr "Час"
 #
 msgid "Hours"
-msgstr "uren"
+msgstr "Часов"
 #
 msgid "Inclusion"
-msgstr "beperkend"
+msgstr ""
 #
 msgid "Information"
-msgstr "Informatie"
+msgstr "Информация"
 #
 msgid "Inside"
-msgstr "Binnen"
+msgstr ""
 #
 msgid "LandFall"
-msgstr "Nabijheid land"
+msgstr ""
 #
 msgid "LandFall Time Invalid"
-msgstr "nabijheid land: tijd ongeldig"
+msgstr ""
 #
 msgid "Landfall"
-msgstr "Nabijheid land"
+msgstr ""
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Detectie landnabijheid gebruikt globale kustlijngegevens (gshhs).\\Installeer "
-"de database met de hoogste resolutie van kustlijnen voor meer nauwkeurigheid "
-"en veiligheid."
 #
 msgid "Latitude"
-msgstr "Breedte"
+msgstr "Широта"
 #
 msgid "Longitude"
-msgstr "Lengte"
+msgstr "Долгота"
 #
 msgid "Message Box"
-msgstr "Berichtvenster"
+msgstr "Окно сообщения"
 #
 msgid "MessageBox"
-msgstr "Berichtvenster"
+msgstr ""
 #
 msgid "Minute"
-msgstr "minuut"
+msgstr "Минута"
 #
 msgid "Minutes"
-msgstr "minuten"
+msgstr "Минут"
 #
 msgid ""
 "Most alarms should be self-explanatory\n"
@@ -278,236 +272,215 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"De meeste alarmen spreken vanzelf. Standaard wordt een alarmgeluid gegeven, "
-"maar u kunt elke opdracht uitvoeren die u wilt. Een voorbeeld is: \"aplay/usr/"
-"local/share/opencpn/sounds/2bells.wav\".\n"
-"\n"
-"Het berichtenvenster kan handig zijn om andere applicaties te onderbreken "
-"(zoals met een videospeler).\n"
-"\n"
-"Automatisch terugstellen stopt het alarm als de aanleiding wegvalt; het alarm "
-"kan later weer worden gegeven."
 #
 msgid "NMEA Data"
-msgstr "NMEA-gegevens"
+msgstr "Данные NMEA"
 #
 msgid "NO AIS tagets found in zone"
-msgstr "Geen AIS object binnen zone"
+msgstr ""
 #
 msgid "Name"
-msgstr "Naam"
+msgstr ""
 #
 msgid "Neither"
-msgstr "algemeen"
+msgstr ""
 #
 msgid "New"
-msgstr "Nieuw"
+msgstr ""
 #
 msgid "New Alarm"
-msgstr "Nieuw alarm"
+msgstr ""
 #
 msgid "No Boundary within "
-msgstr "geen gebiedsgrens binnen "
+msgstr ""
 #
 msgid "No User Activity for"
-msgstr "geen gebruikersactiviteit gedurende"
+msgstr ""
 #
 msgid "Off Course By >"
-msgstr "Koersafwijking van >"
+msgstr ""
 #
 msgid "Options"
-msgstr "Opties"
+msgstr ""
 #
 msgid "Outside"
-msgstr "Buiten"
+msgstr ""
 #
 msgid "Over Speed"
-msgstr "oversnelheid"
+msgstr ""
 #
 msgid "OverSpeed"
-msgstr "oversnelheid"
+msgstr ""
 #
 msgid "Port"
-msgstr "BB"
+msgstr "Лев. Борт"
 #
 msgid "Port or Starboard"
-msgstr "BB of SB"
+msgstr ""
 #
 msgid "Radius"
-msgstr "Straal"
+msgstr "Радиус"
 #
 msgid "Repeat"
-msgstr "Herhalen"
+msgstr ""
 #
 msgid "Repeat Alarm after seconds"
-msgstr "Herhaal alarm na (seconden)"
+msgstr "Повторять сигнал после секунд"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Vereis de volgende NMEA-berichten:"
+msgstr ""
 #
 msgid "Reset"
-msgstr "Terugstellen"
+msgstr "Сброс"
 #
 msgid "Second"
-msgstr "seconde"
+msgstr "Секунда"
 #
 msgid "Seconds"
-msgstr "seconden"
+msgstr "Секунд"
 #
 msgid ""
 "Seconds to Average\n"
 "SOG over"
 msgstr ""
-"Aantal seconden\n"
-"\n"
-"voor middelen SOG"
 #
 msgid "Select a file"
-msgstr "Selecteer een bestand"
+msgstr "Выберите файл"
 #
 msgid "Ship MMSI"
-msgstr "Scheep's MMSI"
+msgstr ""
 #
 msgid "Ship Name"
-msgstr "Scheepsnaam"
+msgstr ""
 #
 msgid "Sound"
-msgstr "Geluid"
+msgstr "Звук"
 #
 msgid "Speed"
-msgstr "Vaart"
+msgstr ""
 #
 msgid "Speed Alarm"
-msgstr "Vaartalarm"
+msgstr ""
 #
 msgid "Speed over ground"
 msgstr ""
-"Vaart over de grond\n"
-"\n"
-"(SOG)"
 #
 msgid "Starboard"
-msgstr "SB"
+msgstr "Прав. Борт"
 #
 msgid "Status"
-msgstr "Status"
+msgstr ""
 #
 msgid "Sync to Boat"
-msgstr "Gebruik vaartuigpositie"
+msgstr ""
 #
 msgid "Test"
-msgstr "Test"
+msgstr ""
 #
 msgid "Time"
-msgstr "tijd"
+msgstr ""
 #
 msgid "Type"
-msgstr "Type"
+msgstr ""
 #
 msgid "Under Speed"
-msgstr "ondersnelheid"
+msgstr ""
 #
 msgid "UnderSpeed"
-msgstr "ondersnelheid"
+msgstr ""
 #
 msgid "WatchDog"
-msgstr "'WatchDog'"
+msgstr "Сторожевой"
 #
 msgid "Watchdog"
-msgstr "'Watchdog'"
+msgstr "Сторожевой"
 #
 msgid "Watchdog Configuration"
-msgstr "'Watchdog' informatie"
+msgstr ""
 #
 msgid "Watchdog Information"
-msgstr "'Watchdog' informatie"
+msgstr ""
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Watchdog PlugIn voor OpenCPN"
+msgstr ""
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Watchdog PlugIn voor OpenCPN\n"
-"Geeft alarm bij veranderende omstandigheden."
 #
 msgid "Watchman"
-msgstr "Wachtsman"
+msgstr "Сторожевой"
 #
 msgid "With Course Of"
-msgstr "Bij koers van"
+msgstr ""
 #
 msgid "at least every"
-msgstr "ten minste elke"
+msgstr ""
 #
 msgid "bAutoSync"
-msgstr "bAutoSync"
+msgstr ""
 #
 msgid "course"
-msgstr "koers"
+msgstr ""
 #
 msgid "degrees(s)"
-msgstr "graden"
+msgstr "градус(ов)"
 #
 msgid "failed to save"
-msgstr "kon niet opslaan"
+msgstr ""
 #
 msgid "in"
-msgstr "in"
+msgstr ""
 #
 msgid "inside boundary"
-msgstr "binnen gebiedsgrens"
+msgstr ""
 #
 msgid "invalid Boundary mode"
-msgstr "ongeldige gebiedsgrensmodus"
+msgstr ""
 #
 msgid "invalid Course mode"
-msgstr "ongeldige koersmodus"
+msgstr ""
 #
 msgid "invalid LandFall mode"
-msgstr "ongeldige 'nabijheid land' modus"
+msgstr ""
 #
 msgid "invalid Speed mode"
-msgstr "ongeldige vaartmodus"
+msgstr ""
 #
 msgid "invalid alarm type"
-msgstr "ongeldig alarmtype"
+msgstr ""
 #
 msgid "knots"
-msgstr "knopen"
+msgstr "Узлы"
 #
 msgid "meter(s)"
-msgstr "meter"
+msgstr "метр(ов)"
 #
 msgid "meters"
-msgstr "meter"
+msgstr ""
 #
 msgid "minute(s)"
-msgstr "minuten"
+msgstr "минута(ы)"
 #
 msgid "minutes"
-msgstr "minuten"
+msgstr "минут"
 #
 msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"zeemijl van gebiedsgrens\n"
-"(alle richtingen)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"zeemijl van kustlijn\n"
-"(alle richtingen)"
 #
 msgid "radius"
-msgstr "straal"
+msgstr ""
 #
 msgid "second(s)"
-msgstr "seconde(n)"
+msgstr "секунд(а)"
 #
 msgid "seconds"
-msgstr "seconden"
+msgstr ""

@@ -3,30 +3,30 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-30 09:18+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"PO-Revision-Date: 2016-02-07 02:50-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
+"Language-Team: Swedish\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: sv-SE\n"
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
 msgid " boundary "
-msgstr " límite "
+msgstr " gränsen "
 #
 msgid " does not exist"
-msgstr " ¡no existe!"
+msgstr " finns inte"
 #
 msgid " in "
-msgstr " en "
+msgstr " om "
 #
 msgid " minutes"
-msgstr " minutos"
+msgstr " minuter"
 #
 msgid "$GPGGA"
 msgstr "$GPGGA"
@@ -38,223 +38,220 @@ msgid "3"
 msgstr "3"
 #
 msgid "AIS Target in zone"
-msgstr "Blanco AIS en la zona"
+msgstr "AIS-mål finns i gränsområdet"
 #
 msgid "ALARM!"
-msgstr "¡ALARMA!"
+msgstr "LARM!"
 #
 msgid "About Author"
-msgstr "Sobre el autor"
+msgstr "Om utgivaren"
 #
 msgid "Action"
-msgstr "Acción"
+msgstr "Åtgärd"
 #
 msgid "Alarm Action"
-msgstr "Acciones de Alarma"
+msgstr "Åtgärd vid larm"
 #
 msgid "Alarms"
-msgstr "Alarmas"
+msgstr "Larm"
 #
 msgid "Anchor"
-msgstr "Fondeo"
+msgstr "Ankare"
 #
 msgid "Anchor Watch"
-msgstr "Garreo"
+msgstr "Ankarvakt"
 #
 msgid "Any"
-msgstr "Cualquiera"
+msgstr "Alla"
 #
 msgid "Auto Reset"
-msgstr "Auto Reset"
+msgstr "Återställ automatiskt"
 #
 msgid "Automatically Reset"
-msgstr "Reiniciar automáticamente"
+msgstr "Återställ automatiskt"
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Sincronización automática con el barco cuando se activa"
+msgstr "Synkronisera till båtens position varje gång larmet aktiveras"
 #
 msgid "Boundary Alarm"
-msgstr "Alarma de límite"
+msgstr "Gränslarm"
 #
 msgid "Boundary Distance"
-msgstr "Distancia a límite"
+msgstr "Avstånd till Gränslinje"
 #
 msgid "Boundary GUID"
-msgstr "GUID del Límite"
+msgstr "Gränslinjens GUID (Id)"
 #
 msgid "Boundary Time"
-msgstr "Tiempo hasta límite"
+msgstr "Tid till Gränslinje"
 #
 msgid "Boundary Type"
-msgstr "Tipo de límite"
+msgstr "Gränstyp"
 #
 msgid "Boundary name"
-msgstr "Nombre del límite"
+msgstr "Gränsens namn"
 #
 msgid ""
 "Check Frequency  (Secs)\n"
 "(Note: not Guard Zone)"
 msgstr ""
-"Frecuencia de comprobaciones (seg)\n"
-"(Nota: no en zona de guardia)"
+"Uppdateringsfrekvens (Sek)\n"
+"(OBS: Gäller ej \"Larmzon\")"
 #
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Avsluta"
 #
 msgid "Command"
-msgstr "Comando"
+msgstr "Kommando"
 #
 msgid "Configuration"
-msgstr "Configuración"
+msgstr "Inställningar"
 #
 msgid "Course"
-msgstr "Rumbo"
+msgstr "Kurs"
 #
 msgid "Current Course"
-msgstr "Rumbo actual"
+msgstr "Nuvarande kurs"
 #
 msgid "Day"
-msgstr "Día"
+msgstr "Dag"
 #
 msgid "Days"
-msgstr "Días"
+msgstr "Dagar"
 #
 msgid "Deadman"
-msgstr "Inactividad"
+msgstr "Hålldon/dödmangrepp"
 #
 msgid "Degrees"
-msgstr "Grados"
+msgstr "Grader"
 #
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Ta bort"
 #
 msgid "Delete All"
-msgstr "Borrar Todo"
+msgstr "Ta bort alla"
 #
 msgid "Description"
-msgstr "Descripción"
+msgstr "Beskrivning"
 #
 msgid "Disable All Alarms"
-msgstr "Desactivar todas las alarmas"
+msgstr "Inaktivera alla larm"
 #
 msgid "Distance"
-msgstr "Distancia"
+msgstr "Distans"
 #
 msgid "Edit"
-msgstr "Editar"
+msgstr "Ändra"
 #
 msgid "Edit Alarm"
-msgstr "Editar alarma"
+msgstr "Ändra larm"
 #
 msgid "Enable All Alarms"
-msgstr "Activar todas las alarmas"
+msgstr "Aktivera alla larm"
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
 msgstr ""
-"Activado tras la primera vez que sea visible el cuadro de diálogo de Watchdog"
+"Valda larm är alltid aktiverade efter att Vakthundens dialogruta har öppnats "
+"en gång"
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Activar solo si el cuadro de diálogo de Watchdog es visible"
+msgstr "Valda larm aktiveras endast när Vakthundens dialogruta är öppen"
 #
 msgid "Error!"
-msgstr "¡Error!"
+msgstr "Fel!"
 #
 msgid "Exclusion"
-msgstr "Exclusión"
+msgstr "Yttre"
 #
 msgid "Failed to execute command: "
-msgstr "Error ejecutando el comando: "
+msgstr "Det gick inte att utföra kommandot: "
 #
 msgid "Failed to read"
-msgstr "Fallo al leer"
+msgstr "Kunde inte läsa"
 #
 msgid "GPS course crosses boundary in <"
-msgstr "Curso GPS cruza límite en <"
+msgstr "GPS-kursen leder till en gränslinje inom"
 #
 msgid "GPS course crosses land in <"
-msgstr "El rumbo de GPS cruza tierra en < de "
+msgstr "GPS-kursen når land om <"
 #
 msgid "GPS fix is <"
-msgstr "Posición GPS está a < de "
+msgstr "GPS-position är <"
 #
 msgid "GUID"
 msgstr "GUID"
 #
 msgid "General Setup"
-msgstr "Configuración general"
+msgstr "Allmänna inställningar"
 #
 msgid "Get Boundary GUID"
-msgstr "Obtener el GUID del límite"
+msgstr "Läs in aktuell gräns-GUID"
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "La representación gráfica muestra un área delimitando la zona segura"
+msgstr "Grafisk visning ritar ankringsområdets gränser på kortet"
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr ""
-"La representación gráfica muestra un círculo con esta velocidad como radio"
+msgstr "Grafisk visning ritar cirkel med vald fart som radie"
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "La representación gráfica muestra lineas delimitando los rumbos válidos"
+msgstr "Grafisk visning ritar linjer för tillåten kursavvikelse"
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
 msgstr ""
-"Superposición gráfica de la línea desde la posición GPS del barco hasta el "
-"punto en el límite encontrado"
+"Grafisk visning av \"GPS-position\" ritar en linje från båten till en punkt i "
+"den upptäckta gränslinjen"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
-msgstr ""
-"La representación gráfica muestra una linea desde el barco hasta el punto de "
-"la costa"
+msgstr "Rita linje som visar avstånd och riktning för landkänning"
 #
 msgid "Graphics Enabled"
-msgstr "Gráficos habilitados"
+msgstr "Aktivera grafisk visning"
 #
 msgid "Guard Zone"
-msgstr "Zona de vigilancia"
+msgstr "AIS i bevakningszon"
 #
 msgid "Guard Zone GUID"
-msgstr "GUID de la Zona de vigilancia"
+msgstr "Larmzonens GUID"
 #
 msgid "Guard Zone Name"
-msgstr "Nombre Zona de vigilancia"
+msgstr "Namn på Larmzonen"
 #
 msgid "Hour"
-msgstr "Hora"
+msgstr "Timme"
 #
 msgid "Hours"
-msgstr "Horas"
+msgstr "Timmar"
 #
 msgid "Inclusion"
-msgstr "Inclusión"
+msgstr "Inre"
 #
 msgid "Information"
-msgstr "Información"
+msgstr "Information"
 #
 msgid "Inside"
-msgstr "Interior"
+msgstr "Insidan"
 #
 msgid "LandFall"
-msgstr "Recalada"
+msgstr "Landkänning"
 #
 msgid "LandFall Time Invalid"
-msgstr "Hora de recalada no válida"
+msgstr "Ogiltig tid för landkänning"
 #
 msgid "Landfall"
-msgstr "Tierra a la vista"
+msgstr "Landkänning"
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Detección de recalada utiliza gshhs (datos de alta resolución de costas "
-"jerárquicos global.) \n"
-"Considere la instalación de la base de datos de resolución más alta para "
-"mejorar precisión."
+"Närhet till land upptäcks med hjälp gshhs (Databeteckning för högupplöst "
+"kustlinje)\n"
+"För bästa tillförlitlighet bör detaljnivån för vektorkorten vara hög."
 #
 msgid "Latitude"
 msgstr "Latitud"
@@ -263,16 +260,16 @@ msgid "Longitude"
 msgstr "Longitud"
 #
 msgid "Message Box"
-msgstr "Mensaje en ventana"
+msgstr "Meddelanderuta"
 #
 msgid "MessageBox"
-msgstr "Cuadro de mensaje"
+msgstr "Meddelanderuta"
 #
 msgid "Minute"
-msgstr "Minuto"
+msgstr "Minut"
 #
 msgid "Minutes"
-msgstr "Minutos"
+msgstr "Minuter"
 #
 msgid ""
 "Most alarms should be self-explanatory\n"
@@ -283,230 +280,231 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"La mayoría de las alarmas deberían explicarse por si solas\n"
-"Normalmente se activará un sonido, sin embargo puedes ejecutar cualquier "
-"comando, por ejemplo: \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
-"Los mensajes en ventana pueden ser útiles para interrumpir otras aplicaciones "
-"(como un reproductor de vídeo)\n"
-"\"Reiniciar automáticamente\" reseteará la alarma una vez haya dejado de "
-"estar activa para que pueda activarse de nuevo."
+"De flesta larm bör vara självförklarande\n"
+"Det är vanligt att spela upp ett ljud, men kan du välja att också/istället "
+"köra ett eget kommando, t.ex.(Linux): \"aplay /usr/local/share/opencpn/"
+"sounds/2bells.wav\"\n"
+"\"Meddelande\" kan vara lämpligt för att avbryta andra program (som en "
+"filmspelare) \n"
+"\"Automatisk återställning\" återställer larmet om larmorsaken försvinner, "
+"men det kan utlösas igen senare."
 #
 msgid "NMEA Data"
-msgstr "Datos NMEA"
+msgstr "NMEA-Data"
 #
 msgid "NO AIS tagets found in zone"
-msgstr "No hay blancos AIS en la zona"
+msgstr "Inget AIS-mål i gränsområdet"
 #
 msgid "Name"
-msgstr "Nombre"
+msgstr "Namn"
 #
 msgid "Neither"
-msgstr "Ni"
+msgstr "Oberoende"
 #
 msgid "New"
-msgstr "Nuevo"
+msgstr "Nytt"
 #
 msgid "New Alarm"
-msgstr "Nueva alarma"
+msgstr "Nytt larm"
 #
 msgid "No Boundary within "
-msgstr "Sin límite a menos de "
+msgstr "Inga gränslinjer inom "
 #
 msgid "No User Activity for"
-msgstr "Sin actividad del usuario por "
+msgstr "Ingen användaraktivitet på"
 #
 msgid "Off Course By >"
-msgstr "Desvío > de"
+msgstr "Ur kurs mer än"
 #
 msgid "Options"
-msgstr "Opciones"
+msgstr "Larmgräns"
 #
 msgid "Outside"
-msgstr "Exterior"
+msgstr "Utsidan"
 #
 msgid "Over Speed"
-msgstr "Velocidad alta"
+msgstr "Högfart"
 #
 msgid "OverSpeed"
-msgstr "Velocidad alta"
+msgstr "Fart högre än"
 #
 msgid "Port"
-msgstr "babor"
+msgstr "Babord"
 #
 msgid "Port or Starboard"
-msgstr "Babor o estribor"
+msgstr "Babord eller Styrbord"
 #
 msgid "Radius"
-msgstr "Radio"
+msgstr "Radie"
 #
 msgid "Repeat"
-msgstr "Repetir"
+msgstr "Upprepa"
 #
 msgid "Repeat Alarm after seconds"
-msgstr "Repetir alarma tras segundos"
+msgstr "Upprepa larmet efter (sek)"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Requiere las siguientes frases NMEA"
+msgstr "Bevaka följande NMEA mening:"
 #
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Återställa"
 #
 msgid "Second"
-msgstr "Segundo"
+msgstr "Sekund"
 #
 msgid "Seconds"
-msgstr "Segundos"
+msgstr "Sekunder"
 #
 msgid ""
 "Seconds to Average\n"
 "SOG over"
 msgstr ""
-"Segundos para promediar\n"
-"SOG"
+"Medelfarten räknas varje\n"
+" sekunder"
 #
 msgid "Select a file"
-msgstr "Seleccionar archivo"
+msgstr "Välj en fil"
 #
 msgid "Ship MMSI"
-msgstr "MMSI del barco"
+msgstr "Fartyget MMSI"
 #
 msgid "Ship Name"
-msgstr "Nombre del barco"
+msgstr "Fartygets namn"
 #
 msgid "Sound"
-msgstr "Sonido"
+msgstr "Ljud"
 #
 msgid "Speed"
-msgstr "Velocidad"
+msgstr "Fart"
 #
 msgid "Speed Alarm"
-msgstr "Alarma de velocidad"
+msgstr "Fartavvikelse"
 #
 msgid "Speed over ground"
-msgstr "Velocidad efectiva"
+msgstr "Fart över grund (SOG)"
 #
 msgid "Starboard"
-msgstr "Estribor"
+msgstr "Styrbord"
 #
 msgid "Status"
-msgstr "Estado"
+msgstr "Status"
 #
 msgid "Sync to Boat"
-msgstr "Posición actual"
+msgstr "Synkronisera med båten"
 #
 msgid "Test"
-msgstr "Prueba"
+msgstr "Testa"
 #
 msgid "Time"
-msgstr "Hora"
+msgstr "Tid"
 #
 msgid "Type"
-msgstr "Tipo"
+msgstr "Typ"
 #
 msgid "Under Speed"
-msgstr "Velocidad baja"
+msgstr "Lågfart"
 #
 msgid "UnderSpeed"
-msgstr "Velocidad baja"
+msgstr "Fart lägre än"
 #
 msgid "WatchDog"
-msgstr "WatchDog"
+msgstr "Vakthunden"
 #
 msgid "Watchdog"
-msgstr "Watchdog"
+msgstr "Vakthunden"
 #
 msgid "Watchdog Configuration"
-msgstr "Configuración de Watchdog"
+msgstr "Vakthundens inställningar"
 #
 msgid "Watchdog Information"
-msgstr "Información de Watchdog"
+msgstr "Information om Vakthunden"
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Plugin Watchdog para OpenCPN"
+msgstr "Vakthunden. Modul för OpenCPN"
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Plugin Watchdog para OpenCPN\n"
-"Alarma de usuario para condiciones inestables."
+"Vakthunden. Modul till OpenCPN\n"
+"Larmar när valda gränser överskrids."
 #
 msgid "Watchman"
-msgstr "Vigilante"
+msgstr "Vakthund"
 #
 msgid "With Course Of"
-msgstr "Con rumbo"
+msgstr "Från kursen"
 #
 msgid "at least every"
-msgstr "por lo menos cada "
+msgstr "minst varje"
 #
 msgid "bAutoSync"
 msgstr "bAutoSync"
 #
 msgid "course"
-msgstr "rumbo"
+msgstr "kurs"
 #
 msgid "degrees(s)"
-msgstr "grado(s)"
+msgstr "grad(er)"
 #
 msgid "failed to save"
-msgstr "Error al guardar"
+msgstr "det gick inte att spara"
 #
 msgid "in"
-msgstr "en"
+msgstr "om"
 #
 msgid "inside boundary"
-msgstr "dentro del límite"
+msgstr "Inre gräns"
 #
 msgid "invalid Boundary mode"
-msgstr "Modo límite no válido"
+msgstr "ogiltigt val av gränsövervakning"
 #
 msgid "invalid Course mode"
-msgstr "Modo Rumbo no válido"
+msgstr "ogiltigt val av kurslarm"
 #
 msgid "invalid LandFall mode"
-msgstr "modo de recalada no válido"
+msgstr "Ogiltigt val för landkänning"
 #
 msgid "invalid Speed mode"
-msgstr "modo de velocidad no válido"
+msgstr "ogiltigt val av fartlarm"
 #
 msgid "invalid alarm type"
-msgstr "tipo de alarma no válido"
+msgstr "ogiltig larmtyp"
 #
 msgid "knots"
-msgstr "nudos"
+msgstr "knop"
 #
 msgid "meter(s)"
-msgstr "metro(s)"
+msgstr "meter"
 #
 msgid "meters"
-msgstr "metros"
+msgstr "meter"
 #
 msgid "minute(s)"
-msgstr "minuto(s)"
+msgstr "minut(er)"
 #
 msgid "minutes"
-msgstr "minutos"
+msgstr "minuter"
 #
 msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"nm de límite\n"
-" (cualquier dirección)"
+"NM från gränslinje\n"
+"(Oavsett riktning)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"mn de la costa\n"
-"(cualquier dirección)"
+"NM från kustlinje\n"
+"(i någon riktning)"
 #
 msgid "radius"
-msgstr "radio"
+msgstr "radie"
 #
 msgid "second(s)"
-msgstr "segundo(s)"
+msgstr "Sekund(er)"
 #
 msgid "seconds"
-msgstr "segundos"
+msgstr "sekunder"
