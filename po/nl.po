@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-17 18:54+0100\n"
+"PO-Revision-Date: 2016-02-19 18:09+0100\n"
 "Last-Translator: NAV <rider2@kpnmail.nl>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -26,10 +26,10 @@ msgid " - inside inactive boundary"
 msgstr " - binnen inactieve gebiedsgrens"
 #
 msgid " Any Boundary Distance"
-msgstr "Grens elk gebied (afstand)"
+msgstr "Elke gebiedsgrens (afstand)"
 #
 msgid " Inactive Boundary Distance"
-msgstr "Grens inactief gebied (afstand)"
+msgstr "Inactieve gebiedsgrens (afstand)"
 #
 msgid " boundary "
 msgstr " gebiedsgrens "
@@ -65,10 +65,10 @@ msgid "Action"
 msgstr "Alarmactie"
 #
 msgid "Active"
-msgstr "Actief"
+msgstr "actief"
 #
 msgid "Active Boundary Distance"
-msgstr "Grens actief gebied (afstand)"
+msgstr "Actieve gebiedsgrens (afstand)"
 #
 msgid "Alarm Action"
 msgstr "Alarmacties"
@@ -104,13 +104,13 @@ msgid "Boundary GUID"
 msgstr "GUID gebied"
 #
 msgid "Boundary State"
-msgstr "Status gebied"
+msgstr "Betreft gebiedsstatus"
 #
 msgid "Boundary Time"
 msgstr "Gebiedsgrens (tijd)"
 #
 msgid "Boundary Type"
-msgstr "Alarm werkt voor het volgende gebiedstype"
+msgstr "Betreft gebiedstype"
 #
 msgid "Boundary name"
 msgstr "gebied"
@@ -249,7 +249,7 @@ msgid "Hours"
 msgstr "uren"
 #
 msgid "Inactive"
-msgstr "Inactief"
+msgstr "inactief"
 #
 msgid "Inclusion"
 msgstr "beperkend"

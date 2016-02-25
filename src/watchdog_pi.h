@@ -58,11 +58,26 @@ std::cout << x << std::endl; } while (0)
 #include <wx/fileconf.h>
 
 #include "version.h"
+#include "wxWTranslateCatalog.h"
 
 #define     MY_API_VERSION_MAJOR    1
 #define     MY_API_VERSION_MINOR    10
 
 #define ABOUT_AUTHOR_URL "http://seandepagnier.users.sourceforge.net"
+
+#define OPC wxS("opencpn-watchdog_pi")
+
+#ifndef WXINTL_NO_GETTEXT_MACRO
+#ifdef OPC
+#ifdef _
+#undef _
+#endif // _
+#define _(s) wxGetTranslation((s),OPC)
+#endif // OPC
+#else 
+#define _(s) wxGetTranslation((s))
+#endif // WXINTL_NO_GETTEXT_MACRO
+
 
 #include "ocpn_plugin.h"
 
