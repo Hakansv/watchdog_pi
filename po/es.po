@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-18 16:08-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -29,14 +29,7 @@ msgid " - inside inactive boundary"
 msgstr "dentro del límite"
 #
 #, fuzzy
-msgid " Any Boundary Distance"
-msgstr "Distancia a límite"
-#
-#, fuzzy
-msgid " Inactive Boundary Distance"
-msgstr "Distancia a límite"
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr " límite "
 #
 msgid " does not exist"
@@ -92,6 +85,10 @@ msgstr "Garreo"
 msgid "Any"
 msgstr "Cualquiera"
 #
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Distancia a límite"
+#
 msgid "Auto Reset"
 msgstr "Auto Reset"
 #
@@ -101,6 +98,9 @@ msgstr "Reiniciar automáticamente"
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr "Sincronización automática con el barco cuando se activa"
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr "Alarma de límite"
 #
@@ -109,6 +109,10 @@ msgstr "Distancia a límite"
 #
 msgid "Boundary GUID"
 msgstr "GUID del Límite"
+#
+#, fuzzy
+msgid "Boundary Name"
+msgstr "Nombre del límite"
 #
 #, fuzzy
 msgid "Boundary State"
@@ -194,6 +198,10 @@ msgstr "¡Error!"
 msgid "Exclusion"
 msgstr "Exclusión"
 #
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "Exclusión"
+#
 msgid "Failed to execute command: "
 msgstr "Error ejecutando el comando: "
 #
@@ -263,14 +271,19 @@ msgstr "Horas"
 msgid "Inactive"
 msgstr ""
 #
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Distancia a límite"
+#
 msgid "Inclusion"
+msgstr "Inclusión"
+#
+#, fuzzy
+msgid "Inclusion Alarm"
 msgstr "Inclusión"
 #
 msgid "Information"
 msgstr "Información"
-#
-msgid "Inside"
-msgstr "Interior"
 #
 msgid "LandFall"
 msgstr "Recalada"
@@ -490,6 +503,10 @@ msgstr "Error al guardar"
 msgid "in"
 msgstr "en"
 #
+#, fuzzy
+msgid "inside"
+msgstr "Interior"
+#
 msgid "inside boundary"
 msgstr "dentro del límite"
 #
@@ -537,6 +554,10 @@ msgstr ""
 "mn de la costa\n"
 "(cualquier dirección)"
 #
+#, fuzzy
+msgid "outside"
+msgstr "Exterior"
+#
 msgid "radius"
 msgstr "radio"
 #
@@ -545,3 +566,13 @@ msgstr "segundo(s)"
 #
 msgid "seconds"
 msgstr "segundos"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr " límite "

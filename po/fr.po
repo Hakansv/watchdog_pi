@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-25 08:03-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -18,25 +18,18 @@ msgstr ""
 #
 #, fuzzy
 msgid " - inside active boundary"
-msgstr "barrière/zone intérieure"
+msgstr "zone intérieure"
 #
 #, fuzzy
 msgid " - inside any boundary"
-msgstr "barrière/zone intérieure"
+msgstr "zone intérieure"
 #
 #, fuzzy
 msgid " - inside inactive boundary"
-msgstr "barrière/zone intérieure"
+msgstr "zone intérieure"
 #
 #, fuzzy
-msgid " Any Boundary Distance"
-msgstr "Distance jusqu'à la barrière/zone"
-#
-#, fuzzy
-msgid " Inactive Boundary Distance"
-msgstr "Distance jusqu'à la barrière/zone"
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr "Barrière/Zone "
 #
 msgid " does not exist"
@@ -78,19 +71,23 @@ msgid "Active Boundary Distance"
 msgstr "Distance jusqu'à la barrière/zone"
 #
 msgid "Alarm Action"
-msgstr "Action d'alarme"
+msgstr "Action(s) mise en oeuvre"
 #
 msgid "Alarms"
-msgstr "Alarmes"
+msgstr "Gestion des alertes"
 #
 msgid "Anchor"
 msgstr "Ancre"
 #
 msgid "Anchor Watch"
-msgstr "Sécurisation du mouillage"
+msgstr "Surveillance du mouillage"
 #
 msgid "Any"
 msgstr "Tous"
+#
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Distance jusqu'à la barrière/zone"
 #
 msgid "Auto Reset"
 msgstr "RAZ automatique"
@@ -101,8 +98,11 @@ msgstr "Remettre à zéro automatiquement"
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr "Synchroniser automatiquement le bateau chaque fois qu'activé"
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
-msgstr "Alarme de barrière/zone"
+msgstr "Alerte de zone"
 #
 msgid "Boundary Distance"
 msgstr "Distance jusqu'à la barrière/zone"
@@ -111,17 +111,21 @@ msgid "Boundary GUID"
 msgstr "GUID de la barrière/zone"
 #
 #, fuzzy
+msgid "Boundary Name"
+msgstr "Nom de la zone"
+#
+#, fuzzy
 msgid "Boundary State"
-msgstr "Nom de la barrière/zone"
+msgstr "Nom de la zone"
 #
 msgid "Boundary Time"
-msgstr "Durée jusqu'à la barrière/zone"
+msgstr "Durée/Distance jusqu'à une zone"
 #
 msgid "Boundary Type"
-msgstr "Type de la barrière/zone"
+msgstr "Type de la zone"
 #
 msgid "Boundary name"
-msgstr "Nom de la barrière/zone"
+msgstr "Nom de la zone"
 #
 msgid ""
 "Check Frequency  (Secs)\n"
@@ -152,7 +156,7 @@ msgid "Days"
 msgstr "Jours"
 #
 msgid "Deadman"
-msgstr "Homme mort"
+msgstr "Homme qui dort"
 #
 msgid "Degrees"
 msgstr "Degrés"
@@ -167,7 +171,7 @@ msgid "Description"
 msgstr "Description"
 #
 msgid "Disable All Alarms"
-msgstr "Désactiver toutes les alarmes"
+msgstr "Désactiver toutes les alertes"
 #
 msgid "Distance"
 msgstr "Distance à la terre >"
@@ -176,22 +180,27 @@ msgid "Edit"
 msgstr "Editer"
 #
 msgid "Edit Alarm"
-msgstr "Editer l'alarme"
+msgstr "Propriétés de cette alerte"
 #
 msgid "Enable All Alarms"
-msgstr "Activer toutes les alarmes"
+msgstr "Activer toutes les alertes"
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
-msgstr "Permettre après que la boite de dialogue du Watchdog ait été visible"
+msgstr "Permettre dès que la boite de dialogue du chien de garde est visible"
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Permettre seulement si la boite de dialogue de Watchdog est visible"
+msgstr ""
+"Permettre seulement si la boite de dialogue du chien de garde est visible"
 #
 msgid "Error!"
 msgstr "Erreur !"
 #
 msgid "Exclusion"
-msgstr "Exclusion"
+msgstr "Interdire"
+#
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "Interdire"
 #
 msgid "Failed to execute command: "
 msgstr "échec de la commande : "
@@ -200,13 +209,13 @@ msgid "Failed to read"
 msgstr "Echec de lecture"
 #
 msgid "GPS course crosses boundary in <"
-msgstr "En suivant le cap GPS, on atteint une barrière/zone <"
+msgstr "Avec ce COG, on atteint une zone <"
 #
 msgid "GPS course crosses land in <"
 msgstr "Le COG porte à terre <"
 #
 msgid "GPS fix is <"
-msgstr "La distance est <"
+msgstr "La position est <"
 #
 msgid "GUID"
 msgstr "GUID"
@@ -215,7 +224,7 @@ msgid "General Setup"
 msgstr "Réglage général"
 #
 msgid "Get Boundary GUID"
-msgstr "Obtenir la GUID de la barrière/zone"
+msgstr "Obtenir la GUID de la zone"
 #
 msgid "Graphical overlay displays bounding anchor area"
 msgstr "Affichage de la zone de mouillage"
@@ -231,7 +240,7 @@ msgid ""
 "point in the found boundary"
 msgstr ""
 "Affichage, par superposition graphique, de la ligne entre le bateau, en "
-"utilisant ses coordonnées GPS, et le point de la barrière/zone trouvée"
+"utilisant sa position, et le point de la zone trouvée"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
@@ -259,23 +268,28 @@ msgstr "Heures"
 msgid "Inactive"
 msgstr ""
 #
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Distance jusqu'à la barrière/zone"
+#
 msgid "Inclusion"
-msgstr "Inclusion"
+msgstr "Autoriser"
+#
+#, fuzzy
+msgid "Inclusion Alarm"
+msgstr "Autoriser"
 #
 msgid "Information"
 msgstr "Information"
 #
-msgid "Inside"
-msgstr "A l'intérieur"
-#
 msgid "LandFall"
-msgstr "Terre atteinte"
+msgstr "Terre proche"
 #
 msgid "LandFall Time Invalid"
-msgstr "Heure invalide de l'atterrissage"
+msgstr "L'heure d'atterrissage est invalide"
 #
 msgid "Landfall"
-msgstr "Terre atteinte"
+msgstr "Terre proche "
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
@@ -314,17 +328,17 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"- La plupart des alarmes doivent être explicites. \n"
+"- La plupart des alertes doivent être explicites. \n"
 "\n"
 "- Normalement, un son est joué, mais vous pouvez exécuter n'importe quelle "
 "commande\n"
 "que vous aimez, par exemple : \"aplay / usr/local/share/opencpn/sounds/2bells."
 "wav \"\n"
 "\n"
-"- Une boite de message est nécessaire pour interrompre d'autres applications "
-"(telle qu'un movie player)\n"
+"- Une boite de message peut être nécessaire pour interrompre d'autres "
+"applications (telle qu'un movie player)\n"
 "\n"
-"- La RAZ d'une alarme ne fonctionne qu'une fois et doit être réactivée à "
+"- La RAZ d'une alerte ne fonctionne qu'une fois et doit être réactivée à "
 "nouveau ultérieurement.\n"
 "\n"
 "- Un GUID est l'identificateur unique, attribué par OpenCPN, à tout objet "
@@ -352,10 +366,10 @@ msgid "New"
 msgstr "Nouveau"
 #
 msgid "New Alarm"
-msgstr "Nouvelle alarme"
+msgstr "Nouvelle alerte"
 #
 msgid "No Boundary within "
-msgstr "Pas de «barrière/zone» à moins de "
+msgstr "Pas de zone à moins de "
 #
 msgid "No User Activity for"
 msgstr "Inactivité de l'utilisateur pendant"
@@ -376,7 +390,7 @@ msgid "OverSpeed"
 msgstr "Vitesse excessive"
 #
 msgid "Port"
-msgstr "."
+msgstr "Babord"
 #
 msgid "Port or Starboard"
 msgstr "Babord ou tribord"
@@ -394,7 +408,7 @@ msgid "Require following NMEA sentences:"
 msgstr "Les phrases NMEA suivantes sont requises :"
 #
 msgid "Reset"
-msgstr "RAZ"
+msgstr "RàZ"
 #
 msgid "Second"
 msgstr "Seconde"
@@ -461,23 +475,23 @@ msgid "Watchdog"
 msgstr "Chien de garde"
 #
 msgid "Watchdog Configuration"
-msgstr "Configuration de Watchdog"
+msgstr "Configuration du chien de garde"
 #
 msgid "Watchdog Information"
 msgstr "Information"
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Complément Watchdog pour OpenCPN"
+msgstr "Complément Chien de garde pour OpenCPN"
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Complément Watchdog (chien de garde) pour OpenCPN\n"
+"Complément Chien de garde pour OpenCPN\n"
 "Mise en place d'alarmes paramétrables."
 #
 msgid "Watchman"
-msgstr "Surveillant"
+msgstr "Equipier de quart"
 #
 msgid "With Course Of"
 msgstr "Avec le cap"
@@ -500,26 +514,30 @@ msgstr "échec de la sauvegarde"
 msgid "in"
 msgstr "dans"
 #
+#, fuzzy
+msgid "inside"
+msgstr "A l'intérieur"
+#
 msgid "inside boundary"
-msgstr "barrière/zone intérieure"
+msgstr "zone intérieure"
 #
 msgid "invalid Boundary mode"
-msgstr "mode Barrière/Zone invalide"
+msgstr "mode \"Barrière/Zone\" invalide"
 #
 msgid "invalid Course mode"
-msgstr "mode Cap invalide"
+msgstr "mode \"Cap\" invalide"
 #
 msgid "invalid LandFall mode"
-msgstr "mode Terre atteinte invalide"
+msgstr "mode \"Terre proche\" invalide"
 #
 msgid "invalid Speed mode"
-msgstr "mode Vitesse invalide"
+msgstr "mode \"Vitesse\" invalide"
 #
 msgid "invalid alarm type"
 msgstr "type d'alarme invalide"
 #
 msgid "knots"
-msgstr "Noeuds"
+msgstr "noeuds"
 #
 msgid "meter(s)"
 msgstr "mètre(s)"
@@ -537,21 +555,35 @@ msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"Nm entre la position GPS et la barrière/zone\n"
+"milles entre la position et la zone\n"
 "(dans toutes les directions)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"Nm jusqu'à la ligne de côte\n"
+"milles jusqu'à la ligne de côte\n"
 "(dans toutes les directions)"
 #
+#, fuzzy
+msgid "outside"
+msgstr "A l'extérieur"
+#
 msgid "radius"
-msgstr "Rayon"
+msgstr "rayon"
 #
 msgid "second(s)"
 msgstr "seconde(s)"
 #
 msgid "seconds"
 msgstr "secondes"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr "Barrière/Zone "

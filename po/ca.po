@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-07 02:48-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-18 16:08-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Catalan\n"
 "Language: ca_ES\n"
@@ -25,13 +25,7 @@ msgstr ""
 msgid " - inside inactive boundary"
 msgstr ""
 #
-msgid " Any Boundary Distance"
-msgstr ""
-#
-msgid " Inactive Boundary Distance"
-msgstr ""
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr ""
 #
 msgid " does not exist"
@@ -85,6 +79,9 @@ msgstr "Alarma d'ancla"
 msgid "Any"
 msgstr ""
 #
+msgid "Any Boundary Distance"
+msgstr ""
+#
 msgid "Auto Reset"
 msgstr ""
 #
@@ -94,6 +91,9 @@ msgstr ""
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr ""
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr ""
 #
@@ -101,6 +101,9 @@ msgid "Boundary Distance"
 msgstr ""
 #
 msgid "Boundary GUID"
+msgstr ""
+#
+msgid "Boundary Name"
 msgstr ""
 #
 msgid "Boundary State"
@@ -183,6 +186,9 @@ msgstr ""
 msgid "Exclusion"
 msgstr ""
 #
+msgid "Exclusion Alarms"
+msgstr ""
+#
 msgid "Failed to execute command: "
 msgstr "No s'ha pogut executar l'ordre: "
 #
@@ -250,14 +256,17 @@ msgstr "Hores"
 msgid "Inactive"
 msgstr ""
 #
+msgid "Inactive Boundary Distance"
+msgstr ""
+#
 msgid "Inclusion"
+msgstr ""
+#
+msgid "Inclusion Alarm"
 msgstr ""
 #
 msgid "Information"
 msgstr "Informació"
-#
-msgid "Inside"
-msgstr ""
 #
 msgid "LandFall"
 msgstr "Recalada"
@@ -475,6 +484,9 @@ msgstr ""
 msgid "in"
 msgstr ""
 #
+msgid "inside"
+msgstr ""
+#
 msgid "inside boundary"
 msgstr ""
 #
@@ -519,6 +531,9 @@ msgid ""
 msgstr ""
 "nm des de la línia de costa\n"
 " (en qualsevol direcció)"
+#
+msgid "outside"
+msgstr ""
 #
 msgid "radius"
 msgstr ""

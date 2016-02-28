@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-12 17:06-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-25 08:05-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
@@ -29,14 +29,7 @@ msgid " - inside inactive boundary"
 msgstr "dentro do limite"
 #
 #, fuzzy
-msgid " Any Boundary Distance"
-msgstr "Distância Limite"
-#
-#, fuzzy
-msgid " Inactive Boundary Distance"
-msgstr "Distância Limite"
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr " limite "
 #
 msgid " does not exist"
@@ -92,6 +85,10 @@ msgstr "Alarme de âncora"
 msgid "Any"
 msgstr "Qualquer"
 #
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Distância Limite"
+#
 msgid "Auto Reset"
 msgstr "Auto Reset"
 #
@@ -101,6 +98,9 @@ msgstr "Redefinir automaticamente"
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr "Sincronizar automaticamente para o barco sempre que ativado"
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr "Alarme de Limite"
 #
@@ -109,6 +109,10 @@ msgstr "Distância Limite"
 #
 msgid "Boundary GUID"
 msgstr "Limite GUID"
+#
+#, fuzzy
+msgid "Boundary Name"
+msgstr "Nome do limite"
 #
 #, fuzzy
 msgid "Boundary State"
@@ -193,6 +197,10 @@ msgstr "Erro!"
 msgid "Exclusion"
 msgstr "Exclusão"
 #
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "Exclusão"
+#
 msgid "Failed to execute command: "
 msgstr "Falha ao executar o comando: "
 #
@@ -238,7 +246,7 @@ msgid ""
 "crossing"
 msgstr ""
 "Sobreposição gráfica para o tempo exibe a linha do barco no local de "
-"cruzamento com o terreno"
+"cruzamento com a terra"
 #
 msgid "Graphics Enabled"
 msgstr "Gráficos habilitados"
@@ -261,14 +269,19 @@ msgstr "Horas"
 msgid "Inactive"
 msgstr ""
 #
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Distância Limite"
+#
 msgid "Inclusion"
+msgstr "Inclusão"
+#
+#, fuzzy
+msgid "Inclusion Alarm"
 msgstr "Inclusão"
 #
 msgid "Information"
 msgstr "Informação"
-#
-msgid "Inside"
-msgstr "Dentro"
 #
 msgid "LandFall"
 msgstr "Aterragem"
@@ -286,7 +299,7 @@ msgid ""
 msgstr ""
 "Landfall deteção utiliza gshhs (dados hierárquicos global de alta resolução "
 "do litoral) \n"
-"Considere instalando o banco de dados de resolução mais alta para maior "
+"Considere instalar o banco de dados de resolução mais alta para maior "
 "precisão."
 #
 msgid "Latitude"
@@ -350,7 +363,7 @@ msgid "No User Activity for"
 msgstr "Nenhuma atividade do usuário para"
 #
 msgid "Off Course By >"
-msgstr "Claro que por >"
+msgstr "Fora do rumo >"
 #
 msgid "Options"
 msgstr "Opções"
@@ -380,7 +393,7 @@ msgid "Repeat Alarm after seconds"
 msgstr "Repetir alarme após segundos"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Necessitam de sentenças NMEA a seguir:"
+msgstr "Necessita das seguintes frases NMEA:"
 #
 msgid "Reset"
 msgstr "Reiniciar"
@@ -489,6 +502,10 @@ msgstr "falha ao salvar"
 msgid "in"
 msgstr "em"
 #
+#, fuzzy
+msgid "inside"
+msgstr "Dentro"
+#
 msgid "inside boundary"
 msgstr "dentro do limite"
 #
@@ -536,6 +553,10 @@ msgstr ""
 "nm da linha da costa\n"
 "(qualquer direção)"
 #
+#, fuzzy
+msgid "outside"
+msgstr "Fora"
+#
 msgid "radius"
 msgstr "raio"
 #
@@ -544,3 +565,13 @@ msgstr "segundo(s)"
 #
 msgid "seconds"
 msgstr "segundos"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr " limite "

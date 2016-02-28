@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-07 02:50-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-18 16:09-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -29,14 +29,7 @@ msgid " - inside inactive boundary"
 msgstr "Inre gräns"
 #
 #, fuzzy
-msgid " Any Boundary Distance"
-msgstr "Avstånd till Gränslinje"
-#
-#, fuzzy
-msgid " Inactive Boundary Distance"
-msgstr "Avstånd till Gränslinje"
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr " gränsen "
 #
 msgid " does not exist"
@@ -92,6 +85,10 @@ msgstr "Ankarvakt"
 msgid "Any"
 msgstr "Alla"
 #
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Avstånd till Gränslinje"
+#
 msgid "Auto Reset"
 msgstr "Återställ automatiskt"
 #
@@ -101,6 +98,9 @@ msgstr "Återställ automatiskt"
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr "Synkronisera till båtens position varje gång larmet aktiveras"
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr "Gränslarm"
 #
@@ -109,6 +109,10 @@ msgstr "Avstånd till Gränslinje"
 #
 msgid "Boundary GUID"
 msgstr "Gränslinjens GUID (Id)"
+#
+#, fuzzy
+msgid "Boundary Name"
+msgstr "Gränsens namn"
 #
 #, fuzzy
 msgid "Boundary State"
@@ -195,6 +199,10 @@ msgstr "Fel!"
 msgid "Exclusion"
 msgstr "Yttre"
 #
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "Yttre"
+#
 msgid "Failed to execute command: "
 msgstr "Det gick inte att utföra kommandot: "
 #
@@ -261,14 +269,19 @@ msgstr "Timmar"
 msgid "Inactive"
 msgstr ""
 #
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Avstånd till Gränslinje"
+#
 msgid "Inclusion"
+msgstr "Inre"
+#
+#, fuzzy
+msgid "Inclusion Alarm"
 msgstr "Inre"
 #
 msgid "Information"
 msgstr "Information"
-#
-msgid "Inside"
-msgstr "Insidan"
 #
 msgid "LandFall"
 msgstr "Landkänning"
@@ -488,6 +501,10 @@ msgstr "det gick inte att spara"
 msgid "in"
 msgstr "om"
 #
+#, fuzzy
+msgid "inside"
+msgstr "Insidan"
+#
 msgid "inside boundary"
 msgstr "Inre gräns"
 #
@@ -535,6 +552,10 @@ msgstr ""
 "NM från kustlinje\n"
 "(i någon riktning)"
 #
+#, fuzzy
+msgid "outside"
+msgstr "Utsidan"
+#
 msgid "radius"
 msgstr "radie"
 #
@@ -543,3 +564,13 @@ msgstr "Sekund(er)"
 #
 msgid "seconds"
 msgstr "sekunder"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr " gränsen "

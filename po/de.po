@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-07 02:49-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-24 14:27-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -25,13 +25,7 @@ msgstr ""
 msgid " - inside inactive boundary"
 msgstr ""
 #
-msgid " Any Boundary Distance"
-msgstr ""
-#
-msgid " Inactive Boundary Distance"
-msgstr ""
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr ""
 #
 msgid " does not exist"
@@ -59,7 +53,7 @@ msgid "ALARM!"
 msgstr "ALARM!"
 #
 msgid "About Author"
-msgstr "Über den Autor"
+msgstr "Über Autor"
 #
 msgid "Action"
 msgstr ""
@@ -71,7 +65,7 @@ msgid "Active Boundary Distance"
 msgstr ""
 #
 msgid "Alarm Action"
-msgstr "Alarmaktion"
+msgstr "Alarm Aktion"
 #
 msgid "Alarms"
 msgstr ""
@@ -80,9 +74,12 @@ msgid "Anchor"
 msgstr "Anker"
 #
 msgid "Anchor Watch"
-msgstr "Ankerwache"
+msgstr "Anker Wache"
 #
 msgid "Any"
+msgstr ""
+#
+msgid "Any Boundary Distance"
 msgstr ""
 #
 msgid "Auto Reset"
@@ -94,6 +91,9 @@ msgstr ""
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr ""
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr ""
 #
@@ -101,6 +101,9 @@ msgid "Boundary Distance"
 msgstr ""
 #
 msgid "Boundary GUID"
+msgstr ""
+#
+msgid "Boundary Name"
 msgstr ""
 #
 msgid "Boundary State"
@@ -124,7 +127,7 @@ msgid "Close"
 msgstr "Schließen"
 #
 msgid "Command"
-msgstr "Kommando"
+msgstr "Befehl"
 #
 msgid "Configuration"
 msgstr ""
@@ -133,7 +136,7 @@ msgid "Course"
 msgstr ""
 #
 msgid "Current Course"
-msgstr "Gefahrener Kurs"
+msgstr "Aktueller Kurs"
 #
 msgid "Day"
 msgstr "Tag"
@@ -142,7 +145,7 @@ msgid "Days"
 msgstr "Tage"
 #
 msgid "Deadman"
-msgstr "Totmann"
+msgstr "Totermann"
 #
 msgid "Degrees"
 msgstr "Grad"
@@ -160,7 +163,7 @@ msgid "Disable All Alarms"
 msgstr ""
 #
 msgid "Distance"
-msgstr "Distanz"
+msgstr "Entfernung"
 #
 msgid "Edit"
 msgstr ""
@@ -183,8 +186,11 @@ msgstr ""
 msgid "Exclusion"
 msgstr ""
 #
+msgid "Exclusion Alarms"
+msgstr ""
+#
 msgid "Failed to execute command: "
-msgstr "Kommando konnte nicht ausgeführt werden: "
+msgstr "Fehler bei Befehlsausführung:"
 #
 msgid "Failed to read"
 msgstr ""
@@ -193,28 +199,28 @@ msgid "GPS course crosses boundary in <"
 msgstr ""
 #
 msgid "GPS course crosses land in <"
-msgstr "GPS Kurs trifft auf Land in <"
+msgstr "GPS Kurs kreuzt Land in <"
 #
 msgid "GPS fix is <"
-msgstr "GPS-Fix ist <"
+msgstr "GPS Fix ist <"
 #
 msgid "GUID"
 msgstr ""
 #
 msgid "General Setup"
-msgstr "Allgemeine Einstellungen"
+msgstr "Allgemeine Einstellung"
 #
 msgid "Get Boundary GUID"
 msgstr ""
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "Grafischer Overlay zeigt die Ankergrenzzone"
+msgstr "Grafische Überlagerung zeigt Ankerbereich Grenze"
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr "Die Grafik zeigt einen Radius für diese Geschwindigkeit"
+msgstr "Grafische Überlagerung zeigt Radius mit dieser Geschw."
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "Grafischer Overlay zeigt die den korrekten Kurs begrenzenden Linien"
+msgstr "Grafische Überlagerung zeigt Grenzlinien gültiger Kurse"
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
@@ -225,8 +231,7 @@ msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
 msgstr ""
-"Eine eingezeichnete Linie zeigt den Kurs vom Boot zum Landfall (bei "
-"Zeitbasierter Warnung)"
+"Grafische Überlagerung zeigt zeitl. Linie vom Boot zum Ort der Landberührung"
 #
 msgid "Graphics Enabled"
 msgstr ""
@@ -249,41 +254,43 @@ msgstr "Stunden"
 msgid "Inactive"
 msgstr ""
 #
+msgid "Inactive Boundary Distance"
+msgstr ""
+#
 msgid "Inclusion"
+msgstr ""
+#
+msgid "Inclusion Alarm"
 msgstr ""
 #
 msgid "Information"
 msgstr "Information"
 #
-msgid "Inside"
-msgstr ""
-#
 msgid "LandFall"
-msgstr "Landfall"
+msgstr "LandFall"
 #
 msgid "LandFall Time Invalid"
 msgstr ""
 #
 msgid "Landfall"
-msgstr "Landfall"
+msgstr "LandFall"
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Landfall Erkennung nutzt die gshhs Küstenliniendaten.\n"
-"Sie sollten den Datensatz mit der höchstmögliche verfügbaren Auflösung für "
-"eine optimale Genauigkeit verwenden."
+"Landfall Erkennung verwendet gshhs (Küstendaten)\n"
+"Für beste Genauigkeit verwende die am höchsten auflösende Datenbank."
 #
 msgid "Latitude"
-msgstr "Breitengrad (Lat)"
+msgstr "Breite"
 #
 msgid "Longitude"
-msgstr "Längengrad (Lon)"
+msgstr "Länge"
 #
 msgid "Message Box"
-msgstr "Nachrichten-Box"
+msgstr "Nachrichten Box"
 #
 msgid "MessageBox"
 msgstr ""
@@ -303,14 +310,12 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"Die meisten Alarme sollten selbsterklärend sein\n"
-"Normalerweise wird eine akustische Warnung ausgelöst, man kann aber auch "
-"einen beliebigen Befehl wie   \"aplay /usr/local/share/opencpn/sounds/2bells."
-"wav\" ausführen\n"
-" Die Messagebox kann nützlich sein, um eine andere Anwendung, wie einen Film, "
-"zu unterbrechen\n"
-"Automatisches Zurücksetzen setzt den Alarm aus, sobald die Bedingungen nicht "
-"mehr zutreffen. Der Alarm kann aber später wieder ausgelöst werden."
+"Die meisten Alarme sind selbsterklärend\n"
+"Normalerweise wird ein Ton abgespielt, es können aber auch Befehle "
+"konfiguriert werden.\n"
+"Die Nachrichtenbox ist nützlich zum Unterbrechen anderer Programme.\n"
+"Der automatische Reset unterbricht einen nicht mehr aktiven Alarm, der später "
+"wieder aktiv sein kann."
 #
 msgid "NMEA Data"
 msgstr "NMEA-Daten"
@@ -334,10 +339,10 @@ msgid "No Boundary within "
 msgstr ""
 #
 msgid "No User Activity for"
-msgstr "Ohne Benutzeraktivität seit"
+msgstr "Keine Anwender Aktivität für"
 #
 msgid "Off Course By >"
-msgstr "Kursabweichung >"
+msgstr "Kurs-Abw. mit >"
 #
 msgid "Options"
 msgstr ""
@@ -346,7 +351,7 @@ msgid "Outside"
 msgstr ""
 #
 msgid "Over Speed"
-msgstr "Zu schnell"
+msgstr "Übergeschw."
 #
 msgid "OverSpeed"
 msgstr ""
@@ -364,16 +369,16 @@ msgid "Repeat"
 msgstr ""
 #
 msgid "Repeat Alarm after seconds"
-msgstr "Alarm wiederholen nach (Sekunden)"
+msgstr "Wiederhole Alarm nach Sekunden"
 #
 msgid "Require following NMEA sentences:"
-msgstr "Folgende NMEA Daten sind notwendig:"
+msgstr "Erfordert folgende NMEA Sequenz:"
 #
 msgid "Reset"
-msgstr "Zurücksetzen"
+msgstr "Reset"
 #
 msgid "Second"
-msgstr "Sekunde"
+msgstr "Sekunden"
 #
 msgid "Seconds"
 msgstr "Sekunden"
@@ -384,7 +389,7 @@ msgid ""
 msgstr ""
 #
 msgid "Select a file"
-msgstr "Wähle Datei"
+msgstr "Wähle eine Datei"
 #
 msgid "Ship MMSI"
 msgstr ""
@@ -399,7 +404,7 @@ msgid "Speed"
 msgstr ""
 #
 msgid "Speed Alarm"
-msgstr "Geschwindigkeitsalarm"
+msgstr "Geschw. Alarm"
 #
 msgid "Speed over ground"
 msgstr ""
@@ -411,7 +416,7 @@ msgid "Status"
 msgstr ""
 #
 msgid "Sync to Boat"
-msgstr "Auf das Boot beziehen"
+msgstr "Sync zum Boot"
 #
 msgid "Test"
 msgstr ""
@@ -423,41 +428,41 @@ msgid "Type"
 msgstr ""
 #
 msgid "Under Speed"
-msgstr "Zu langsam"
+msgstr "Untergeschw."
 #
 msgid "UnderSpeed"
 msgstr ""
 #
 msgid "WatchDog"
-msgstr "WatchDog"
+msgstr "Wachhund"
 #
 msgid "Watchdog"
-msgstr "Watchdog"
+msgstr "Wachhund"
 #
 msgid "Watchdog Configuration"
 msgstr ""
 #
 msgid "Watchdog Information"
-msgstr "Watchdog Information"
+msgstr "Wachhund Information"
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Wachhund-PlugIn für OpenCPN"
+msgstr "Wachhund PlugIn für OpenCPN"
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Wachhund-PlugIn für OpenCPN\n"
-"Den Skipper bei sich verändernden Bedingungen alarmieren."
+"Wachhund PlugIn für OpenCPN\n"
+"Alarmiert über Änderungen."
 #
 msgid "Watchman"
-msgstr "Watchman"
+msgstr "Wachhund"
 #
 msgid "With Course Of"
 msgstr "Mit Kurs von"
 #
 msgid "at least every"
-msgstr "mindestens alle"
+msgstr "mindest jede"
 #
 msgid "bAutoSync"
 msgstr ""
@@ -472,6 +477,9 @@ msgid "failed to save"
 msgstr ""
 #
 msgid "in"
+msgstr ""
+#
+msgid "inside"
 msgstr ""
 #
 msgid "inside boundary"
@@ -496,7 +504,7 @@ msgid "knots"
 msgstr "Knoten"
 #
 msgid "meter(s)"
-msgstr "meter"
+msgstr "Meter"
 #
 msgid "meters"
 msgstr "Meter"
@@ -505,7 +513,7 @@ msgid "minute(s)"
 msgstr "Minute(n)"
 #
 msgid "minutes"
-msgstr "Minuten"
+msgstr "Minute(n)"
 #
 msgid ""
 "nm from boundary\n"
@@ -516,14 +524,17 @@ msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"NM von der Küste\n"
-"(jegliche Richtung)"
+"sm von Küstenlinie\n"
+"(jede Richtung)"
+#
+msgid "outside"
+msgstr ""
 #
 msgid "radius"
 msgstr ""
 #
 msgid "second(s)"
-msgstr "Sekunde(n)"
+msgstr "Sekunden"
 #
 msgid "seconds"
 msgstr "Sekunden"

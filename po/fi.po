@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-12 17:05-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-26 09:18-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
@@ -29,14 +29,7 @@ msgid " - inside inactive boundary"
 msgstr "rajan sisällä"
 #
 #, fuzzy
-msgid " Any Boundary Distance"
-msgstr "Raja etäisyys"
-#
-#, fuzzy
-msgid " Inactive Boundary Distance"
-msgstr "Raja etäisyys"
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr " raja "
 #
 msgid " does not exist"
@@ -92,6 +85,10 @@ msgstr "Ankkuri vahti"
 msgid "Any"
 msgstr "Mikä tahansa"
 #
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Raja etäisyys"
+#
 msgid "Auto Reset"
 msgstr "Automaattinen kuittaus"
 #
@@ -101,6 +98,9 @@ msgstr "Automaattinen nollaus"
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr "Automaattisesti synkronoi veneeseen, kun mahdollista"
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr "Raja hälytys"
 #
@@ -109,6 +109,10 @@ msgstr "Raja etäisyys"
 #
 msgid "Boundary GUID"
 msgstr "Rajan GUID"
+#
+#, fuzzy
+msgid "Boundary Name"
+msgstr "Rajan nimi"
 #
 #, fuzzy
 msgid "Boundary State"
@@ -193,6 +197,10 @@ msgstr "Virhe!"
 msgid "Exclusion"
 msgstr "Poisjättäminen"
 #
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "Poisjättäminen"
+#
 msgid "Failed to execute command: "
 msgstr "Komennon suoritus epäonnistui: "
 #
@@ -259,14 +267,19 @@ msgstr "Tunnit"
 msgid "Inactive"
 msgstr ""
 #
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Raja etäisyys"
+#
 msgid "Inclusion"
+msgstr "Mukaan ottaminen"
+#
+#, fuzzy
+msgid "Inclusion Alarm"
 msgstr "Mukaan ottaminen"
 #
 msgid "Information"
 msgstr "Informaatiota"
-#
-msgid "Inside"
-msgstr "Sisällä"
 #
 msgid "LandFall"
 msgstr "Maakosketus"
@@ -486,6 +499,10 @@ msgstr "tallennus epäonnistui"
 msgid "in"
 msgstr "paikassa"
 #
+#, fuzzy
+msgid "inside"
+msgstr "Sisällä"
+#
 msgid "inside boundary"
 msgstr "rajan sisällä"
 #
@@ -533,6 +550,10 @@ msgstr ""
 "nm rantaviivasta\n"
 " (jossakin suunnassa)"
 #
+#, fuzzy
+msgid "outside"
+msgstr "Ulkopuolella"
+#
 msgid "radius"
 msgstr "säde"
 #
@@ -541,3 +562,13 @@ msgstr "sekunnit"
 #
 msgid "seconds"
 msgstr "sekuntti"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr " raja "

@@ -294,7 +294,12 @@ public:
         switch(m_Mode) {
         case TIME: return _("Time") + wxString::Format(_T(" < %f"), m_TimeMinutes);
         case DISTANCE: return _("Distance") + wxString::Format(_T(" < %f nm"), m_Distance);
-        case ANCHOR: return _("Boundary GUID") + wxString(_T(" ")) + m_BoundaryGUID;
+        case ANCHOR: {
+            if(m_BoundaryName == wxEmptyString)
+                return _("Boundary GUID") + wxString(_T(": ")) + m_BoundaryGUID;
+            else
+                return _("Boundary Name") + wxString(_T(": ")) + m_BoundaryName;
+        }
         case GUARD: {
             if(m_GuardZoneName == wxEmptyString)
                 return _("Guard Zone GUID") + wxString(_T(": ")) + m_GuardZoneGUID;
@@ -386,7 +391,7 @@ public:
                             m_BoundaryName = g_ReceivedBoundaryTimeJSONMsg[wxS("Name")].AsString();
                             m_BoundaryDescription = g_ReceivedBoundaryTimeJSONMsg[wxS("Description")].AsString();
                             m_BoundaryGUID = g_ReceivedBoundaryTimeJSONMsg[wxS("GUID")].AsString();
-                            g_ReceivedBoundaryDistanceMessage = wxEmptyString;
+                            g_ReceivedBoundaryTimeMessage = wxEmptyString;
                             return true;
                         }
                     }
@@ -591,8 +596,19 @@ public:
                         l_s = _T(" ") + wxString(_("Boundary name")) + _T(": ") + m_BoundaryName;
                     else
                         l_s =  _T(" ") + wxString(_("Boundary GUID")) + _T(": ") + m_BoundaryGUID;
-                    if(m_bCurrentBoatPos)
-                        l_s.append(_T(" - ") + wxString(_("inside boundary")));
+                    if(m_bCurrentBoatPos) {
+                        switch (m_BoundaryState) {
+                            case ID_BOUNDARY_STATE_ANY:
+                                l_s.append(_(" - inside any boundary"));
+                                break;
+                            case ID_BOUNDARY_STATE_ACTIVE:
+                                l_s.append(_(" - inside active boundary"));
+                                break;
+                            case ID_BOUNDARY_STATE_INACTIVE:
+                                l_s.append(_(" - inside inactive boundary"));
+                                break;
+                        }
+                    }
                     else {
                         l_s.append(_T(" <= "));
                         l_s << m_BoundaryDistance;
@@ -601,13 +617,13 @@ public:
                 } else {
                     switch (m_BoundaryState) {
                         case ID_BOUNDARY_STATE_ANY:
-                            l_s = _(" Any Boundary Distance") + _T(" >");
+                            l_s = _("Any Boundary Distance") + _T(" >");
                             break;
                         case ID_BOUNDARY_STATE_ACTIVE:
                             l_s = _("Active Boundary Distance") + _T(" >");
                             break;
                         case ID_BOUNDARY_STATE_INACTIVE:
-                            l_s = _(" Inactive Boundary Distance") + _T(" >");
+                            l_s = _("Inactive Boundary Distance") + _T(" >");
                             break;
                     }
                     l_s.append(wxString::Format(_T(" %.2f nm"), m_Distance));
@@ -618,13 +634,13 @@ public:
             case ANCHOR:
             {
                 if(m_BoundaryName != wxEmptyString) {
-                    return _T(" ") + wxString(_("Anchor")) + _T(" ") +
-                    (m_bAnchorOutside ? _("Outside") : _("Inside")) +
-                    wxString(_T(" boundary ")) + m_BoundaryName;
+                    return _T(" ") + wxString(_("Boat")) + _T(" ") +
+                    (m_bAnchorOutside ? _("outside") : _("inside")) +
+                    wxString(_(" boundary area: ")) + m_BoundaryName;
                 } else {
-                return _T(" ") + wxString(_("Anchor")) + _T(" ") +
-                    (m_bAnchorOutside ? wxString(_("Outside")) : wxString(_("Inside"))) +
-                    wxString(_(" boundary ")) + m_BoundaryGUID;
+                return _T(" ") + wxString(_("Boat")) + _T(" ") +
+                    (m_bAnchorOutside ? wxString(_("outside")) : wxString(_("inside"))) +
+                    wxString(_(" boundary area: ")) + m_BoundaryGUID;
                 }
                 break;
             }
@@ -743,6 +759,14 @@ public:
                 break;
         }
         m_BoundaryGUID = panel->m_tBoundaryGUID->GetValue();
+        if(g_BoundaryName != wxEmptyString) {
+            m_BoundaryName = g_BoundaryName;
+            g_BoundaryName = wxEmptyString;
+        }
+        if(g_BoundaryDescription != wxEmptyString) {
+            m_BoundaryDescription = g_BoundaryDescription;
+            g_BoundaryDescription = wxEmptyString;
+        }
         m_GuardZoneGUID = panel->m_tGuardZoneGUID->GetValue();
         if(g_GuardZoneName != wxEmptyString) {
             m_GuardZoneName = g_GuardZoneName;

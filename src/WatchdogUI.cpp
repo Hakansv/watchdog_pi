@@ -414,6 +414,13 @@ BoundaryPanel::BoundaryPanel( wxWindow* parent, wxWindowID id, const wxPoint& po
 	fgSizer17->SetFlexibleDirection( wxBOTH );
 	fgSizer17->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 	
+	m_staticText33 = new wxStaticText( this, wxID_ANY, _("Exclusion Alarms"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText33->Wrap( -1 );
+	fgSizer17->Add( m_staticText33, 0, wxALL, 5 );
+	
+	m_staticline4 = new wxStaticLine( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
+	fgSizer17->Add( m_staticline4, 0, wxEXPAND | wxALL, 5 );
+	
 	wxFlexGridSizer* fgSizer16;
 	fgSizer16 = new wxFlexGridSizer( 0, 3, 0, 0 );
 	fgSizer16->SetFlexibleDirection( wxBOTH );
@@ -478,7 +485,7 @@ BoundaryPanel::BoundaryPanel( wxWindow* parent, wxWindowID id, const wxPoint& po
 	fgSizer28->SetFlexibleDirection( wxBOTH );
 	fgSizer28->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 	
-	m_rbAnchor = new wxRadioButton( this, wxID_ANY, _("Anchor Watch"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_rbAnchor = new wxRadioButton( this, wxID_ANY, _("Inclusion Alarm"), wxDefaultPosition, wxDefaultSize, 0 );
 	fgSizer28->Add( m_rbAnchor, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 	
 	m_staticText32 = new wxStaticText( this, wxID_ANY, _("Boundary GUID"), wxDefaultPosition, wxDefaultSize, 0 );

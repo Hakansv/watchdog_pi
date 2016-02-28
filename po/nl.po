@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-19 18:09+0100\n"
-"Last-Translator: NAV <rider2@kpnmail.nl>\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-27 09:01+1000\n"
+"Last-Translator: \n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -17,22 +17,16 @@ msgstr ""
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
 msgid " - inside active boundary"
-msgstr " - binnen actieve gebiedsgrens"
+msgstr "- binnen gebiedsgrens"
 #
 msgid " - inside any boundary"
-msgstr " - binnen elke gebiedsgrens"
+msgstr "- binnen gebiedsgrens"
 #
 msgid " - inside inactive boundary"
-msgstr " - binnen inactieve gebiedsgrens"
+msgstr "- binnen gebiedsgrens"
 #
-msgid " Any Boundary Distance"
-msgstr "Elke gebiedsgrens (afstand)"
-#
-msgid " Inactive Boundary Distance"
-msgstr "Inactieve gebiedsgrens (afstand)"
-#
-msgid " boundary "
-msgstr " gebiedsgrens "
+msgid " boundary area: "
+msgstr " gebiedsgrens: "
 #
 msgid " does not exist"
 msgstr " bestaat niet"
@@ -53,7 +47,7 @@ msgid "3"
 msgstr "3"
 #
 msgid "AIS Target in zone"
-msgstr "AIS object binnen zone"
+msgstr "AIS object binnen gebied"
 #
 msgid "ALARM!"
 msgstr "ALARM!"
@@ -65,10 +59,10 @@ msgid "Action"
 msgstr "Alarmactie"
 #
 msgid "Active"
-msgstr "actief"
+msgstr "Alarmactie"
 #
 msgid "Active Boundary Distance"
-msgstr "Actieve gebiedsgrens (afstand)"
+msgstr "Nabijheid gebiedsgrens (afstand)"
 #
 msgid "Alarm Action"
 msgstr "Alarmacties"
@@ -77,13 +71,17 @@ msgid "Alarms"
 msgstr "Alarmen"
 #
 msgid "Anchor"
-msgstr "Ankerpositie"
+msgstr "Afstand referentiepositie"
 #
 msgid "Anchor Watch"
-msgstr "Ankerwacht"
+msgstr "Binnen/Buiten gebied"
 #
 msgid "Any"
 msgstr "elk"
+#
+#, fuzzy
+msgid "Any Boundary Distance"
+msgstr "Nabijheid gebiedsgrens (afstand)"
 #
 msgid "Auto Reset"
 msgstr "Automatisch terugstellen"
@@ -92,25 +90,32 @@ msgid "Automatically Reset"
 msgstr "Automatisch terugstellen"
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Ankerpositie gelijk aan vaartuigpositie indien ingeschakeld"
+msgstr "Gelijk aan vaartuigpositie indien ingeschakeld"
+#
+msgid "Boat"
+msgstr ""
 #
 msgid "Boundary Alarm"
-msgstr "Gebiedsgrens"
+msgstr "Gebied gerelateerd (4 opties)"
 #
 msgid "Boundary Distance"
-msgstr "Gebiedsgrens (afstand)"
+msgstr "Nabijheid gebiedsgrens (afstand)"
 #
 msgid "Boundary GUID"
 msgstr "GUID gebied"
 #
+msgid "Boundary Name"
+msgstr "gebied"
+#
+#, fuzzy
 msgid "Boundary State"
-msgstr "Betreft gebiedsstatus"
+msgstr "gebied"
 #
 msgid "Boundary Time"
-msgstr "Gebiedsgrens (tijd)"
+msgstr "Nabijheid gebiedsgrens (tijd)"
 #
 msgid "Boundary Type"
-msgstr "Betreft gebiedstype"
+msgstr "Alarm werkt voor het volgende gebiedstype"
 #
 msgid "Boundary name"
 msgstr "gebied"
@@ -120,7 +125,7 @@ msgid ""
 "(Note: not Guard Zone)"
 msgstr ""
 "Check frequentie (sec)\n"
-"(niet voor bewakingszone) "
+"(niet voor bewakingsgebied) "
 #
 msgid "Close"
 msgstr "Sluiten"
@@ -132,7 +137,7 @@ msgid "Configuration"
 msgstr "Instellingen"
 #
 msgid "Course"
-msgstr "Koersafwijking"
+msgstr "Afwijking koers (COG)"
 #
 msgid "Current Course"
 msgstr "Gebruik huidige koers"
@@ -162,7 +167,7 @@ msgid "Disable All Alarms"
 msgstr "Alle alarmen uitschakelen"
 #
 msgid "Distance"
-msgstr "Afstand"
+msgstr "afstand"
 #
 msgid "Edit"
 msgstr "Bewerken"
@@ -185,6 +190,10 @@ msgstr "Fout!"
 msgid "Exclusion"
 msgstr "te ontwijken"
 #
+#, fuzzy
+msgid "Exclusion Alarms"
+msgstr "te ontwijken"
+#
 msgid "Failed to execute command: "
 msgstr "Kon opdracht niet uitvoeren:"
 #
@@ -192,10 +201,10 @@ msgid "Failed to read"
 msgstr "Kon niet lezen"
 #
 msgid "GPS course crosses boundary in <"
-msgstr "Gegist traject kruist gebiedsgrens over <"
+msgstr "Gegist traject bereikt gebied over <"
 #
 msgid "GPS course crosses land in <"
-msgstr "Gegist traject kruist kustlijn over <"
+msgstr "Gegist traject bereikt kust over <"
 #
 msgid "GPS fix is <"
 msgstr "GPS-positie is <"
@@ -210,7 +219,9 @@ msgid "Get Boundary GUID"
 msgstr "Zoek GUID gebied"
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "Grafische overlay toont grenzen ankergebied"
+msgstr ""
+"Grafische overlay toont ondoorzichtig cirkelgebied met als middelpunt de "
+"referentiepositie"
 #
 msgid "Graphical overlay displays circle with radius of this speed"
 msgstr "Grafische overlay toont cirkel met straal van deze vaart"
@@ -221,9 +232,7 @@ msgstr "Grafische overlay toont grenslijnen van geldige koersen"
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
-msgstr ""
-"Grafische overlay toont gegist traject van vaartuig naar de gevonden "
-"gebiedsgrens"
+msgstr "Grafische overlay toont lijn van vaartuig naar de gevonden gebiedsgrens"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
@@ -234,13 +243,13 @@ msgid "Graphics Enabled"
 msgstr "Grafische overlay ingeschakeld"
 #
 msgid "Guard Zone"
-msgstr "Bewakingszone"
+msgstr "Bewakingsgebied AIS "
 #
 msgid "Guard Zone GUID"
-msgstr "GUID bewakingszone"
+msgstr "GUID gebied"
 #
 msgid "Guard Zone Name"
-msgstr "Naam bewakingszone"
+msgstr "Naam bewakingsgebied"
 #
 msgid "Hour"
 msgstr "uur"
@@ -249,16 +258,21 @@ msgid "Hours"
 msgstr "uren"
 #
 msgid "Inactive"
-msgstr "inactief"
+msgstr ""
+#
+#, fuzzy
+msgid "Inactive Boundary Distance"
+msgstr "Nabijheid gebiedsgrens (afstand)"
 #
 msgid "Inclusion"
 msgstr "beperkend"
 #
+#, fuzzy
+msgid "Inclusion Alarm"
+msgstr "beperkend"
+#
 msgid "Information"
 msgstr "Informatie"
-#
-msgid "Inside"
-msgstr "Binnen"
 #
 msgid "LandFall"
 msgstr "Nabijheid land"
@@ -274,9 +288,9 @@ msgid ""
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Detectie landnabijheid gebruikt globale kustlijngegevens (gshhs).\\Installeer "
-"de database met de hoogste resolutie van kustlijnen voor meer nauwkeurigheid "
-"en veiligheid."
+"Detectie landnabijheid gebruikt globale kustlijngegevens (gshhs).\n"
+"Installeer de database met de hoogste resolutie van kustlijnen voor meer "
+"nauwkeurigheid en veiligheid."
 #
 msgid "Latitude"
 msgstr "Breedte"
@@ -319,7 +333,7 @@ msgid "NMEA Data"
 msgstr "NMEA-gegevens"
 #
 msgid "NO AIS tagets found in zone"
-msgstr "Geen AIS object binnen zone"
+msgstr "Geen AIS objecten binnen gebied"
 #
 msgid "Name"
 msgstr "Naam"
@@ -337,13 +351,13 @@ msgid "No Boundary within "
 msgstr "geen gebiedsgrens binnen "
 #
 msgid "No User Activity for"
-msgstr "geen gebruikersactiviteit gedurende"
+msgstr "Geen gebruikersactiviteit gedurende"
 #
 msgid "Off Course By >"
 msgstr "Koersafwijking van >"
 #
 msgid "Options"
-msgstr "Opties"
+msgstr "Alarminstelling"
 #
 msgid "Outside"
 msgstr "Buiten"
@@ -429,7 +443,7 @@ msgid "Time"
 msgstr "tijd"
 #
 msgid "Type"
-msgstr "Type"
+msgstr "Alarmtype"
 #
 msgid "Under Speed"
 msgstr "ondersnelheid"
@@ -483,6 +497,9 @@ msgstr "kon niet opslaan"
 msgid "in"
 msgstr "in"
 #
+msgid "inside"
+msgstr "Binnen"
+#
 msgid "inside boundary"
 msgstr "binnen gebiedsgrens"
 #
@@ -520,7 +537,7 @@ msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"zeemijl van gebiedsgrens\n"
+"zeemijl buiten gebiedsgrens\n"
 "(alle richtingen)"
 #
 msgid ""
@@ -530,6 +547,9 @@ msgstr ""
 "zeemijl van kustlijn\n"
 "(alle richtingen)"
 #
+msgid "outside"
+msgstr "Buiten"
+#
 msgid "radius"
 msgstr "straal"
 #
@@ -538,3 +558,13 @@ msgstr "seconde(n)"
 #
 msgid "seconds"
 msgstr "seconden"
+#
+#
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid " boundary area"
+#~ msgstr " gebiedsgrens "

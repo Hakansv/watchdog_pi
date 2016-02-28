@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 15:19+1100\n"
-"PO-Revision-Date: 2016-02-07 02:49-0500\n"
+"POT-Creation-Date: 2016-02-28 13:22+1100\n"
+"PO-Revision-Date: 2016-02-18 16:09-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -26,13 +26,7 @@ msgstr ""
 msgid " - inside inactive boundary"
 msgstr ""
 #
-msgid " Any Boundary Distance"
-msgstr ""
-#
-msgid " Inactive Boundary Distance"
-msgstr ""
-#
-msgid " boundary "
+msgid " boundary area: "
 msgstr ""
 #
 msgid " does not exist"
@@ -86,6 +80,9 @@ msgstr "Якорная Стоянка"
 msgid "Any"
 msgstr ""
 #
+msgid "Any Boundary Distance"
+msgstr ""
+#
 msgid "Auto Reset"
 msgstr ""
 #
@@ -95,6 +92,9 @@ msgstr ""
 msgid "Automatically syncronize to the boat whenever enabled"
 msgstr ""
 #
+msgid "Boat"
+msgstr ""
+#
 msgid "Boundary Alarm"
 msgstr ""
 #
@@ -102,6 +102,9 @@ msgid "Boundary Distance"
 msgstr ""
 #
 msgid "Boundary GUID"
+msgstr ""
+#
+msgid "Boundary Name"
 msgstr ""
 #
 msgid "Boundary State"
@@ -184,6 +187,9 @@ msgstr ""
 msgid "Exclusion"
 msgstr ""
 #
+msgid "Exclusion Alarms"
+msgstr ""
+#
 msgid "Failed to execute command: "
 msgstr "Не удалось выполнить команду: "
 #
@@ -248,14 +254,17 @@ msgstr "Часов"
 msgid "Inactive"
 msgstr ""
 #
+msgid "Inactive Boundary Distance"
+msgstr ""
+#
 msgid "Inclusion"
+msgstr ""
+#
+msgid "Inclusion Alarm"
 msgstr ""
 #
 msgid "Information"
 msgstr "Информация"
-#
-msgid "Inside"
-msgstr ""
 #
 msgid "LandFall"
 msgstr ""
@@ -460,6 +469,9 @@ msgstr ""
 msgid "in"
 msgstr ""
 #
+msgid "inside"
+msgstr ""
+#
 msgid "inside boundary"
 msgstr ""
 #
@@ -501,6 +513,9 @@ msgstr ""
 msgid ""
 "nm from coastline\n"
 "(any direction)"
+msgstr ""
+#
+msgid "outside"
 msgstr ""
 #
 msgid "radius"

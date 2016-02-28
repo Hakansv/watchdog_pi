@@ -3,318 +3,300 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-28 13:22+1100\n"
-"PO-Revision-Date: 2016-02-25 08:05-0500\n"
+"PO-Revision-Date: 2016-02-18 16:09-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
-"Language-Team: Estonian\n"
-"Language: et_EE\n"
+"Language-Team: Galician\n"
+"Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: opencpn\n"
-"X-Crowdin-Language: et\n"
+"X-Crowdin-Language: gl\n"
 "X-Crowdin-File: /plugins/watchdog_pi/po/watchdog_pi.pot\n"
 #
-#, fuzzy
 msgid " - inside active boundary"
-msgstr "piiri sees"
+msgstr ""
 #
-#, fuzzy
 msgid " - inside any boundary"
-msgstr "piiri sees"
+msgstr ""
 #
-#, fuzzy
 msgid " - inside inactive boundary"
-msgstr "piiri sees"
+msgstr ""
 #
-#, fuzzy
 msgid " boundary area: "
-msgstr " piir "
+msgstr ""
 #
 msgid " does not exist"
-msgstr " pole olemas"
+msgstr ""
 #
 msgid " in "
-msgstr " asukohas "
+msgstr ""
 #
 msgid " minutes"
-msgstr " minutit"
+msgstr ""
 #
 msgid "$GPGGA"
-msgstr "$GPGGA"
+msgstr ""
 #
 msgid "1"
-msgstr "1"
+msgstr ""
 #
 msgid "3"
-msgstr "3"
+msgstr ""
 #
 msgid "AIS Target in zone"
-msgstr "AIS-märk on alas"
+msgstr ""
 #
 msgid "ALARM!"
-msgstr "HÄIRE!"
+msgstr ""
 #
 msgid "About Author"
-msgstr "Autorist"
+msgstr ""
 #
 msgid "Action"
-msgstr "Tegevus"
+msgstr ""
 #
-#, fuzzy
 msgid "Active"
-msgstr "Tegevus"
+msgstr ""
 #
-#, fuzzy
 msgid "Active Boundary Distance"
-msgstr "Vehmaa piirini"
+msgstr ""
 #
 msgid "Alarm Action"
-msgstr "Tegevus häire korral"
+msgstr ""
 #
 msgid "Alarms"
-msgstr "Häired"
+msgstr ""
 #
 msgid "Anchor"
-msgstr "Ankur"
+msgstr ""
 #
 msgid "Anchor Watch"
-msgstr "Ankruvaht"
+msgstr ""
 #
 msgid "Any"
-msgstr "Iga"
+msgstr ""
 #
-#, fuzzy
 msgid "Any Boundary Distance"
-msgstr "Vehmaa piirini"
+msgstr ""
 #
 msgid "Auto Reset"
-msgstr "Autolähestamine"
+msgstr ""
 #
 msgid "Automatically Reset"
-msgstr "Auto-algseadistus"
+msgstr ""
 #
 msgid "Automatically syncronize to the boat whenever enabled"
-msgstr "Automaatselt sünkroniseeri alusega iga kord kui lubatud"
+msgstr ""
 #
 msgid "Boat"
 msgstr ""
 #
 msgid "Boundary Alarm"
-msgstr "Piiri häire"
+msgstr ""
 #
 msgid "Boundary Distance"
-msgstr "Vehmaa piirini"
+msgstr ""
 #
 msgid "Boundary GUID"
-msgstr "Piiri GUID"
+msgstr ""
 #
-#, fuzzy
 msgid "Boundary Name"
-msgstr "Piiri nimi"
+msgstr ""
 #
-#, fuzzy
 msgid "Boundary State"
-msgstr "Piiri nimi"
+msgstr ""
 #
 msgid "Boundary Time"
-msgstr "Aeg piirini"
+msgstr ""
 #
 msgid "Boundary Type"
-msgstr "Piiri laad"
+msgstr ""
 #
 msgid "Boundary name"
-msgstr "Piiri nimi"
+msgstr ""
 #
 msgid ""
 "Check Frequency  (Secs)\n"
 "(Note: not Guard Zone)"
 msgstr ""
-"Kontrolli sagedust (sek)\n"
-"(Märkus: mitte valvetsoon)"
 #
 msgid "Close"
-msgstr "Sulge"
+msgstr ""
 #
 msgid "Command"
-msgstr "käsk"
+msgstr ""
 #
 msgid "Configuration"
-msgstr "Seadistus"
+msgstr ""
 #
 msgid "Course"
-msgstr "Kurss"
+msgstr ""
 #
 msgid "Current Course"
-msgstr "Praegune kurss"
+msgstr ""
 #
 msgid "Day"
-msgstr "päev"
+msgstr ""
 #
 msgid "Days"
-msgstr "päeva"
+msgstr ""
 #
 msgid "Deadman"
-msgstr "Surnu-lüliti"
+msgstr ""
 #
 msgid "Degrees"
-msgstr "kraadi"
+msgstr ""
 #
 msgid "Delete"
-msgstr "Kustuta"
+msgstr ""
 #
 msgid "Delete All"
-msgstr "Kustuta kõik"
+msgstr ""
 #
 msgid "Description"
-msgstr "Kirjeldus"
+msgstr ""
 #
 msgid "Disable All Alarms"
-msgstr "Blokeeri kõik häired"
+msgstr ""
 #
 msgid "Distance"
-msgstr "Vahemaa"
+msgstr ""
 #
 msgid "Edit"
-msgstr "Muuda"
+msgstr ""
 #
 msgid "Edit Alarm"
-msgstr "Muuda häiret"
+msgstr ""
 #
 msgid "Enable All Alarms"
-msgstr "Võimalda kõik häired"
+msgstr ""
 #
 msgid "Enabled after first time Watchdog Dialog is visible"
-msgstr "Lubatud peale esimest korda kui Watchdog Dialog on nähtav"
+msgstr ""
 #
 msgid "Enabled only if Watchdog Dialog is visible"
-msgstr "Lubatud ainult kui Watchdog Dialog on nähtav"
+msgstr ""
 #
 msgid "Error!"
-msgstr "Viga!"
+msgstr ""
 #
 msgid "Exclusion"
-msgstr "Väljajätt"
+msgstr ""
 #
-#, fuzzy
 msgid "Exclusion Alarms"
-msgstr "Väljajätt"
+msgstr ""
 #
 msgid "Failed to execute command: "
-msgstr "Ei õnnestunud käivitada käsku:"
+msgstr ""
 #
 msgid "Failed to read"
-msgstr "Lugemine nurjus"
+msgstr ""
 #
 msgid "GPS course crosses boundary in <"
-msgstr "GPS-kurss lõikub piiriga <"
+msgstr ""
 #
 msgid "GPS course crosses land in <"
-msgstr "GPS'i kurss lõikub maaga <"
+msgstr ""
 #
 msgid "GPS fix is <"
-msgstr "GPS asokoht on <"
+msgstr ""
 #
 msgid "GUID"
-msgstr "GUID"
+msgstr ""
 #
 msgid "General Setup"
-msgstr "Üldine seadistus"
+msgstr ""
 #
 msgid "Get Boundary GUID"
-msgstr "Saa piir GUID"
+msgstr ""
 #
 msgid "Graphical overlay displays bounding anchor area"
-msgstr "Graafiline ülekate kuvab ankruala piiri"
+msgstr ""
 #
 msgid "Graphical overlay displays circle with radius of this speed"
-msgstr "Graafiline ülekate kuvab ringi, mille raadiuseks on valitud kiirus"
+msgstr ""
 #
 msgid "Graphical overlay displays lines bounding valid courses"
-msgstr "Graafiline ülekate kuvab jooni, mis piiravad korrektseid kursse"
+msgstr ""
 #
 msgid ""
 "Graphical overlay for GPS fix displays line from boat to location of the "
 "point in the found boundary"
 msgstr ""
-"GPS'i graafiline ülekate näitab joont paadist leitud piiril punkti asukohta"
 #
 msgid ""
 "Graphical overlay for time displays line from boat to location of land "
 "crossing"
-msgstr "Aja graafiline ülekate kuvab joont alusest kuni maaga lõikumise kohani"
+msgstr ""
 #
 msgid "Graphics Enabled"
-msgstr "Lubatud graafika"
+msgstr ""
 #
 msgid "Guard Zone"
-msgstr "Valvetsoon"
+msgstr ""
 #
 msgid "Guard Zone GUID"
-msgstr "Valvetsooni GUID"
+msgstr ""
 #
 msgid "Guard Zone Name"
-msgstr "Valvetsooni nimi"
+msgstr ""
 #
 msgid "Hour"
-msgstr "tund"
+msgstr ""
 #
 msgid "Hours"
-msgstr "tunnid"
+msgstr ""
 #
 msgid "Inactive"
 msgstr ""
 #
-#, fuzzy
 msgid "Inactive Boundary Distance"
-msgstr "Vehmaa piirini"
+msgstr ""
 #
 msgid "Inclusion"
-msgstr "Kaasamine"
+msgstr ""
 #
-#, fuzzy
 msgid "Inclusion Alarm"
-msgstr "Kaasamine"
+msgstr ""
 #
 msgid "Information"
-msgstr "Info"
+msgstr ""
 #
 msgid "LandFall"
-msgstr "Randumine"
+msgstr ""
 #
 msgid "LandFall Time Invalid"
-msgstr "Randumise aeg on kehtetu"
+msgstr ""
 #
 msgid "Landfall"
-msgstr "Rannik"
+msgstr ""
 #
 msgid ""
 "Landfall detection uses gshhs (global heirarchical high-resolution shoreline "
 "data.)\n"
 "Consider installing the highest resolution database for best accuracy."
 msgstr ""
-"Ranniku tuvastamine kasutab gshhs'i (global heirarchical high-resolution "
-"shoreline data.)\n"
-"Kaalutle kõrgeima eraldusvõimega andmebaasi paigaldamist parima täpsuse jaoks."
 #
 msgid "Latitude"
-msgstr "Laius"
+msgstr ""
 #
 msgid "Longitude"
-msgstr "Pikkus"
+msgstr ""
 #
 msgid "Message Box"
-msgstr "teateboks"
+msgstr ""
 #
 msgid "MessageBox"
-msgstr "Teateboks"
+msgstr ""
 #
 msgid "Minute"
-msgstr "minut"
+msgstr ""
 #
 msgid "Minutes"
-msgstr "minutid"
+msgstr ""
 #
 msgid ""
 "Most alarms should be self-explanatory\n"
@@ -325,247 +307,221 @@ msgid ""
 "Automatically Reset will reset the alarm once it is no longer triggered, and "
 "it may be triggered again later."
 msgstr ""
-"Enamus häireid peaksid olema iseenesestmõitetavad\n"
-"Harilikult on helisignaal, kuid te saate käivitada iga käsu nagu soovite, "
-"näiteks:  \"aplay /usr/local/share/opencpn/sounds/2bells.wav\"\n"
-"Teatekast võib olla kasulik teiste rakenduste katkestamiseks\n"
-"Automaatne tühistamine algseadistab häire ükskord kui teda enam ei käivitata "
-"ning teda võib hiljem jälle valla päästa."
 #
 msgid "NMEA Data"
-msgstr "NMEA-voog"
+msgstr ""
 #
 msgid "NO AIS tagets found in zone"
-msgstr "ÜHTEGI AIS-märki pole alas"
+msgstr ""
 #
 msgid "Name"
-msgstr "Nimi"
+msgstr ""
 #
 msgid "Neither"
-msgstr "Mitte kumbki"
+msgstr ""
 #
 msgid "New"
-msgstr "Uus"
+msgstr ""
 #
 msgid "New Alarm"
-msgstr "Uus häire"
+msgstr ""
 #
 msgid "No Boundary within "
-msgstr "Puudub piir "
+msgstr ""
 #
 msgid "No User Activity for"
-msgstr "Kasutaja tegevus puudub"
+msgstr ""
 #
 msgid "Off Course By >"
-msgstr "Kursi kõrvalekalle >"
+msgstr ""
 #
 msgid "Options"
-msgstr "Valikud"
+msgstr ""
 #
 msgid "Outside"
-msgstr "Väljas"
+msgstr ""
 #
 msgid "Over Speed"
-msgstr "Ülekiirus"
+msgstr ""
 #
 msgid "OverSpeed"
-msgstr "Ülekiirus"
+msgstr ""
 #
 msgid "Port"
-msgstr "pakpoordis"
+msgstr ""
 #
 msgid "Port or Starboard"
-msgstr "Pak- või tüürpoord"
+msgstr ""
 #
 msgid "Radius"
-msgstr "raadius"
+msgstr ""
 #
 msgid "Repeat"
-msgstr "Korda"
+msgstr ""
 #
 msgid "Repeat Alarm after seconds"
-msgstr "korda häiret sekundi järel"
+msgstr ""
 #
 msgid "Require following NMEA sentences:"
-msgstr "Vajalik on järgmine NMEA pakkumine:"
+msgstr ""
 #
 msgid "Reset"
-msgstr "Algseadista"
+msgstr ""
 #
 msgid "Second"
-msgstr "sekund"
+msgstr ""
 #
 msgid "Seconds"
-msgstr "sekundit"
+msgstr ""
 #
 msgid ""
 "Seconds to Average\n"
 "SOG over"
 msgstr ""
-"Sekundit keskmine\n"
-"SOG on möödas"
 #
 msgid "Select a file"
-msgstr "Vali fail"
+msgstr ""
 #
 msgid "Ship MMSI"
-msgstr "Laeva MMSI"
+msgstr ""
 #
 msgid "Ship Name"
-msgstr "Laeva nimi"
+msgstr ""
 #
 msgid "Sound"
-msgstr "heli"
+msgstr ""
 #
 msgid "Speed"
-msgstr "Kiirus"
+msgstr ""
 #
 msgid "Speed Alarm"
-msgstr "Kiiruse häire"
+msgstr ""
 #
 msgid "Speed over ground"
-msgstr "Kiirus põhja suhtes"
+msgstr ""
 #
 msgid "Starboard"
-msgstr "Tüürpoord"
+msgstr ""
 #
 msgid "Status"
-msgstr "Olek"
+msgstr ""
 #
 msgid "Sync to Boat"
-msgstr "Aluse asukoht"
+msgstr ""
 #
 msgid "Test"
-msgstr "Test"
+msgstr ""
 #
 msgid "Time"
-msgstr "Aeg"
+msgstr ""
 #
 msgid "Type"
-msgstr "Tüüp"
+msgstr ""
 #
 msgid "Under Speed"
-msgstr "Alakiirus"
+msgstr ""
 #
 msgid "UnderSpeed"
-msgstr "Alakiirus"
+msgstr ""
 #
 msgid "WatchDog"
-msgstr "Watchdog"
+msgstr ""
 #
 msgid "Watchdog"
-msgstr "Watchdog"
+msgstr ""
 #
 msgid "Watchdog Configuration"
-msgstr "Watchdog seadistamine"
+msgstr ""
 #
 msgid "Watchdog Information"
-msgstr "Watchdog'i info"
+msgstr ""
 #
 msgid "Watchdog PlugIn for OpenCPN"
-msgstr "Watchdog'i plugin OpenCPN'i jaoks"
+msgstr ""
 #
 msgid ""
 "Watchdog PlugIn for OpenCPN\n"
 "Alarm user of changing conditions."
 msgstr ""
-"Watchdog'i plugin OpenCPN'i jaoks\n"
-"Hoiatab kasutajat muutuvatest tingimustest."
 #
 msgid "Watchman"
-msgstr "Vahimees"
+msgstr ""
 #
 msgid "With Course Of"
-msgstr "Aluseks kurss"
+msgstr ""
 #
 msgid "at least every"
-msgstr "vähemalt iga"
+msgstr ""
 #
 msgid "bAutoSync"
 msgstr ""
 #
 msgid "course"
-msgstr "kurss"
+msgstr ""
 #
 msgid "degrees(s)"
-msgstr "kraadi"
+msgstr ""
 #
 msgid "failed to save"
-msgstr "salvestus nurjus"
+msgstr ""
 #
 msgid "in"
-msgstr "asukohas"
+msgstr ""
 #
-#, fuzzy
 msgid "inside"
-msgstr "Sees"
+msgstr ""
 #
 msgid "inside boundary"
-msgstr "piiri sees"
+msgstr ""
 #
 msgid "invalid Boundary mode"
-msgstr "kehtetu piiri režiim"
+msgstr ""
 #
 msgid "invalid Course mode"
-msgstr "kehtetu kursi režiim"
+msgstr ""
 #
 msgid "invalid LandFall mode"
-msgstr "kehtetu randumise laad"
+msgstr ""
 #
 msgid "invalid Speed mode"
-msgstr "kehtetu kiiruse režiim"
+msgstr ""
 #
 msgid "invalid alarm type"
-msgstr "kehtetu häire tüüp"
+msgstr ""
 #
 msgid "knots"
-msgstr "sõlme"
+msgstr ""
 #
 msgid "meter(s)"
-msgstr "meetrit"
+msgstr ""
 #
 msgid "meters"
-msgstr "meetrit"
+msgstr ""
 #
 msgid "minute(s)"
-msgstr "minuti(te) jooksul"
+msgstr ""
 #
 msgid "minutes"
-msgstr "minuti pärast"
+msgstr ""
 #
 msgid ""
 "nm from boundary\n"
 "(any direction)"
 msgstr ""
-"nm piirist\n"
-"(iga suund)"
 #
 msgid ""
 "nm from coastline\n"
 "(any direction)"
 msgstr ""
-"nm rannajoonest\n"
-"(igal suunal)"
 #
-#, fuzzy
 msgid "outside"
-msgstr "Väljas"
+msgstr ""
 #
 msgid "radius"
-msgstr "raadius"
+msgstr ""
 #
 msgid "second(s)"
-msgstr "sekund(it)"
+msgstr ""
 #
 msgid "seconds"
-msgstr "sekundit"
-#
-#
-#
-#
-#
-#
-#
-#, fuzzy
-#~ msgid " boundary area"
-#~ msgstr " piir "
+msgstr ""
