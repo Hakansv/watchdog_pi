@@ -99,13 +99,13 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 watchdog_pi *g_watchdog_pi = NULL;
 
 watchdog_pi::watchdog_pi(void *ppimgr)
-    : opencpn_plugin_110(ppimgr)
+    : opencpn_plugin_113(ppimgr)
 {
     // Create the PlugIn icons
     initialize_images();
     m_lastfix.Lat = NAN;
     m_lasttimerfix.Lat = NAN;
-    m_sog = m_cog = NAN;
+    m_sog = m_cog = m_hdm = NAN;
     m_declination = NAN;
     
     g_ReceivedPathGUIDMessage = wxEmptyString;
@@ -142,28 +142,29 @@ int watchdog_pi::Init(void)
     AddLocaleCatalog( PLUGIN_CATALOG_NAME );
 
     Alarm::LoadConfigAll();
-    
+
+#ifdef WATCHDOG_USE_SVG
+    m_leftclick_tool_id = InsertPlugInToolSVG( _T( "Watchdog" ), _svg_watchdog, _svg_watchdog_rollover,
+        _svg_watchdog_toggled, wxITEM_CHECK, _( "Watchdog" ), _T( "" ), NULL, WATCHDOG_TOOL_POSITION, 0, this);
+#else
     m_leftclick_tool_id  = InsertPlugInTool
         (_T(""), _img_watchdog, _img_watchdog, wxITEM_NORMAL,
          _("Watchdog"), _T(""), NULL, WATCHDOG_TOOL_POSITION, 0, this);
+#endif
     
-    m_WatchdogDialog = NULL;
-    m_ConfigurationDialog = NULL;
     m_PropertiesDialog = NULL;
     m_Timer.Connect(wxEVT_TIMER, wxTimerEventHandler
                     ( watchdog_pi::OnTimer ), NULL, this);
     m_Timer.Start(3000);
     
-    if(!m_WatchdogDialog)
-    {
-        m_WatchdogDialog = new WatchdogDialog(*this, GetOCPNCanvasWindow());
-        m_ConfigurationDialog = new ConfigurationDialog(*this, m_WatchdogDialog);
+    m_WatchdogDialog = new WatchdogDialog(*this, GetOCPNCanvasWindow());
+    m_ConfigurationDialog = new ConfigurationDialog(*this, m_WatchdogDialog);
         
-        wxIcon icon;
-        icon.CopyFromBitmap(*_img_watchdog);
-        m_WatchdogDialog->SetIcon(icon);
-        m_ConfigurationDialog->SetIcon(icon);
-    }
+    wxIcon icon;
+    icon.CopyFromBitmap(*_img_watchdog);
+    m_WatchdogDialog->SetIcon(icon);
+    m_ConfigurationDialog->SetIcon(icon);
+
     m_bWatchdogDialogShown = false;
     m_cursor_time = wxDateTime::Now();
 
@@ -362,6 +363,8 @@ void watchdog_pi::OnTimer( wxTimerEvent & )
         }
     } else
         m_sog = m_cog = NAN;
+
+    m_hdm = m_lastfix.Hdm;
     
     m_lasttimerfix = m_lastfix;
 }
